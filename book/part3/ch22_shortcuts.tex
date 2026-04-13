@@ -1,0 +1,126 @@
+% ============================================================================
+% Chapter 22: Keyboard Shortcuts
+% ============================================================================
+
+\chapter{Keyboard Shortcuts}
+\label{ch:shortcuts}
+
+\begin{objectives}
+  \item Memorise the most important keyboard shortcuts
+  \item Use shortcuts to work faster than using a mouse
+  \item Apply shortcuts in Word, Excel, and general Windows tasks
+  \item Understand why shortcuts improve productivity
+\end{objectives}
+
+\bytetip[tip]{Keyboard shortcuts are like \textbf{superpowers} for your fingers. Once you learn them, you'll wonder how you ever survived without them!}
+
+\section{Why Use Shortcuts?}
+\label{sec:why-shortcuts}
+\index{keyboard shortcuts}
+
+Using the mouse for everything is slow. Keyboard shortcuts let you do the same things \emph{much} faster --- sometimes 10 times faster!
+
+\section{Essential Shortcuts Cheat Sheet}
+\label{sec:shortcuts-cheat}
+
+% --- Figure 22.1: Shortcuts Visual Cheat Sheet ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  shortcard/.style={
+    rounded corners=5pt, minimum width=3cm, minimum height=1.6cm,
+    font=\small\sffamily, align=center, line width=1pt
+  }
+]
+  % Row 1
+  \node[shortcard, fill=FunSky!15, draw=FunSky] at (0,0) {\key{Ctrl}+\key{C}\\\textbf{Copy}};
+  \node[shortcard, fill=FunMint!15, draw=FunMint] at (3.5,0) {\key{Ctrl}+\key{V}\\\textbf{Paste}};
+  \node[shortcard, fill=FunCoral!15, draw=FunCoral] at (7,0) {\key{Ctrl}+\key{X}\\\textbf{Cut}};
+  \node[shortcard, fill=FunPurple!15, draw=FunPurple] at (10.5,0) {\key{Ctrl}+\key{Z}\\\textbf{Undo}};
+  
+  % Row 2
+  \node[shortcard, fill=FunYellow!20, draw=FunYellow!80!black] at (0,-2.2) {\key{Ctrl}+\key{Y}\\\textbf{Redo}};
+  \node[shortcard, fill=LabGreen!15, draw=LabGreen] at (3.5,-2.2) {\key{Ctrl}+\key{S}\\\textbf{Save}};
+  \node[shortcard, fill=ModuleBlue!10, draw=ModuleBlue] at (7,-2.2) {\key{Ctrl}+\key{A}\\\textbf{Select All}};
+  \node[shortcard, fill=NoteOrange!15, draw=NoteOrange] at (10.5,-2.2) {\key{Ctrl}+\key{F}\\\textbf{Find}};
+  
+  % Row 3
+  \node[shortcard, fill=FunPink!15, draw=FunPink] at (0,-4.4) {\key{Ctrl}+\key{P}\\\textbf{Print}};
+  \node[shortcard, fill=FunSky!15, draw=FunSky] at (3.5,-4.4) {\key{Ctrl}+\key{N}\\\textbf{New}};
+  \node[shortcard, fill=FunMint!15, draw=FunMint] at (7,-4.4) {\key{Ctrl}+\key{O}\\\textbf{Open}};
+  \node[shortcard, fill=FunCoral!15, draw=FunCoral] at (10.5,-4.4) {\key{Ctrl}+\key{W}\\\textbf{Close}};
+  
+  % Row 4 - Windows shortcuts
+  \node[shortcard, fill=FunPurple!15, draw=FunPurple] at (0,-6.6) {\key{Alt}+\key{Tab}\\\textbf{Switch App}};
+  \node[shortcard, fill=FunYellow!20, draw=FunYellow!80!black] at (3.5,-6.6) {\key{Win}+\key{D}\\\textbf{Desktop}};
+  \node[shortcard, fill=LabGreen!15, draw=LabGreen] at (7,-6.6) {\key{Win}+\key{E}\\\textbf{Explorer}};
+  \node[shortcard, fill=ModuleBlue!10, draw=ModuleBlue] at (10.5,-6.6) {\key{Win}+\key{L}\\\textbf{Lock PC}};
+\end{tikzpicture}
+\caption{The 16 most important keyboard shortcuts --- learn them all!}
+\label{fig:shortcuts-cheat}
+\end{figure}
+
+\section{Shortcuts Save Time}
+\label{sec:shortcuts-time}
+
+% --- Figure 22.2: Time Saved With Shortcuts (bar chart) ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, bar width=12pt,
+  xlabel={Time (seconds)},
+  xlabel style={font=\small\sffamily},
+  symbolic y coords={Select All, Undo, Save, Copy/Paste},
+  ytick=data,
+  yticklabel style={font=\small\sffamily},
+  xticklabel style={font=\small\sffamily},
+  xmin=0, xmax=7,
+  width=11cm, height=6cm,
+  enlarge y limits=0.2,
+  legend style={at={(0.95,0.95)}, anchor=north east, font=\small\sffamily},
+  nodes near coords,
+  nodes near coords style={font=\tiny\sffamily\bfseries},
+]
+\addplot[fill=FunCoral!70, draw=FunCoral] coordinates {(5,Copy/Paste) (4,Save) (3,Undo) (5,Select All)};
+\addplot[fill=LabGreen!70, draw=LabGreen] coordinates {(0.5,Copy/Paste) (0.3,Save) (0.3,Undo) (0.3,Select All)};
+\legend{Mouse Method, Keyboard Shortcut}
+\end{axis}
+\end{tikzpicture}
+\caption{Shortcuts are up to 10x faster than using the mouse!}
+\label{fig:time-saved}
+\end{figure}
+
+\bytetip[fun]{Professional typists use shortcuts \emph{hundreds} of times per day. Over a year, that saves an estimated \textbf{8 full working days} of time! That's more than a week of extra holiday, just from pressing \key{Ctrl}+\key{S} instead of clicking menus.}
+
+\begin{shortcutbox}
+\textbf{Pro tip:} The most important shortcut to build as a habit is \key{Ctrl}+\key{S} (Save). Press it every few minutes while working --- it only takes a fraction of a second and could save you from losing hours of work if the power goes out!
+\end{shortcutbox}
+
+\begin{tryit}
+Open Notepad and type a sentence. Now practise these shortcuts in order:
+\begin{enumerate}[itemsep=2pt]
+  \item \key{Ctrl}+\key{A} (select all text)
+  \item \key{Ctrl}+\key{C} (copy it)
+  \item Press \key{Enter} twice, then \key{Ctrl}+\key{V} (paste it)
+  \item \key{Ctrl}+\key{Z} (undo the paste)
+  \item \key{Ctrl}+\key{S} (save the file)
+\end{enumerate}
+You just used 5 shortcuts in under 10 seconds!
+\end{tryit}
+
+\begin{funfact}
+The \key{Ctrl}+\key{C}, \key{Ctrl}+\key{X}, \key{Ctrl}+\key{V} shortcuts were popularised by Apple's original Macintosh in 1984 (using the Command key instead of Ctrl). They chose C for Copy, X for Cut (like scissors cutting), and V for Paste (because V looks like an insertion mark in proofreading).
+\end{funfact}
+
+\begin{reviewqs}
+  \item What are keyboard shortcuts, and why should you use them?
+  \item Write the shortcuts for: Copy, Paste, Cut, Undo, Save.
+  \item What does \key{Alt}+\key{Tab} do?
+  \item What does \key{Win}+\key{E} open?
+  \item How much time can shortcuts save compared to using the mouse?
+\end{reviewqs}
+
+\begin{challenge}
+Create a ``Shortcuts Study Card'': on one side, write the shortcut (e.g., \key{Ctrl}+\key{C}). On the other side, write what it does (``Copy''). Make at least 12 cards and quiz a partner!
+\end{challenge}

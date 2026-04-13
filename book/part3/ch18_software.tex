@@ -1,0 +1,80 @@
+% ============================================================================
+% Chapter 18: Software in Detail
+% ============================================================================
+
+\chapter{Software in Detail}
+\label{ch:software-detail}
+
+\begin{objectives}
+  \item Classify software into system and application categories
+  \item Understand the role of device drivers
+  \item Explore different types of application software
+  \item Learn about open-source vs proprietary software
+\end{objectives}
+
+\bytetip[tip]{We covered software basics earlier --- now it's time to go deeper! There are many more types of software than you might think.}
+
+\section{System Software Revisited}
+\label{sec:system-sw-detail}
+\index{system software!types}
+
+System software includes more than just the operating system:
+
+\begin{theorybox}[Types of System Software]
+\begin{enumerate}[label=\textcolor{ModuleBlue}{\textbf{\arabic*.}}, itemsep=4pt]
+  \item \textbf{Operating System} --- Manages hardware and provides user interface (Windows, macOS)
+  \item \textbf{Device Drivers}\index{device driver} --- Small programs that help the OS communicate with specific hardware (printer driver, graphics driver)
+  \item \textbf{Utility Software}\index{utility software} --- Tools for maintenance (antivirus, disk cleanup, file compression)
+  \item \textbf{Firmware}\index{firmware} --- Permanent software built into hardware (BIOS, router firmware)
+\end{enumerate}
+\end{theorybox}
+
+\section{Application Software Categories}
+\label{sec:app-categories}
+
+\begin{table}[H]
+\centering
+\caption{Types of application software}
+\label{tab:app-types}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l X l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{Purpose}} & \textcolor{white}{\textbf{Example}} \\
+\midrule
+\rowcolor{RowLight} Word Processor & Create and edit documents & MS Word, Google Docs \\
+\rowcolor{RowDark} Spreadsheet & Organise data and calculations & MS Excel, Google Sheets \\
+\rowcolor{RowLight} Presentation & Create slideshows & MS PowerPoint \\
+\rowcolor{RowDark} Web Browser & Access websites & Chrome, Edge, Firefox \\
+\rowcolor{RowLight} Media Player & Play audio and video & VLC, Windows Media Player \\
+\rowcolor{RowDark} Image Editor & Edit photos and images & Paint, Photoshop, GIMP \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Open Source vs Proprietary}
+\label{sec:opensource}
+\index{open source}\index{proprietary software}
+
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item \textbf{Open Source}\index{open source} --- Free to use, modify, and share. The code is public. Examples: Linux, Firefox, GIMP, LibreOffice.
+  \item \textbf{Proprietary}\index{proprietary software} --- Owned by a company. You must pay (or get a licence) to use it. Code is secret. Examples: Windows, MS Office, Photoshop.
+\end{itemize}
+
+\bytetip[fun]{Did you know that \textbf{Android} is based on the open-source \textbf{Linux} kernel? That means the core of your smartphone's OS was created by volunteers around the world, for free!}
+
+\begin{funfact}
+\textbf{LibreOffice} is a free, open-source alternative to Microsoft Office. It includes a word processor, spreadsheet, and presentation tool --- and it's used by millions of people, governments, and schools worldwide who don't want to pay for MS Office!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What are device drivers and why are they needed?
+  \item Name three types of system software besides the OS.
+  \item What is the difference between open-source and proprietary software?
+  \item Give two examples each of open-source and proprietary software.
+  \item What category of application software would you use to edit photos?
+\end{reviewqs}
+
+\begin{challenge}
+Research \textbf{three free, open-source} alternatives to paid software. For example, find a free alternative to Photoshop, MS Word, and Windows. Make a comparison table with columns: Paid Software, Free Alternative, Key Difference.
+\end{challenge}

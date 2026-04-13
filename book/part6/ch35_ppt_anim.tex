@@ -1,0 +1,100 @@
+% ============================================================================
+% Chapter 35: Transitions and Animations
+% ============================================================================
+\chapter{Transitions and Animations}
+\label{ch:ppt-anim}
+
+\begin{objectives}
+  \item Add slide transitions and control their timing
+  \item Apply animations to text, images, and shapes
+  \item Understand the difference between transitions and animations
+  \item Run a slideshow and use presenter tools
+\end{objectives}
+
+\bytetip[tip]{Transitions and animations make your presentation come alive! But remember: subtle effects look professional, while excessive effects look childish. Use them wisely!}
+
+\section{Transitions vs Animations}
+\label{sec:trans-vs-anim}
+\index{MS PowerPoint!transitions}\index{MS PowerPoint!animations}
+
+% --- Figure 35.1: Transitions vs Animations ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Transition
+  \node[draw=FunSky, fill=FunSky!10, rounded corners=8pt,
+        minimum width=5cm, minimum height=3cm, line width=1.5pt] (trans) at (0,0) {};
+  \node[font=\large\bfseries\sffamily, text=FunSky] at (0,1) {\faSync\ Transition};
+  \node[font=\small\sffamily, text=NavyBlue, text width=4cm, align=center] at (0,-0.2) {
+    Effect between\\two slides\\(how slides change)
+  };
+  
+  % Animation
+  \node[draw=FunPurple, fill=FunPurple!10, rounded corners=8pt,
+        minimum width=5cm, minimum height=3cm, line width=1.5pt] (anim) at (7.5,0) {};
+  \node[font=\large\bfseries\sffamily, text=FunPurple] at (7.5,1) {\faPlay\ Animation};
+  \node[font=\small\sffamily, text=NavyBlue, text width=4cm, align=center] at (7.5,-0.2) {
+    Effect on objects\\within one slide\\(how items appear)
+  };
+  
+  % Arrow
+  \draw[NoteOrange, line width=2pt, <->] (3,0) -- (4.5,0);
+  \node[above, font=\scriptsize\sffamily\bfseries, text=NoteOrange] at (3.75,0.1) {Different!};
+\end{tikzpicture}
+\caption{Transitions move between slides; animations move objects within a slide}
+\label{fig:trans-vs-anim}
+\end{figure}
+
+\section{Adding Transitions}
+\label{sec:add-transitions}
+
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Select a slide in the slide panel.
+  \item Go to the \textbf{Transitions} tab.
+  \item Choose a transition effect (Fade, Push, Wipe, etc.).
+  \item Set the \textbf{duration} (how fast the transition happens).
+  \item Click ``Apply To All'' to use the same transition throughout.
+\end{enumerate}
+
+\section{Adding Animations}
+\label{sec:add-animations}
+
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Select the object you want to animate (text, image, or shape).
+  \item Go to the \textbf{Animations} tab.
+  \item Choose an effect: Appear, Fade In, Fly In, Bounce, etc.
+  \item Use ``Animation Pane'' to see and reorder all animations.
+  \item Set timing: On Click, With Previous, or After Previous.
+\end{enumerate}
+
+\section{Running a Slideshow}
+\label{sec:slideshow}
+\index{MS PowerPoint!slideshow}
+
+\begin{shortcutbox}
+\begin{tabular}{ll}
+  \key{F5} & Start slideshow from the beginning \\
+  \key{Shift}+\key{F5} & Start from the current slide \\
+  \key{Esc} & Exit the slideshow \\
+  \key{B} & Black screen (during show) \\
+  \key{W} & White screen (during show) \\
+\end{tabular}
+\end{shortcutbox}
+
+\bytetip[fun]{The ``B'' and ``W'' keys during a slideshow are secret presentation tricks! Press \key{B} to black out the screen when you want the audience to focus on you, not the slides. Press \key{W} for a white screen. Press any key to return.}
+
+\begin{funfact}
+PowerPoint was originally created by Robert Gaskins and Dennis Austin in 1987 for Macintosh, and was called \textbf{``Presenter.''} Microsoft bought the company (Forethought) for \$14 million just 3 months after its release --- one of the best investments in tech history!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the difference between a transition and an animation?
+  \item How do you add a transition to a slide?
+  \item Name three animation effects available in PowerPoint.
+  \item What keyboard shortcut starts a slideshow from the beginning?
+  \item Why should you avoid using too many animation effects?
+\end{reviewqs}
+
+\begin{challenge}
+Take your ``Favourite Book/Movie'' presentation from Chapter 33. Add a different transition to each slide. Animate the title on slide 1 with ``Fly In,'' and animate bullet points on slide 2 to appear one by one. Run the slideshow for a partner!
+\end{challenge}

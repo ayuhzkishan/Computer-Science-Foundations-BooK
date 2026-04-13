@@ -1,0 +1,152 @@
+% ============================================================================
+% Chapter 28: Introduction to MS Excel
+% ============================================================================
+\chapter{Introduction to MS Excel}
+\label{ch:excel-intro}
+
+\begin{objectives}
+  \item Open MS Excel and identify parts of the Excel window
+  \item Understand cells, rows, columns, and cell addresses
+  \item Enter data into cells (text, numbers, dates)
+  \item Navigate a worksheet using keyboard and mouse
+\end{objectives}
+
+\bytetip[tip]{Excel is like a super-powered calculator combined with a smart notebook. It can do maths, organise lists, create charts, and much more. Let's explore!}
+
+\section{The Excel Window}
+\label{sec:excel-window}
+\index{MS Excel!interface}
+
+% --- Figure 28.1: Excel Window Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.7]
+  \draw[NavyBlue, line width=2pt, rounded corners=3pt] (0,0) rectangle (16,11);
+  
+  % Title bar
+  \fill[NavyBlue!80] (0.1,10.2) rectangle (15.9,11);
+  \node[text=white, font=\tiny\sffamily] at (8,10.6) {Book1 --- Microsoft Excel};
+  
+  % Ribbon area
+  \fill[LabGreen!10] (0.1,8.8) rectangle (15.9,10.2);
+  \node[font=\tiny\sffamily, text=NavyBlue] at (8,9.5) {Home \quad Insert \quad Page Layout \quad Formulas \quad Data \quad Review \quad View};
+  
+  % Name Box + Formula Bar
+  \fill[ShadeGray] (0.1,8.0) rectangle (15.9,8.8);
+  \node[draw=NavyBlue!30, fill=white, font=\tiny\sffamily\bfseries, minimum width=1.2cm, minimum height=0.5cm] at (1.2,8.4) {A1};
+  \node[font=\tiny\sffamily, text=NavyBlue!50, anchor=west] at (3,8.4) {\textit{fx}\quad =SUM(A1:A5)};
+  
+  % Column headers
+  \fill[ModuleBlue!20] (1.5,7.2) rectangle (15.5,8.0);
+  \foreach \x/\c in {2.5/A, 4.5/B, 6.5/C, 8.5/D, 10.5/E, 12.5/F, 14.5/G}{
+    \node[font=\tiny\sffamily\bfseries, text=ModuleBlue] at (\x,7.6) {\c};
+  }
+  
+  % Row numbers
+  \fill[NavyBlue!10] (0.1,1.0) rectangle (1.5,7.2);
+  \foreach \y/\r in {6.5/1, 5.5/2, 4.5/3, 3.5/4, 2.5/5, 1.5/6}{
+    \node[font=\tiny\sffamily\bfseries, text=NavyBlue] at (0.8,\y) {\r};
+  }
+  
+  % Cell grid
+  \fill[white] (1.5,1.0) rectangle (15.5,7.2);
+  \foreach \x in {1.5,3.5,...,15.5}{
+    \draw[NavyBlue!15, line width=0.3pt] (\x,1.0) -- (\x,7.2);
+  }
+  \foreach \y in {1.0,2.0,...,7.0}{
+    \draw[NavyBlue!15, line width=0.3pt] (1.5,\y) -- (15.5,\y);
+  }
+  
+  % Highlighted cell
+  \draw[ModuleBlue, line width=1.5pt] (1.5,6.2) rectangle (3.5,7.2);
+  
+  % Sheet tabs
+  \fill[ShadeGray] (0.1,0) rectangle (15.9,1.0);
+  \node[draw=NavyBlue!30, fill=white, font=\tiny\sffamily, rounded corners=2pt, minimum width=1.5cm, minimum height=0.4cm] at (2,0.5) {Sheet1};
+  \node[draw=NavyBlue!15, fill=ShadeGray, font=\tiny\sffamily, rounded corners=2pt, minimum width=1.5cm, minimum height=0.4cm] at (4,0.5) {Sheet2};
+  
+  % Labels
+  \draw[FunCoral, line width=1pt, ->] (-1.5,8.4) -- (0,8.4);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunCoral, align=right] at (-1.5,8.4) {Name Box \&\\Formula Bar};
+  
+  \draw[ModuleBlue, line width=1pt, ->] (-1.5,7.6) -- (1.4,7.6);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=ModuleBlue, align=center] at (-1.5,7.6) {Column\\Headers};
+  
+  \draw[NavyBlue, line width=1pt, ->] (-1.5,4.5) -- (0,4.5);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=NavyBlue, align=center] at (-1.5,4.5) {Row\\Numbers};
+  
+  \draw[FunSky, line width=1pt, ->] (-1.5,0.5) -- (0,0.5);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunSky] at (-1.5,0.5) {Sheet Tabs};
+\end{tikzpicture}
+\caption{The MS Excel window with all key elements labelled}
+\label{fig:excel-window}
+\end{figure}
+
+\section{Understanding Cell Addresses}
+\label{sec:cell-address}
+\index{cell address}\index{MS Excel!cells}
+
+% --- Figure 28.2: Cell Address Explained ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % 4x4 grid
+  \foreach \x in {0,2,4,6}{
+    \draw[NavyBlue!30, line width=0.5pt] (\x,0) -- (\x,4);
+  }
+  \foreach \y in {0,1,2,3,4}{
+    \draw[NavyBlue!30, line width=0.5pt] (0,\y) -- (6,\y);
+  }
+  
+  % Headers
+  \foreach \x/\c in {1/A, 3/B, 5/C}{
+    \node[font=\small\sffamily\bfseries, text=ModuleBlue] at (\x,4.4) {\c};
+  }
+  \foreach \y/\r in {3.5/1, 2.5/2, 1.5/3, 0.5/4}{
+    \node[font=\small\sffamily\bfseries, text=NavyBlue] at (-0.4,\y) {\r};
+  }
+  
+  % Highlight C3
+  \fill[FunYellow!40] (4,1) rectangle (6,2);
+  \draw[FunYellow!80!black, line width=2pt] (4,1) rectangle (6,2);
+  \node[font=\small\sffamily\bfseries] at (5,1.5) {42};
+  
+  % Column arrow
+  \draw[ModuleBlue, line width=1.5pt, ->] (5,4.4) -- (5,4.8);
+  \node[above, font=\small\sffamily\bfseries, text=ModuleBlue] at (5,4.8) {Column C};
+  
+  % Row arrow
+  \draw[NavyBlue, line width=1.5pt, ->] (-0.4,1.5) -- (-0.8,1.5);
+  \node[left, font=\small\sffamily\bfseries, text=NavyBlue] at (-0.8,1.5) {Row 3};
+  
+  % Speech bubble
+  \node[draw=FunYellow!80!black, fill=FunYellow!10, rounded corners=6pt,
+        font=\small\sffamily\bfseries, text=NavyBlue, inner sep=5pt] 
+    at (9,1.5) {My address is \textbf{C3}!};
+  \draw[FunYellow!80!black, line width=1pt, ->] (7.5,1.5) -- (6.1,1.5);
+\end{tikzpicture}
+\caption{Cell C3 --- column letter + row number = cell address}
+\label{fig:cell-address}
+\end{figure}
+
+\begin{theorybox}[Cell Address]
+Every cell in Excel has a unique address made of its \textbf{column letter} and \textbf{row number}. For example, the cell in column C, row 3 has the address \textbf{C3}. This is how Excel knows which cell you're talking about in formulas.
+\end{theorybox}
+
+\bytetip[fun]{An Excel worksheet has \textbf{16,384 columns} (A to XFD) and \textbf{1,048,576 rows}. That's over \textbf{17 billion cells} in a single sheet! You'd need to live several lifetimes to fill them all.}
+
+\begin{funfact}
+The first spreadsheet program was called \textbf{VisiCalc}, released in 1979 for the Apple II. It was so popular that people bought Apple II computers \emph{just} to run VisiCalc. It's considered one of the most important software programs ever created!
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name five parts of the Excel window.
+  \item What is a cell address? Give three examples.
+  \item How many columns and rows does an Excel worksheet have?
+  \item Where is the Formula Bar, and what does it show?
+  \item What are sheet tabs, and what do they do?
+\end{reviewqs}
+
+\begin{challenge}
+Open Excel and type data for 5 classmates: Name (column A), Age (column B), Favourite Subject (column C). Bold the header row. Adjust column widths so all text is visible. Save as ``ClassData.xlsx.''
+\end{challenge}

@@ -1,0 +1,201 @@
+% ============================================================================
+% Lab Chapter for Part I — Practicals 1–6
+% ============================================================================
+
+\chapter{Part I --- Hands-On Practicals}
+\label{ch:lab1}
+
+\bytetip[fun]{Time to get your hands on a real computer! Remember --- read each step carefully, ask your teacher if you're stuck, and most importantly, have fun!}
+
+% ======================================================================
+% PRACTICAL 1
+% ======================================================================
+
+\begin{labactivity}{1}{Identifying Computer Parts}{10 min}
+
+\youwillneed{\faDesktop\ Computer or printed image \quad \faClock\ 10 minutes \quad \faFile\ Worksheet}
+
+\textbf{Step Map:}
+\begin{center}
+\begin{tikzpicture}[node distance=0.4cm]
+  \node[stepcircle node] (s1) {1};
+  \node[process, right=of s1, minimum width=2cm, font=\tiny\sffamily] (l1) {Look};
+  \node[stepcircle node, right=of l1] (s2) {2};
+  \node[process, right=of s2, minimum width=2cm, font=\tiny\sffamily] (l2) {Point};
+  \node[stepcircle node, right=of l2] (s3) {3};
+  \node[process, right=of s3, minimum width=2cm, font=\tiny\sffamily] (l3) {Label};
+  \node[stepcircle node, right=of l3] (s4) {4};
+  \node[process, right=of s4, minimum width=2cm, font=\tiny\sffamily] (l4) {Answer};
+  \foreach \a/\b in {s1/l1, l1/s2, s2/l2, l2/s3, s3/l3, l3/s4, s4/l4}{
+    \draw[thickarrow, line width=1pt] (\a) -- (\b);
+  }
+\end{tikzpicture}
+\end{center}
+
+\textbf{Objective:} Identify the main parts of a computer by name and function.\\[4pt]
+\textbf{Materials:} Real computer OR printed A3 image of a computer setup; identification worksheet.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Look at the computer (or image) on your desk.
+  \item Point to and name each part your teacher asks about.
+  \item Fill in the \emph{Parts Identification Worksheet} --- draw a line from each label to the correct part.
+  \item Answer: Is a keyboard an input or output device?
+  \item Answer: What does the monitor display?
+\end{enumerate}
+\textbf{Expected Outcome:} Students correctly label Monitor, CPU, Keyboard, Mouse on the worksheet.
+
+\welldone
+\end{labactivity}
+
+% ======================================================================
+% PRACTICAL 2
+% ======================================================================
+
+\begin{labactivity}{2}{Starting and Shutting Down a Computer}{10 min}
+
+\youwillneed{\faDesktop\ Working computer \quad \faClock\ 10 minutes \quad \faFile\ Observation sheet}
+
+\textbf{Step Map:}
+\begin{center}
+\begin{tikzpicture}[node distance=0.4cm]
+  \node[stepcircle node] (s1) {1};
+  \node[process, right=of s1, minimum width=2.2cm, font=\tiny\sffamily] (l1) {Power On};
+  \node[stepcircle node, right=of l1] (s2) {2};
+  \node[process, right=of s2, minimum width=2.2cm, font=\tiny\sffamily] (l2) {Wait};
+  \node[stepcircle node, right=of l2] (s3) {3};
+  \node[process, right=of s3, minimum width=2.2cm, font=\tiny\sffamily] (l3) {Explore};
+  \node[stepcircle node, right=of l3] (s4) {4};
+  \node[process, right=of s4, minimum width=2.2cm, font=\tiny\sffamily] (l4) {Shut Down};
+  \foreach \a/\b in {s1/l1, l1/s2, s2/l2, l2/s3, s3/l3, l3/s4, s4/l4}{
+    \draw[thickarrow, line width=1pt] (\a) -- (\b);
+  }
+\end{tikzpicture}
+\end{center}
+
+\textbf{Objective:} Learn how to safely start and shut down a computer.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Press the power button on the CPU tower. Notice the light turns on.
+  \item Wait patiently for the desktop to appear. This may take 30--60 seconds.
+  \item Look at the desktop. Can you see icons? The taskbar? The Start button?
+  \item Click the \textbf{Start} button $\rightarrow$ Click \textbf{Power} $\rightarrow$ Click \textbf{Shut Down}.
+  \item Wait until the screen goes completely dark and the power light turns off.
+\end{enumerate}
+\textbf{Expected Outcome:} Students can independently start and shut down a computer safely.
+
+\welldone
+\end{labactivity}
+
+% ======================================================================
+% PRACTICAL 3
+% ======================================================================
+
+\begin{labactivity}{3}{Mouse Practice --- Click, Double-Click, Drag}{15 min}
+
+\youwillneed{\faDesktop\ Computer with mouse \quad \faClock\ 15 minutes \quad \faMouse\ Mouse}
+
+\textbf{Step Map:}
+\begin{center}
+\begin{tikzpicture}[node distance=0.3cm]
+  \node[stepcircle node] (s1) {1};
+  \node[process, right=of s1, minimum width=2cm, font=\tiny\sffamily] (l1) {Click};
+  \node[stepcircle node, right=of l1] (s2) {2};
+  \node[process, right=of s2, minimum width=2cm, font=\tiny\sffamily] (l2) {Dbl-Click};
+  \node[stepcircle node, right=of l2] (s3) {3};
+  \node[process, right=of s3, minimum width=2cm, font=\tiny\sffamily] (l3) {Rt-Click};
+  \node[stepcircle node, right=of l3] (s4) {4};
+  \node[process, right=of s4, minimum width=2cm, font=\tiny\sffamily] (l4) {Drag};
+  \foreach \a/\b in {s1/l1, l1/s2, s2/l2, l2/s3, s3/l3, l3/s4, s4/l4}{
+    \draw[thickarrow, line width=1pt] (\a) -- (\b);
+  }
+\end{tikzpicture}
+\end{center}
+
+\textbf{Objective:} Master single click, double-click, right-click, and drag-and-drop.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item \textbf{Single Click:} Click once on the Recycle Bin icon. It should become highlighted (selected).
+  \item \textbf{Double-Click:} Double-click the Recycle Bin to open it. A window should appear.
+  \item Close the window by clicking the \textbf{X} button in the top-right corner.
+  \item \textbf{Right-Click:} Right-click on an empty part of the desktop. A menu should appear.
+  \item Press \key{Esc} to close the menu.
+  \item \textbf{Drag and Drop:} Click and hold any desktop icon, drag it to a new position, then release.
+\end{enumerate}
+\textbf{Expected Outcome:} Students can perform all four mouse actions confidently.
+
+\welldone
+\end{labactivity}
+
+% ======================================================================
+% PRACTICAL 4
+% ======================================================================
+
+\begin{labactivity}{4}{Keyboard Exploration}{10 min}
+
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 minutes \quad \faKeyboard\ Keyboard}
+
+\textbf{Objective:} Identify key groups on the keyboard and type your name.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Open \textbf{Notepad} (Start $\rightarrow$ search ``Notepad'' $\rightarrow$ click to open).
+  \item Type your full name. Press \key{Enter} to go to a new line.
+  \item Type the name of your school on the new line.
+  \item Find and press the \key{Caps Lock} key. Type your name again --- notice it's ALL CAPITALS.
+  \item Press \key{Caps Lock} again to turn it off.
+  \item Find the \key{Backspace} key and use it to delete some text.
+  \item Close Notepad \emph{without} saving (click ``Don't Save'' when asked).
+\end{enumerate}
+\textbf{Expected Outcome:} Students can type text, use Caps Lock, Enter, and Backspace.
+
+\welldone
+\end{labactivity}
+
+% ======================================================================
+% PRACTICAL 5
+% ======================================================================
+
+\begin{labactivity}{5}{Exploring the Desktop}{10 min}
+
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 minutes \quad \faFile\ Observation sheet}
+
+\textbf{Objective:} Identify elements of the Windows desktop.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Look at your desktop. Find and write down at least 3 icon names.
+  \item Find the \textbf{Taskbar} at the bottom. What icons do you see pinned there?
+  \item Click the \textbf{Start button} (Windows icon, bottom-left). What appears?
+  \item Look at the bottom-right corner. Find the \textbf{clock}, \textbf{volume} icon, and \textbf{Wi-Fi} icon.
+  \item Right-click on an empty part of the desktop. Explore the options in the menu that appears.
+\end{enumerate}
+\textbf{Expected Outcome:} Students can identify and describe desktop icons, taskbar, Start menu, and system tray.
+
+\welldone
+\end{labactivity}
+
+% ======================================================================
+% PRACTICAL 6
+% ======================================================================
+
+\begin{labactivity}{6}{Classifying Hardware and Software}{10 min}
+
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 minutes \quad \faFile\ Classification worksheet}
+
+\textbf{Objective:} Create a list and classify items as hardware or software.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Look around the computer lab. Write down 5 things you can \textbf{physically touch} (these are \textbf{hardware}).
+  \item Now think of 5 programs or apps (these are \textbf{software}).
+  \item On your worksheet, draw a table with two columns: ``Hardware'' and ``Software.''
+  \item Place each item in the correct column.
+  \item Share your lists with a partner and check each other's work.
+\end{enumerate}
+\textbf{Expected Outcome:} Students correctly classify at least 8 out of 10 items.
+
+\welldone
+\end{labactivity}
+
+\vspace{12pt}
+\begin{center}
+  \qrcode[height=2cm]{https://example.com/module1}\\[6pt]
+  {\small\sffamily\textcolor{NavyBlue}{Scan for extra Part I resources and activities!}}
+\end{center}

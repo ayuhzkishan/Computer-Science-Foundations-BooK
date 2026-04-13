@@ -1,0 +1,139 @@
+% ============================================================================
+% Chapter 9: File and Folder Management
+% ============================================================================
+
+\chapter{File and Folder Management}
+\label{ch:files}
+
+\begin{objectives}
+  \item Understand the concept of files and folders
+  \item Create, rename, copy, move, and delete files and folders
+  \item Navigate the File Explorer window
+  \item Know the rules for naming files in Windows
+\end{objectives}
+
+\bytetip[tip]{Think of your computer like a giant filing cabinet. \textbf{Folders} are the drawers, and \textbf{files} are the documents inside them. Keeping things organised will save you \emph{hours} of searching!}
+
+% ---------------------------------------------------------------
+\section{What Are Files and Folders?}
+\label{sec:files-folders}
+\index{file}\index{folder}
+
+\begin{theorybox}[Files and Folders]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item A \textbf{file}\index{file} is a collection of data stored with a name and extension (e.g., \texttt{MyEssay.docx}, \texttt{Photo.jpg})
+  \item A \textbf{folder}\index{folder} (also called a \textbf{directory}) is a container that holds files and other folders
+  \item Folders help you \textbf{organise} your files so you can find them easily
+\end{itemize}
+\end{theorybox}
+
+% --- Figure 9.1: File and Folder Hierarchy Tree ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  level distance=1.4cm, sibling distance=3.5cm,
+  folder/.style={draw=FunYellow!80!black, fill=FunYellow!20, rounded corners=3pt,
+    font=\small\sffamily\bfseries, minimum height=0.7cm, minimum width=2cm, align=center},
+  file/.style={draw=NavyBlue!50, fill=white, rounded corners=1pt,
+    font=\small\sffamily, minimum height=0.6cm, minimum width=2cm, align=center},
+  edge from parent/.style={draw=NavyBlue, line width=1.2pt, ->, >=Stealth}
+]
+  \node[folder] {Documents}
+    child { node[folder] {School}
+      child { node[file] {\faFileWord\ Maths.docx} }
+      child { node[file] {\faFileWord\ Science.docx} }
+    }
+    child { node[folder] {Photos}
+      child { node[file] {\faImage\ Holiday.jpg} }
+    }
+    child { node[file] {\faFile\ MyStory.txt} };
+\end{tikzpicture}
+\caption{Files and folders form a tree-like hierarchy}
+\label{fig:file-tree}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{File Operations}
+\label{sec:file-ops}
+\index{file!operations}
+
+Here are the common things you can do with files:
+
+% --- Figure 9.2: File Operations Step Map ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.3cm]
+  \node[process, fill=PartColor1!10, draw=PartColor1, minimum width=1.8cm] (s1) {Create};
+  \node[process, fill=PartColor3!10, draw=PartColor3, minimum width=1.8cm, right=of s1] (s2) {Open};
+  \node[process, fill=PartColor6!10, draw=PartColor6, minimum width=1.8cm, right=of s2] (s3) {Edit};
+  \node[process, fill=PartColor4!10, draw=PartColor4, minimum width=1.8cm, right=of s3] (s4) {Save};
+  \node[process, fill=PartColor2!10, draw=PartColor2, minimum width=2cm, right=of s4] (s5) {Copy/Move};
+  \node[process, fill=PartColor5!10, draw=PartColor5, minimum width=1.8cm, right=of s5] (s6) {Delete};
+  \foreach \a/\b in {s1/s2, s2/s3, s3/s4, s4/s5, s5/s6}{
+    \draw[thickarrow, line width=1.2pt] (\a) -- (\b);
+  }
+\end{tikzpicture}
+\caption{Common file operations in sequence}
+\label{fig:file-ops}
+\end{figure}
+
+\begin{shortcutbox}
+\begin{tabular}{ll}
+  \key{Ctrl}+\key{C} & Copy selected file \\
+  \key{Ctrl}+\key{X} & Cut (move) selected file \\
+  \key{Ctrl}+\key{V} & Paste file \\
+  \key{Delete} & Send file to Recycle Bin \\
+  \key{F2} & Rename selected file \\
+  \key{Ctrl}+\key{Z} & Undo last action \\
+\end{tabular}
+\end{shortcutbox}
+
+% ---------------------------------------------------------------
+\section{File Naming Rules}
+\label{sec:naming-rules}
+\index{file!naming rules}
+
+% --- Table 9.1: Valid vs Invalid File Names ---
+\begin{table}[H]
+\centering
+\caption{Valid vs invalid file names in Windows}
+\label{tab:file-names}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ll}
+\toprule
+\cellcolor{LabGreen!15}\textcolor{LabGreen}{\ding{51}} \textbf{Valid Names} &
+\cellcolor{WarnRed!10}\textcolor{WarnRed}{\ding{55}} \textbf{Invalid Names} \\
+\midrule
+\rowcolor{RowLight}
+MyReport & My/Report \footnotesize(slash not allowed) \\
+\rowcolor{RowDark}
+Science\_Notes\_2024 & File:Name \footnotesize(colon not allowed) \\
+\rowcolor{RowLight}
+Chapter 1 Draft & CON \footnotesize(reserved name in Windows) \\
+\rowcolor{RowDark}
+photo\_holiday & file* \footnotesize(asterisk not allowed) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bytetip[warn]{Never delete files from the \textbf{Windows} or \textbf{System32} folder. These contain critical files that your computer needs to work. Deleting them can \emph{break your entire computer}!}
+
+\begin{notebox}
+Windows file names \textbf{cannot contain} these characters: \texttt{\textbackslash\ / : * ? " < > |}. Also, names like CON, PRN, AUX, NUL are reserved by Windows and can't be used.
+\end{notebox}
+
+\begin{funfact}
+The longest file name allowed in Windows is \textbf{255 characters} (including the extension). But the \emph{full path} (including all folder names) can't exceed about 260 characters. So if you nest folders very deeply with long names, you might run into problems!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the difference between a file and a folder?
+  \item List three operations you can perform on a file.
+  \item Name three characters that cannot be used in a Windows file name.
+  \item What is the keyboard shortcut for copying a file?
+  \item What happens when you press the \key{Delete} key on a selected file?
+\end{reviewqs}
+
+\begin{challenge}
+Create the following folder structure on a computer: \texttt{MyProject > Documents}, \texttt{MyProject > Images}, \texttt{MyProject > Videos}. Inside Documents, create a text file called ``Notes.txt.'' Then copy it to the Images folder and rename the copy to ``ImageNotes.txt.''
+\end{challenge}

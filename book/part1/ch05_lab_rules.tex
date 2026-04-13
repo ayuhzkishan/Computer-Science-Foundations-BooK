@@ -1,0 +1,173 @@
+% ============================================================================
+% Chapter 5: Computer Lab Rules & Safety
+% ============================================================================
+
+\chapter{Computer Lab Rules \& Safety}
+\label{ch:lab-rules}
+
+\begin{objectives}
+  \item List the important rules for using a computer lab safely
+  \item Demonstrate correct sitting posture at a computer desk
+  \item Explain why lab safety is important for health and equipment
+  \item Identify common mistakes students make in a computer lab
+\end{objectives}
+
+\bytetip[tip]{Your computer lab is a special place --- treat it with care, and it (and your body!) will thank you. Let's learn how to be a safe and responsible computer user!}
+
+% ---------------------------------------------------------------
+\section{Why Do We Need Lab Rules?}
+\label{sec:why-rules}
+\index{computer lab!rules}
+
+A computer lab is full of expensive equipment that can be easily damaged. The rules exist to:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=2pt]
+  \item Keep \textbf{you} safe from electrical hazards and health problems
+  \item Keep the \textbf{computers} safe from food spills, rough handling, and viruses
+  \item Make the lab a \textbf{pleasant place} for everyone to work
+\end{itemize}
+
+% ---------------------------------------------------------------
+\section{Correct Sitting Posture}
+\label{sec:posture}
+\index{ergonomics}\index{posture}
+
+Sitting incorrectly at a computer can cause back pain, neck strain, and tired eyes. Here's how to sit properly:
+
+% --- Figure 5.1: Correct Sitting Posture ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.9]
+  % Desk
+  \fill[NavyBlue!10] (2,2.5) rectangle (7,2.8);
+  \fill[NavyBlue!15] (2.5,0) rectangle (2.8,2.5);
+  \fill[NavyBlue!15] (6.7,0) rectangle (7.0,2.5);
+  
+  % Monitor on desk
+  \fill[NavyBlue!20] (3.8,2.8) rectangle (5.8,4.5);
+  \draw[NavyBlue, line width=1pt] (3.8,2.8) rectangle (5.8,4.5);
+  
+  % Chair
+  \fill[FunSky!15] (0.3,1.2) rectangle (2.2,2.2);
+  \fill[FunSky!20] (0.3,2.2) rectangle (0.7,4.5);
+  
+  % Person (simplified stick figure on chair)
+  % Head
+  \fill[NoteOrange!40] (1.5,4.8) circle (0.35);
+  % Torso (sitting)
+  \draw[NavyBlue, line width=2.5pt] (1.5,4.45) -- (1.5,3.0);
+  % Spine highlight
+  \draw[LabGreen, line width=3pt, opacity=0.5] (1.5,4.4) -- (1.5,2.5);
+  % Upper arms
+  \draw[NavyBlue, line width=2pt] (1.5,3.8) -- (2.3,3.2);
+  % Forearms (on desk)
+  \draw[NavyBlue, line width=2pt] (2.3,3.2) -- (3.2,2.9);
+  % Thighs (horizontal)
+  \draw[NavyBlue, line width=2.5pt] (1.5,2.5) -- (2.5,2.5);
+  % Lower legs (down to floor)
+  \draw[NavyBlue, line width=2.5pt] (2.5,2.5) -- (2.5,0.3);
+  % Feet
+  \fill[NavyBlue!40] (2.2,0) rectangle (3.0,0.3);
+  
+  % Annotations
+  % Back straight
+  \draw[LabGreen, line width=1.5pt, ->] (0,3.5) -- (1.2,3.5);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=LabGreen, align=right] at (0,3.5) {Back\\straight};
+  
+  % Eyes level with screen top
+  \draw[FunPurple, dashed, line width=1pt] (1.9,4.5) -- (3.8,4.5);
+  \node[above right, font=\scriptsize\sffamily\bfseries, text=FunPurple] at (2.5,4.55) {Eyes level with screen top};
+  
+  % Elbows at 90°
+  \draw[NoteOrange, line width=1pt] (2.0,3.2) arc (0:-90:0.3);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=NoteOrange] at (2.6,3.0) {90\textdegree};
+  
+  % Feet flat
+  \draw[WarnRed, line width=1pt, <->] (3.3,0) -- (3.3,0.3);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=WarnRed] at (3.4,0.15) {Feet flat on floor};
+  
+  % Floor line
+  \draw[NavyBlue!30, line width=1pt] (-0.5,0) -- (7.5,0);
+\end{tikzpicture}
+\caption{Correct sitting posture at a computer desk}
+\label{fig:posture}
+\end{figure}
+
+\begin{warnbox}
+\textbf{Bad posture habits} can cause:
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item Back and neck pain
+  \item Headaches from eye strain
+  \item Wrist pain (from typing at wrong angles)
+  \item Tiredness and difficulty concentrating
+\end{itemize}
+Always sit up straight and take a short break every 30 minutes!
+\end{warnbox}
+
+% ---------------------------------------------------------------
+\section{Lab Rules Everyone Must Follow}
+\label{sec:lab-rules-list}
+\index{computer lab!safety}
+
+% --- Figure 5.2: Lab Rules Infographic ---
+\begin{figure}[H]
+\centering
+\begin{tabularx}{\textwidth}{@{}*{3}{>{\centering\arraybackslash}X}@{}}
+  \begin{tcolorbox}[colback=FunCoral!10, colframe=WarnRed, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunCoral}{\faUtensils}}\\
+    {\bfseries No Food or\\Drinks}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunMint!10, colframe=FunMint, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunMint}{\faVolumeOff}}\\
+    {\bfseries Keep Quiet\\and Focused}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunCoral!10, colframe=FunCoral, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunCoral}{\faBroom}}\\
+    {\bfseries Keep Your\\Area Clean}
+  \end{tcolorbox}
+  \\[10pt] % Spacer between rows
+  \begin{tcolorbox}[colback=FunMint!10, colframe=FunMint, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunMint}{\faPowerOff}}\\
+    {\bfseries Shut Down\\Properly}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunCoral!10, colframe=FunCoral, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunCoral}{\faHandPaper}}\\
+    {\bfseries Wash Hands\\Before Use}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunMint!10, colframe=WarnRed, width=3.5cm, height=2.5cm, valign=center, halign=center, arc=8pt, boxrule=1.2pt]
+    {\LARGE\textcolor{FunMint}{\faPhone}}\\
+    {\bfseries No Personal\\Phones}
+  \end{tcolorbox}
+\end{tabularx}
+\caption{Six essential computer lab rules}
+\label{fig:lab-rules}
+\end{figure}
+
+\begin{warnbox}
+Never force-pull cables or plug in USB drives the wrong way around --- always check the connector shape first! Forcing a cable can damage both the cable and the port permanently.
+\end{warnbox}
+
+\bytetip[warn]{If something goes wrong --- a strange error, a weird noise, or a screen that won't turn on --- \textbf{don't panic!} Tell your teacher immediately. Trying to fix it yourself could make things worse.}
+
+\begin{funfact}
+Some schools in Japan have ``computer lab shoes'' --- students change into clean indoor slippers before entering the lab to keep dust and dirt away from the equipment. It might sound extreme, but dust is one of the biggest enemies of computers!
+\end{funfact}
+
+% ---------------------------------------------------------------
+% End-of-Chapter
+% ---------------------------------------------------------------
+
+\begin{reviewqs}
+  \item List any five rules you should follow in a computer lab.
+  \item Why should you not eat or drink near a computer?
+  \item Describe the correct sitting posture for using a computer.
+  \item What should you do if a computer shows an error or stops working?
+  \item Why is it important to shut down a computer properly instead of just switching it off?
+\end{reviewqs}
+
+\begin{challenge}
+Design a \textbf{lab rules poster} for your computer lab. Include at least 6 rules with a simple icon or drawing for each one. Use bright colours and make it eye-catching enough that visitors would stop and read it!
+\end{challenge}

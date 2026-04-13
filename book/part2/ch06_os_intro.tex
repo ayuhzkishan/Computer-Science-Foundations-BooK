@@ -1,0 +1,159 @@
+% ============================================================================
+% Chapter 6: Introduction to Operating Systems
+% ============================================================================
+
+\chapter{Introduction to Operating Systems}
+\label{ch:os-intro}
+
+\begin{objectives}
+  \item Define what an operating system is and why it is needed
+  \item Explain the key functions of an operating system
+  \item Name popular operating systems used today
+  \item Understand the relationship between hardware, OS, and applications
+\end{objectives}
+
+\bytetip[tip]{An operating system is like the \textbf{manager} of a restaurant. You (the customer) don't talk to the chef (hardware) directly --- the manager (OS) takes your order and makes sure everything runs smoothly!}
+
+% ---------------------------------------------------------------
+\section{What Is an Operating System?}
+\label{sec:what-is-os}
+\index{operating system!definition}
+
+An \hl{operating system} (OS) is the most important software on a computer. It manages all the hardware and software, and provides the interface you see and interact with (like the desktop, icons, and windows).
+
+\begin{theorybox}[Definition: Operating System]
+An \textbf{Operating System (OS)}\index{operating system} is system software that:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=2pt]
+  \item Manages the computer's \textbf{hardware} (CPU, memory, storage, peripherals)
+  \item Provides a \textbf{user interface} (desktop, menus, windows)
+  \item Runs and manages \textbf{application software}
+  \item Handles \textbf{files and folders} on your storage drives
+  \item Provides \textbf{security} (user accounts, passwords, firewall)
+\end{itemize}
+\end{theorybox}
+
+% --- Figure 6.1: OS as a Bridge ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Bottom layer: Hardware
+  \node[draw=NavyBlue, fill=NavyBlue!15, rounded corners=4pt,
+        minimum width=12cm, minimum height=1.5cm, line width=1.5pt,
+        font=\small\bfseries\sffamily, text=NavyBlue] (hw) 
+    {\faMicrochip\ Hardware --- CPU, RAM, Storage, Peripherals};
+  
+  % Middle layer: Operating System
+  \node[draw=ModuleBlue, fill=ModuleBlue!15, rounded corners=4pt,
+        minimum width=13cm, minimum height=1.8cm, line width=2pt,
+        font=\bfseries\sffamily, text=ModuleBlue, above=0.8cm of hw] (os) 
+    {\faWindows\ Operating System --- The Bridge};
+  
+  % Bridge arch decoration
+  \foreach \x in {-4,-2,0,2,4}{
+    \draw[ModuleBlue!30, line width=1pt] 
+      ([xshift=\x cm, yshift=-0.1cm]os.south) arc (180:0:0.5cm and 0.3cm);
+  }
+  
+  % Top layer: Application Software
+  \node[draw=AccentTeal, fill=AccentTeal!12, rounded corners=4pt,
+        minimum width=11cm, minimum height=1.5cm, line width=1.5pt,
+        font=\small\bfseries\sffamily, text=AccentTeal, above=0.8cm of os] (apps) 
+    {\faCode\ Application Software --- Word, Chrome, Games};
+  
+  % Arrows
+  \draw[ModuleBlue, line width=2pt, <->] (hw.north) -- (os.south)
+    node[midway, right, font=\scriptsize\sffamily, text=NavyBlue] {manages};
+  \draw[ModuleBlue, line width=2pt, <->] (os.north) -- (apps.south)
+    node[midway, right, font=\scriptsize\sffamily, text=NavyBlue] {supports};
+  
+  % Label
+  \node[below=0.3cm of hw, font=\scriptsize\sffamily\itshape, text=NavyBlue] 
+    {The OS sits between hardware and apps, managing communication between them.};
+\end{tikzpicture}
+\caption{The operating system acts as a bridge between hardware and applications}
+\label{fig:os-bridge}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{A Brief History of Windows}
+\label{sec:windows-history}
+\index{Windows!history}
+
+Microsoft Windows is the most widely used operating system in the world. Here's how it evolved:
+
+% --- Figure 6.2: Windows Version Timeline ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.85]
+  % Timeline line
+  \draw[NavyBlue, line width=2pt] (0,0) -- (15,0);
+  
+  % Timeline nodes
+  \foreach \x/\ver/\yr/\col/\feat in {
+    0.5/XP/2001/FunSky/{Start menu redesign},
+    3.0/Vista/2007/FunMint/{Visual effects},
+    5.5/7/2009/FunPurple/{Taskbar improved},
+    8.0/8/2012/FunCoral/{Touch \& tiles},
+    10.5/10/2015/ModuleBlue/{Cortana \& Edge},
+    13.5/11/2021/LabGreen/{Centred taskbar}
+  }{
+    \node[timenode=\col] at (\x, 0) {};
+    \node[above=0.4cm, font=\small\bfseries\sffamily, text=\col] at (\x, 0) {Win \ver};
+    \node[below=0.3cm, font=\tiny\sffamily, text=NavyBlue] at (\x, 0) {\yr};
+    \node[below=0.7cm, font=\tiny\sffamily\itshape, text=NavyBlue!70, text width=2cm, align=center] 
+      at (\x, 0) {\feat};
+  }
+\end{tikzpicture}
+\caption{A timeline of major Windows versions}
+\label{fig:windows-timeline}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{Functions of an Operating System}
+\label{sec:os-functions}
+\index{operating system!functions}
+
+% --- Table 6.1: OS Functions Summary ---
+\begin{table}[H]
+\centering
+\caption{Key functions of an operating system}
+\label{tab:os-functions}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{c l X l}
+\toprule
+\rowcolor{HeaderRow}
+ & \textcolor{white}{\textbf{Function}} & \textcolor{white}{\textbf{What the OS Does}} & \textcolor{white}{\textbf{Example}} \\
+\midrule
+\rowcolor{RowLight}
+\faMicrochip & Memory & Manages RAM allocation & Opens Chrome \\
+\rowcolor{RowDark}
+\faHdd & Storage & Reads/writes files & Saves a document \\
+\rowcolor{RowLight}
+\faDesktop & Interface & Shows you the desktop & Icons, Start Menu \\
+\rowcolor{RowDark}
+\faNetworkWired & Network & Connects to the Internet & Wi-Fi management \\
+\rowcolor{RowLight}
+\faLock & Security & Protects against threats & Windows Defender \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\bytetip[fun]{There are many operating systems besides Windows! \textbf{macOS} runs on Apple MacBooks, \textbf{Linux} is free and open-source (used by hackers and scientists), and \textbf{Android} runs on most smartphones. They all do the same basic job but look and feel different.}
+
+\begin{funfact}
+The name ``Windows'' comes from the fact that the operating system displays information in rectangular areas on screen called \textbf{windows}. Before Windows, people used MS-DOS, where you had to type commands in plain text --- no mouse, no icons, no colours! Imagine using a computer with only a blank screen and a blinking cursor. Scary, right?
+\end{funfact}
+
+% ---------------------------------------------------------------
+
+\begin{reviewqs}
+  \item What is an operating system? Write a definition in your own words.
+  \item Name three popular operating systems.
+  \item List four functions of an operating system.
+  \item What was the operating system used before Windows?
+  \item Why is the OS called a ``bridge'' between hardware and software?
+\end{reviewqs}
+
+\begin{challenge}
+Research the history of \textbf{one operating system} (Windows, macOS, Linux, or Android). Write a short paragraph about when it was first released, who created it, and one interesting fact about it. Present your findings to the class!
+\end{challenge}

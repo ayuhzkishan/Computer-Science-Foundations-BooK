@@ -1,0 +1,142 @@
+% ============================================================================
+% Chapter 17: Hardware in Detail
+% ============================================================================
+
+\chapter{Hardware in Detail}
+\label{ch:hardware-detail}
+
+\begin{objectives}
+  \item Understand the internal components of the CPU
+  \item Explain the difference between RAM and ROM
+  \item Describe how the ALU and Control Unit work together
+  \item Compare different types of memory and storage
+\end{objectives}
+
+\bytetip[tip]{Time to look \emph{inside} the computer! We're going to open up the CPU and see what's really going on in there. Don't worry --- no screwdrivers needed!}
+
+\section{Inside the CPU}
+\label{sec:inside-cpu}
+\index{CPU!components}\index{ALU}\index{Control Unit}
+
+The CPU has two main parts that work together:
+
+% --- Figure 17.1: Inside the CPU Block Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % CPU outer box
+  \draw[NavyBlue, line width=2.5pt, rounded corners=8pt] (-0.5,-1.5) rectangle (10.5,4.5);
+  \node[font=\large\bfseries\sffamily, text=NavyBlue, anchor=north west] at (-0.2,4.3) {CPU};
+  
+  % ALU box
+  \node[draw=FunCoral, fill=FunCoral!10, rounded corners=6pt,
+        minimum width=4cm, minimum height=2.5cm, line width=1.5pt,
+        font=\small\sffamily, align=center] (alu) at (2.5,2) {
+    {\Large\faCalculator}\\[3pt]
+    \textbf{ALU}\\
+    {\scriptsize Arithmetic Logic Unit}\\[2pt]
+    {\tiny Does all maths \& logic}
+  };
+  
+  % Control Unit box
+  \node[draw=FunSky, fill=FunSky!10, rounded corners=6pt,
+        minimum width=4cm, minimum height=2.5cm, line width=1.5pt,
+        font=\small\sffamily, align=center] (cu) at (7.5,2) {
+    {\Large\faDirections}\\[3pt]
+    \textbf{Control Unit (CU)}\\[2pt]
+    {\tiny Directs all operations}
+  };
+  
+  % Registers
+  \node[draw=FunPurple, fill=FunPurple!10, rounded corners=4pt,
+        minimum width=8cm, minimum height=0.8cm, line width=1pt,
+        font=\small\sffamily] (reg) at (5,0) {
+    \faMemory\ \textbf{Registers} --- Ultra-fast tiny storage
+  };
+  
+  % RAM outside
+  \node[hwbox, fill=FunMint!10, draw=FunMint, minimum width=3cm] (ram) at (5,-3) {
+    \faDatabase\ \textbf{RAM}\\External Memory
+  };
+  
+  % Arrows between components
+  \draw[FunPurple, line width=1.5pt, <->] (alu.south) -- ([yshift=0.1cm]reg.north -| alu);
+  \draw[FunPurple, line width=1.5pt, <->] (cu.south) -- ([yshift=0.1cm]reg.north -| cu);
+  \draw[NoteOrange, line width=1.5pt, <->] (alu.east) -- (cu.west)
+    node[midway, above, font=\tiny\sffamily\bfseries, text=NoteOrange] {Data \& Control};
+  \draw[FunMint, line width=2pt, <->] (reg.south) -- (ram.north)
+    node[midway, right, font=\tiny\sffamily, text=FunMint] {Data transfer};
+\end{tikzpicture}
+\caption{Inside the CPU: ALU, Control Unit, and Registers}
+\label{fig:inside-cpu}
+\end{figure}
+
+\section{RAM vs ROM}
+\label{sec:ram-rom}
+\index{RAM}\index{ROM}
+
+% --- Figure 17.2: RAM vs ROM Comparison ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % RAM Panel
+  \fill[FunSky!12] (0,0) rectangle (5.5,5.5);
+  \draw[FunSky, line width=2pt] (0,0) rectangle (5.5,5.5);
+  \node[font=\large\bfseries\sffamily, text=FunSky] at (2.75,5) {\faDatabase\ RAM};
+  \node[font=\small\sffamily, text=NavyBlue, align=left, anchor=north west] at (0.3,4.3) {
+    \textcolor{FunSky}{\faAngleRight}\ Volatile\\[3pt]
+    \textcolor{FunSky}{\faAngleRight}\ Data lost when off\\[3pt]
+    \textcolor{FunSky}{\faAngleRight}\ Temporary storage\\[3pt]
+    \textcolor{FunSky}{\faAngleRight}\ Fast read/write\\[3pt]
+    \textcolor{FunSky}{\faAngleRight}\ Example: 8 GB RAM
+  };
+  
+  % ROM Panel
+  \fill[FunPurple!10] (6.5,0) rectangle (12,5.5);
+  \draw[FunPurple, line width=2pt] (6.5,0) rectangle (12,5.5);
+  \node[font=\large\bfseries\sffamily, text=FunPurple] at (9.25,5) {\faLock\ ROM};
+  \node[font=\small\sffamily, text=NavyBlue, align=left, anchor=north west] at (6.8,4.3) {
+    \textcolor{FunPurple}{\faAngleRight}\ Non-volatile\\[3pt]
+    \textcolor{FunPurple}{\faAngleRight}\ Data stays forever\\[3pt]
+    \textcolor{FunPurple}{\faAngleRight}\ Permanent instructions\\[3pt]
+    \textcolor{FunPurple}{\faAngleRight}\ Read-only (mostly)\\[3pt]
+    \textcolor{FunPurple}{\faAngleRight}\ Example: BIOS chip
+  };
+  
+  % Center overlap
+  \node[draw=NavyBlue, fill=white, rounded corners=4pt, 
+        font=\scriptsize\sffamily, text=NavyBlue, align=center,
+        inner sep=4pt] at (6, 2.75) {Both are\\memory\\inside the\\computer};
+\end{tikzpicture}
+\caption{RAM vs ROM --- two types of memory with very different jobs}
+\label{fig:ram-vs-rom}
+\end{figure}
+
+\begin{theorybox}[RAM vs ROM Quick Summary]
+\begin{tabular}{lll}
+  & \textbf{RAM} & \textbf{ROM} \\
+  \midrule
+  Full name & Random Access Memory & Read-Only Memory \\
+  Volatile? & Yes (loses data) & No (keeps data) \\
+  Speed & Very fast & Slower than RAM \\
+  Used for & Running programs & Boot instructions \\
+\end{tabular}
+\end{theorybox}
+
+\bytetip[tip]{Here's an easy way to remember: \textbf{RAM} is like your desk --- it holds what you're currently working on. \textbf{ROM} is like a recipe book --- the information is permanent and doesn't change.}
+
+\begin{funfact}
+The first computers had only a few \textbf{kilobytes} of RAM. Today, even budget smartphones have 4--6 GB of RAM --- that's over a million times more! Modern gaming PCs can have 64 GB or even 128 GB of RAM.
+\end{funfact}
+
+\begin{reviewqs}
+  \item What are the two main parts inside the CPU?
+  \item What does ALU stand for and what does it do?
+  \item What is the difference between RAM and ROM?
+  \item What are registers in a CPU?
+  \item Why is RAM called ``volatile'' memory?
+\end{reviewqs}
+
+\begin{challenge}
+Check your school computer's RAM: press \key{Windows}+\key{I} $\rightarrow$ System $\rightarrow$ About. How much RAM does it have? Research online: how much RAM does a typical smartphone have? Compare the two and write three sentences about your findings.
+\end{challenge}

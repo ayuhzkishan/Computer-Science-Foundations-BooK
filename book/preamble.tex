@@ -1,0 +1,476 @@
+% ============================================================================
+% preamble.tex — Foundations of Computer Science
+% Complete Preamble: packages, colors, environments, commands, typography
+% ============================================================================
+
+% --- Essential Packages ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=1in, inner=1.3in, outer=0.9in, top=1.1in, bottom=1.1in]{geometry}
+\usepackage{ifthen}
+
+% --- Color & Graphics ---
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{
+  shapes.geometric, shapes.callouts, shapes.symbols,
+  arrows.meta, positioning, fit, backgrounds,
+  decorations.pathmorphing, decorations.text,
+  shadows.blur, patterns, calc, mindmap, trees,
+  matrix, chains, shapes.multipart
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgf-pie}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{hhline}
+
+% --- Lists ---
+\usepackage{enumitem}
+\usepackage{pifont}
+
+% --- Code / Shortcuts ---
+\usepackage{listings}
+\usepackage{fancyvrb}
+
+% --- Headers / Footers ---
+\usepackage{fancyhdr}
+
+% --- Boxes / Call-outs ---
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, listings, poster, fitting, hooks}
+
+% --- Index ---
+\usepackage{makeidx}
+\makeindex
+
+% --- Glossaries ---
+\usepackage[toc, nonumberlist]{glossaries}
+\makeglossaries
+
+% --- Chapter / Section Styling ---
+\usepackage[explicit]{titlesec}
+\usepackage{titletoc}
+
+% --- Fonts ---
+\usepackage{helvet} % Using standard helvet as sourcesanspro package failed to install in MiKTeX
+% \usepackage{sourcesanspro}
+% \usepackage{sourcecodepro}
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- Caption ---
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{font=small, labelfont={bf,color=NavyBlue}, skip=4pt}
+
+% --- Icons ---
+\usepackage{fontawesome5}
+
+% --- Layout helpers ---
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{needspace}
+\usepackage{afterpage}
+\usepackage{changepage}
+\usepackage{contour}
+\usepackage{soul}
+\usepackage{cancel}
+\usepackage{qrcode}
+
+% --- Hyperlinks & PDF Metadata (load last among most packages) ---
+\usepackage[colorlinks=true, linkcolor=NavyBlue, urlcolor=AccentTeal,
+            citecolor=NavyBlue, pdftitle={Foundations of Computer Science},
+            pdfauthor={Computer Science Department},
+            bookmarks=true, bookmarksopen=true]{hyperref}
+
+
+% ============================================================================
+% COLOR PALETTE
+% ============================================================================
+
+% --- Primary Palette ---
+\definecolor{ModuleBlue}{HTML}{1A73E8}
+\definecolor{LabGreen}{HTML}{1E8449}
+\definecolor{NoteOrange}{HTML}{E67E22}
+\definecolor{WarnRed}{HTML}{C0392B}
+\definecolor{NavyBlue}{HTML}{1B3A6B}
+\definecolor{AccentTeal}{HTML}{00897B}
+\definecolor{HeaderBg}{HTML}{EBF5FB}
+\definecolor{ShadeGray}{HTML}{F2F3F4}
+
+% --- Teen-Friendly Accent Colors ---
+\definecolor{FunPurple}{HTML}{8E44AD}
+\definecolor{FunPink}{HTML}{E91E8C}
+\definecolor{FunYellow}{HTML}{F4D03F}
+\definecolor{FunCoral}{HTML}{FF6B6B}
+\definecolor{FunMint}{HTML}{48C9B0}
+\definecolor{FunSky}{HTML}{5DADE2}
+
+% --- Part Colors ---
+\definecolor{PartColor1}{HTML}{1A73E8}
+\definecolor{PartColor2}{HTML}{1E8449}
+\definecolor{PartColor3}{HTML}{8E44AD}
+\definecolor{PartColor4}{HTML}{E67E22}
+\definecolor{PartColor5}{HTML}{C0392B}
+\definecolor{PartColor6}{HTML}{00897B}
+\definecolor{PartColor7}{HTML}{E91E8C}
+\definecolor{PartColor8}{HTML}{1B3A6B}
+
+% --- Table Row Alternating ---
+\definecolor{RowLight}{HTML}{EBF5FB}
+\definecolor{RowDark}{HTML}{D6EAF8}
+\definecolor{HeaderRow}{HTML}{1A73E8}
+
+
+% ============================================================================
+% TYPOGRAPHY & CHAPTER STYLING
+% ============================================================================
+
+% --- Chapter Title Style (large colored banner) ---
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries\sffamily}
+  {}
+  {0pt}
+  {%
+    \begin{tikzpicture}[remember picture]
+      \fill[ModuleBlue] (0,0) rectangle (\linewidth, 1.8cm);
+      \node[anchor=west, text=white, font=\huge\bfseries\sffamily]
+        at (0.3cm, 0.9cm) {\thechapter\quad};
+      \node[anchor=west, text=white, font=\huge\bfseries\sffamily]
+        at (1.8cm, 0.9cm) {#1};
+    \end{tikzpicture}%
+    \vspace{-0.5cm}
+  }
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+% --- Section Style ---
+\titleformat{\section}
+  {\large\bfseries\sffamily\color{NavyBlue}}
+  {\thesection}{1em}{#1}
+  [{\color{ModuleBlue}\titlerule[1.5pt]}]
+
+% --- Subsection Style ---
+\titleformat{\subsection}
+  {\normalsize\bfseries\sffamily\color{AccentTeal}}
+  {\thesubsection}{1em}{#1}
+
+% --- Page Headers ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\sffamily\textcolor{NavyBlue}{\leftmark}}
+\fancyhead[RO]{\small\sffamily\textcolor{NavyBlue}{\rightmark}}
+\fancyfoot[C]{\small\sffamily\textcolor{NavyBlue}{\thepage}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{ModuleBlue}\leaders\hrule height\headrulewidth\hfill}}
+
+
+% ============================================================================
+% MASCOT: BYTE THE ROBOT
+% ============================================================================
+
+\newcommand{\bytetip}[2][tip]{%
+  \begin{tcolorbox}[
+    enhanced, breakable,
+    colback=FunSky!15, colframe=FunSky,
+    arc=8pt,
+    left=2.5cm, right=6pt, top=6pt, bottom=6pt,
+    overlay={
+      \begin{scope}[shift={($(frame.west)+(1.2cm,0)$)}]
+        % Robot head
+        \fill[white] (-0.55,-0.65) rectangle (0.55,0.65);
+        \draw[FunSky, line width=1.5pt, rounded corners=3pt]
+          (-0.55,-0.65) rectangle (0.55,0.65);
+        % Eyes
+        \fill[NavyBlue] (-0.22,0.15) circle (0.1);
+        \fill[NavyBlue] (0.22,0.15) circle (0.1);
+        % Mouth varies by mood
+        \ifthenelse{\equal{#1}{warn}}{%
+          \draw[WarnRed, line width=1.5pt] (-0.25,-0.2) -- (0.25,-0.2);
+        }{%
+          \draw[LabGreen, line width=1.5pt]
+            (-0.25,-0.25) .. controls (-0.1,-0.05) and (0.1,-0.05) .. (0.25,-0.25);
+        }
+        % Antenna
+        \draw[NavyBlue, line width=1pt] (0,0.65) -- (0,0.9);
+        \fill[FunPink] (0,0.9) circle (0.07);
+        % Label
+        \node[font=\tiny\bfseries\sffamily, text=NavyBlue] at (0,-0.85) {BYTE};
+      \end{scope}
+    }
+  ]
+  \small\sffamily #2
+  \end{tcolorbox}
+}
+
+
+% ============================================================================
+% CUSTOM ENVIRONMENTS
+% ============================================================================
+
+% --- Theory Box ---
+\newtcolorbox{theorybox}[1][]{
+  enhanced, breakable,
+  colback=HeaderBg, colframe=ModuleBlue, arc=6pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  boxed title style={colback=ModuleBlue, arc=4pt},
+  title={\faBook\ #1},
+  left=8pt, right=8pt, top=10pt, bottom=8pt,
+  shadow={2mm}{-2mm}{0mm}{black!15}
+}
+
+% --- Fun Fact Box ---
+\newtcolorbox{funfact}{
+  enhanced, breakable,
+  colback=FunYellow!20, colframe=FunYellow!80!black, arc=8pt,
+  fonttitle=\bfseries\sffamily,
+  title={\faStar\ Did You Know?},
+  left=8pt, right=8pt
+}
+
+% --- Lab Step Box ---
+\newtcolorbox{labstep}[1][]{
+  enhanced, breakable,
+  colback=LabGreen!5, colframe=LabGreen, arc=6pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  boxed title style={colback=LabGreen, arc=4pt},
+  title={\faTerminal\ #1},
+  left=8pt, right=8pt, top=10pt, bottom=8pt
+}
+
+% --- Note Box ---
+\newtcolorbox{notebox}{
+  enhanced, breakable,
+  colback=NoteOrange!10, colframe=NoteOrange, arc=6pt,
+  fonttitle=\bfseries\sffamily,
+  title={\faInfoCircle\ Note},
+  left=8pt, right=8pt
+}
+
+% --- Warning Box ---
+\newtcolorbox{warnbox}{
+  enhanced, breakable,
+  colback=WarnRed!8, colframe=WarnRed, arc=6pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  boxed title style={colback=WarnRed},
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  title={\faExclamationTriangle\ Warning!},
+  left=8pt, right=8pt, top=10pt
+}
+
+% --- Shortcut Box ---
+\newtcolorbox{shortcutbox}{
+  enhanced, breakable,
+  colback=FunPurple!8, colframe=FunPurple, arc=6pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  boxed title style={colback=FunPurple},
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  title={\faKeyboard\ Keyboard Shortcuts},
+  left=8pt, right=8pt, top=10pt
+}
+
+% --- Try It Yourself Box ---
+\newtcolorbox{tryit}{
+  enhanced, breakable,
+  colback=FunMint!15, colframe=FunMint!80!black, arc=8pt,
+  fonttitle=\bfseries\sffamily,
+  title={\faLightbulb\ Try It Yourself!},
+  left=8pt, right=8pt
+}
+
+% --- Real World Connect Box ---
+\newtcolorbox{realworld}{
+  enhanced, breakable,
+  colback=FunCoral!10, colframe=FunCoral, arc=6pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  boxed title style={colback=FunCoral},
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  title={\faGlobe\ Real World Connection},
+  left=8pt, right=8pt, top=10pt
+}
+
+% --- Mini Challenge ---
+\newtcolorbox{challenge}{
+  enhanced, breakable,
+  colback=FunPink!10, colframe=FunPink, arc=8pt,
+  fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+  boxed title style={colback=FunPink},
+  attach boxed title to top left={yshift=-2mm, xshift=8mm},
+  title={\faTrophy\ Challenge Task},
+  left=8pt, right=8pt, top=10pt
+}
+
+% --- Keyboard Key Style ---
+\newcommand{\key}[1]{%
+  \tikz[baseline=(K.base)]{
+    \node[draw=NavyBlue, fill=ShadeGray, rounded corners=2pt,
+          inner sep=2pt, minimum height=16pt, drop shadow,
+          font=\ttfamily\small\bfseries] (K) {#1};
+  }%
+}
+
+% --- Learning Objectives ---
+\newenvironment{objectives}{%
+  \begin{tcolorbox}[
+    enhanced, colback=ModuleBlue!8, colframe=ModuleBlue, arc=8pt,
+    title={\faCheckCircle\ Learning Objectives},
+    fonttitle=\bfseries\sffamily\color{white}, coltitle=white,
+    boxed title style={colback=ModuleBlue},
+    attach boxed title to top left={yshift=-2mm, xshift=8mm},
+    top=10pt, left=8pt, right=8pt
+  ]
+  \begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}},
+                  itemsep=2pt]
+}{%
+  \end{itemize}\end{tcolorbox}\vspace{4pt}
+}
+
+% --- Review Questions ---
+\newenvironment{reviewqs}{%
+  \vspace{6pt}
+  \begin{tcolorbox}[
+    enhanced, colback=FunSky!10, colframe=FunSky!80!black, arc=8pt,
+    title={\faQuestionCircle\ Review Questions},
+    fonttitle=\bfseries\sffamily, top=10pt, left=8pt
+  ]
+  \begin{enumerate}[label={\textbf{\textcolor{NavyBlue}{Q\arabic*.}}},
+                    leftmargin=*, itemsep=4pt]
+}{%
+  \end{enumerate}\end{tcolorbox}
+}
+
+% --- Lab Activity Environment ---
+\newenvironment{labactivity}[3]{%
+  \needspace{6\baselineskip}
+  \begin{tcolorbox}[
+    enhanced, breakable,
+    colback=LabGreen!4, colframe=LabGreen, arc=8pt,
+    title={\faFlask\ \textbf{Practical #1:} #2 \hfill \faClock\ #3},
+    fonttitle=\sffamily\color{white}, coltitle=white,
+    boxed title style={colback=LabGreen, arc=4pt},
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    top=12pt, left=8pt, right=8pt, bottom=8pt
+  ]
+}{%
+  \end{tcolorbox}\vspace{8pt}
+}
+
+% --- Step Circle (inline numbered circle for lab steps) ---
+\newcommand{\stepcircle}[1]{%
+  \tikz[baseline=-0.6ex]\node[circle, draw=LabGreen, fill=LabGreen, text=white,
+    font=\bfseries\sffamily\small, minimum size=0.6cm, inner sep=0]{#1};%
+}
+
+% --- Well Done Badge ---
+\newcommand{\welldone}{%
+  \begin{center}
+  \begin{tikzpicture}
+    \node[star, star points=5, star point ratio=2.2, draw=FunYellow!80!black,
+          fill=FunYellow, minimum size=2cm, font=\bfseries\sffamily\small,
+          text=NavyBlue, drop shadow, align=center] {Practical\\Complete!};
+  \end{tikzpicture}
+  \end{center}
+}
+
+% --- You Will Need Icon Strip ---
+\newcommand{\youwillneed}[1]{%
+  \begin{center}
+  \begin{tikzpicture}
+    \node[rounded corners=6pt, fill=HeaderBg, draw=ModuleBlue, 
+          inner sep=8pt, font=\small\sffamily] 
+      {\faClipboardList\ \textbf{You Will Need:}\quad #1};
+  \end{tikzpicture}
+  \end{center}\vspace{4pt}
+}
+
+
+% ============================================================================
+% PART PAGE DESIGN
+% ============================================================================
+
+\newcommand{\partpage}[5]{%
+  \clearpage
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture, overlay]
+    % Full background
+    \fill[#1] (current page.south west) rectangle (current page.north east);
+    \fill[#1!70!black, opacity=0.5]
+      (current page.south west) -- ++(0, 8cm) --
+      (current page.north east) -- cycle;
+    % Decorative circles
+    \foreach \r/\op in {6/0.08, 9/0.05, 12/0.03}{
+      \fill[white, opacity=\op]
+        ($(current page.north east)+(-3cm,-3cm)$) circle (\r cm);
+    }
+    % Part number watermark
+    \node[text=white, opacity=0.15, font=\fontsize{180}{180}\selectfont\bfseries]
+      at ($(current page.center)+(4cm, 0)$) {#2};
+    % "Part" label
+    \node[text=white, font=\Large\sffamily, opacity=0.9]
+      at ($(current page.center)+(-2cm, 3.5cm)$) {PART #2};
+    % Title
+    \node[text=white, font=\Huge\bfseries\sffamily, align=left,
+          text width=14cm, anchor=west]
+      at ($(current page.west)+(2cm, 0.5cm)$) {#3};
+    % Tagline
+    \node[text=white!80, font=\large\sffamily\itshape, align=left,
+          text width=12cm, anchor=west]
+      at ($(current page.west)+(2cm, -1.5cm)$) {#4};
+    % Bottom strip
+    \fill[white, opacity=0.1]
+      (current page.south west) rectangle ++(21cm, 2.5cm);
+    \node[text=white, font=\sffamily\small]
+      at ($(current page.south)+(0, 1.2cm)$) {#5};
+  \end{tikzpicture}
+  \clearpage
+}
+
+% ============================================================================
+% ADDITIONAL TIKZ STYLES (used by various chapters)
+% ============================================================================
+
+% --- Timeline node (Chapter 6) ---
+\tikzset{
+  timenode/.style={
+    circle, draw=#1, fill=#1, minimum size=8pt, inner sep=0pt
+  }
+}
+
+% --- Label arrow (Chapters 7, 15) ---
+\tikzset{
+  labelarrow/.style={
+    ->, line width=1.5pt, color=#1, >=Stealth[round]
+  }
+}
+
+% --- Step circle node (used in lab step maps) ---
+\tikzset{
+  stepcircle node/.style={
+    circle, draw=LabGreen, fill=LabGreen, text=white,
+    font=\bfseries\sffamily\small, minimum size=0.55cm, inner sep=0pt
+  }
+}
+
+% --- Rounded rectangle shape import ---
+\usetikzlibrary{shapes.misc}
+
+% --- Strikethrough command (if soul doesn't provide \sout) ---
+\usepackage[normalem]{ulem}
+
+% --- Highlight setup for soul ---
+\sethlcolor{FunYellow!40}
+
+% --- Smart diagram (optional; silently skip if not installed) ---
+\IfFileExists{smartdiagram.sty}{\usepackage{smartdiagram}}{}

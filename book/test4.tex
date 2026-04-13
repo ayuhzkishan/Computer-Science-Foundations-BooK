@@ -1,0 +1,18 @@
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\input{preamble}
+\input{assets/tikz_styles}
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={
+    draw=#1, fill=#1!8, rounded corners=10pt,
+    minimum width=3.4cm, minimum height=4cm,
+    line width=1.5pt, align=center, font=\small\sffamily
+  }
+]
+  \node[card=PartColor1] (desktop) at (0,0) {
+    {\Huge\textcolor{PartColor1}{\faDesktop}}\\[6pt]
+    \textbf{Desktop}\\[4pt]
+    {\footnotesize Stays on a desk.\\Powerful \& upgradeable.}
+  };
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,135 @@
+% ============================================================================
+% Chapter 23: Introduction to MS Word
+% ============================================================================
+\chapter{Introduction to MS Word}
+\label{ch:word-intro}
+
+\begin{objectives}
+  \item Open MS Word and identify parts of the Word window
+  \item Create, save, and open a document
+  \item Understand the Ribbon, Quick Access Toolbar, and Status Bar
+  \item Use basic text entry and editing features
+\end{objectives}
+
+\bytetip[tip]{MS Word is the world's most popular word processor. Whether it's a school essay, a letter, or a poster --- Word can handle it all. Let's get started!}
+
+\section{The MS Word Window}
+\label{sec:word-window}
+\index{MS Word!interface}
+
+% --- Figure 23.1: MS Word Window Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.7]
+  % Outer frame
+  \draw[NavyBlue, line width=2pt, rounded corners=3pt] (0,0) rectangle (16,11);
+  
+  % Title Bar
+  \fill[NavyBlue!80] (0.1,10.2) rectangle (15.9,11);
+  \node[text=white, font=\tiny\sffamily] at (8,10.6) {Document1 --- Microsoft Word};
+  
+  % Tabs
+  \fill[ModuleBlue!20] (0.1,9.4) rectangle (15.9,10.2);
+  \foreach \x/\t in {1.5/File, 3/Home, 4.8/Insert, 6.8/Design, 8.5/Layout, 10.5/References, 12.8/View}{
+    \node[font=\tiny\sffamily\bfseries, text=NavyBlue] at (\x, 9.8) {\t};
+  }
+  
+  % Ribbon
+  \fill[HeaderBg] (0.1,7.8) rectangle (15.9,9.4);
+  \node[font=\tiny\sffamily, text=NavyBlue!60] at (4,8.6) {\faBold\ \faItalic\ \faUnderline\quad \faFont\quad \faAlignLeft\ \faAlignCenter\ \faAlignRight};
+  
+  % Ruler
+  \fill[ShadeGray] (0.8,7.4) rectangle (15.2,7.8);
+  
+  % Document area
+  \fill[white] (1.5,1.2) rectangle (14.5,7.4);
+  \node[font=\small\sffamily, text=NavyBlue!30] at (8,4.3) {Your document goes here};
+  \draw[NavyBlue!30, line width=0.5pt] (3,6.5) -- (12,6.5);
+  \draw[NavyBlue!20, line width=0.5pt] (3,6.0) -- (11,6.0);
+  \draw[NavyBlue!20, line width=0.5pt] (3,5.5) -- (12,5.5);
+  
+  % Status Bar
+  \fill[ShadeGray] (0.1,0) rectangle (15.9,1.0);
+  \node[font=\tiny\sffamily, text=NavyBlue, anchor=west] at (0.5,0.5) {Page 1 of 1\quad Words: 0};
+  \node[font=\tiny\sffamily, text=NavyBlue, anchor=east] at (15.5,0.5) {100\%\quad \faSearchPlus};
+  
+  % Labels
+  \draw[FunCoral, line width=1pt, ->] (-1.5,10.6) -- (0,10.6);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunCoral] at (-1.5,10.6) {Title Bar};
+  
+  \draw[FunPurple, line width=1pt, ->] (-1.5,9.8) -- (0,9.8);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunPurple] at (-1.5,9.8) {Tabs};
+  
+  \draw[ModuleBlue, line width=1pt, ->] (-1.5,8.6) -- (0,8.6);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=ModuleBlue] at (-1.5,8.6) {Ribbon};
+  
+  \draw[LabGreen, line width=1pt, ->] (-1.5,7.6) -- (0.7,7.6);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=LabGreen] at (-1.5,7.6) {Ruler};
+  
+  \draw[NoteOrange, line width=1pt, ->] (-1.5,4.3) -- (1.4,4.3);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=NoteOrange, align=center] at (-1.5,4.3) {Document\\Area};
+  
+  \draw[FunSky, line width=1pt, ->] (-1.5,0.5) -- (0,0.5);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunSky] at (-1.5,0.5) {Status Bar};
+\end{tikzpicture}
+\caption{The MS Word window with all parts labelled}
+\label{fig:word-window}
+\end{figure}
+
+\section{Creating and Saving Documents}
+\label{sec:word-create-save}
+\index{MS Word!save}
+
+% --- Figure 23.2: File Operations Quick Reference Cards ---
+\begin{figure}[H]
+\centering
+\begin{tabularx}{\textwidth}{@{}*{4}{>{\centering\arraybackslash}X}@{}}
+  \begin{tcolorbox}[colback=ModuleBlue!8, colframe=ModuleBlue, width=3cm, height=2.2cm, valign=center, halign=center, arc=6pt]
+    {\Large\faFile}\vspace{2pt}\\
+    \textbf{New}\vspace{2pt}\\
+    \key{Ctrl}+\key{N}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=LabGreen!8, colframe=LabGreen, width=3cm, height=2.2cm, valign=center, halign=center, arc=6pt]
+    {\Large\faFolderOpen}\vspace{2pt}\\
+    \textbf{Open}\vspace{2pt}\\
+    \key{Ctrl}+\key{O}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=NoteOrange!8, colframe=NoteOrange, width=3cm, height=2.2cm, valign=center, halign=center, arc=6pt]
+    {\Large\faSave}\vspace{2pt}\\
+    \textbf{Save}\vspace{2pt}\\
+    \key{Ctrl}+\key{S}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunPurple!8, colframe=FunPurple, width=3cm, height=2.2cm, valign=center, halign=center, arc=6pt]
+    {\Large\faSave}\vspace{2pt}\\
+    \textbf{Save As}\vspace{2pt}\\
+    \key{F12}
+  \end{tcolorbox}
+\end{tabularx}
+\caption{Four essential file operations in MS Word}
+\label{fig:word-file-ops}
+\end{figure}
+
+\begin{notebox}
+\textbf{Save} (\key{Ctrl}+\key{S}) saves changes to the current file. \textbf{Save As} (\key{F12}) lets you save a copy with a different name or in a different location. Use Save As when you want to keep the original AND create a modified version.
+\end{notebox}
+
+\bytetip[warn]{Get into the habit of pressing \key{Ctrl}+\key{S} every few minutes! There's nothing worse than losing 30 minutes of work because the power went out or the computer froze.}
+
+\begin{funfact}
+Microsoft Word was first released in 1983 as ``Multi-Tool Word'' for the Xerox ALTO. Its original price was \textbf{\$375} (about \$1,100 in today's money). Today, you can use Word for free online at office.com!
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name six parts of the MS Word window.
+  \item What is the difference between Save and Save As?
+  \item What keyboard shortcut opens a new document?
+  \item Where is the Ribbon located and what does it contain?
+  \item How do you open an existing Word document?
+\end{reviewqs}
+
+\begin{challenge}
+Open MS Word and create a document about yourself. Include your name, school, class, hobbies, and favourite subject. Save it as ``AboutMe.docx'' in your Documents folder. Then use \textbf{Save As} to save another copy called ``AboutMe\_Backup.docx.''
+\end{challenge}

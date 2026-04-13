@@ -1,0 +1,167 @@
+% ============================================================================
+% main.tex — Foundations of Computer Science
+% Master Document: compile this file with pdflatex -shell-escape
+% ============================================================================
+
+\documentclass[12pt, a4paper, twoside, openright]{book}
+
+% --- Load complete preamble ---
+\input{preamble}
+
+% --- Load global TikZ styles ---
+\input{assets/tikz_styles}
+
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% FRONT MATTER
+% ============================================================================
+\frontmatter
+
+% Title page
+\input{frontmatter/titlepage}
+
+% Preface
+\input{frontmatter/preface}
+
+% How to use this book
+\input{frontmatter/howto}
+
+% Table of Contents
+\tableofcontents
+\clearpage
+
+
+% ============================================================================
+% MAIN MATTER
+% ============================================================================
+\mainmatter
+
+% ============================================================================
+% PART I — Getting Started with Computers
+% ============================================================================
+\input{part1/partpage}
+\part{Getting Started with Computers}
+
+\input{part1/ch01_intro}
+\input{part1/ch02_parts}
+\input{part1/ch03_types}
+\input{part1/ch04_software}
+\input{part1/ch05_lab_rules}
+\input{part1/ch_lab1}
+
+
+% ============================================================================
+% PART II — Windows Operating System
+% ============================================================================
+\input{part2/partpage}
+\part{Windows Operating System}
+
+\input{part2/ch06_os_intro}
+\input{part2/ch07_startup}
+\input{part2/ch08_desktop}
+\input{part2/ch09_files}
+\input{part2/ch10_apps}
+\input{part2/ch11_control_panel}
+\input{part2/ch12_storage}
+\input{part2/ch13_internet_win}
+\input{part2/ch14_security}
+\input{part2/ch15_troubleshoot}
+\input{part2/ch_lab2}
+
+
+% ============================================================================
+% PART III — Computer Basics and Shortcuts
+% ============================================================================
+\input{part3/partpage}
+\part{Computer Basics and Shortcuts}
+
+\input{part3/ch16_advanced}
+\input{part3/ch17_hardware}
+\input{part3/ch18_software}
+\input{part3/ch19_os}
+\input{part3/ch20_files_adv}
+\input{part3/ch21_keyboard}
+\input{part3/ch22_shortcuts}
+\input{part3/ch_lab3}
+
+
+% ============================================================================
+% PART IV — Microsoft Word
+% ============================================================================
+\input{part4/partpage}
+\part{Microsoft Word}
+
+\input{part4/ch23_word_intro}
+\input{part4/ch24_word_editing}
+\input{part4/ch25_word_format}
+\input{part4/ch26_word_insert}
+\input{part4/ch27_word_layout}
+\input{part4/ch_lab4}
+
+
+% ============================================================================
+% PART V — Microsoft Excel
+% ============================================================================
+\input{part5/partpage}
+\part{Microsoft Excel}
+
+\input{part5/ch28_excel_intro}
+\input{part5/ch29_excel_worksheets}
+\input{part5/ch30_excel_format}
+\input{part5/ch31_excel_formulas}
+\input{part5/ch32_excel_charts}
+\input{part5/ch_lab5}
+
+
+% ============================================================================
+% PART VI — Microsoft PowerPoint
+% ============================================================================
+\input{part6/partpage}
+\part{Microsoft PowerPoint}
+
+\input{part6/ch33_ppt_intro}
+\input{part6/ch34_ppt_design}
+\input{part6/ch35_ppt_anim}
+\input{part6/ch_lab6}
+
+
+% ============================================================================
+% PART VII — The Internet and the Web
+% ============================================================================
+\input{part7/partpage}
+\part{The Internet and the Web}
+
+\input{part7/ch36_internet}
+\input{part7/ch37_browsing}
+\input{part7/ch38_email}
+\input{part7/ch39_safety}
+\input{part7/ch_lab7}
+
+
+% ============================================================================
+% PART VIII — Review, Projects, and Beyond
+% ============================================================================
+\input{part8/partpage}
+\part{Review, Projects, and Beyond}
+
+\input{part8/ch40_revision1}
+\input{part8/ch41_revision2}
+\input{part8/ch42_projects}
+\input{part8/ch43_future}
+
+
+% ============================================================================
+% BACK MATTER
+% ============================================================================
+\backmatter
+
+% Glossary
+\input{backmatter/glossary}
+
+% Index
+\input{backmatter/index}
+
+
+\end{document}

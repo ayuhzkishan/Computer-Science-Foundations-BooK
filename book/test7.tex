@@ -1,0 +1,15 @@
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={
+    draw=black, align=center
+  }
+]
+  \node[card] (desktop) at (0,0) {
+    {\Huge A}\\[6pt]
+    \textbf{Desktop}\\[4pt]
+    {\footnotesize Stays}
+  };
+\end{tikzpicture}
+\end{document}

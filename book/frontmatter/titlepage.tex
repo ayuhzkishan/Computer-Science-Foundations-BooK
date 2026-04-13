@@ -1,0 +1,104 @@
+% ============================================================================
+% titlepage.tex — Full-Page TikZ Title Page
+% ============================================================================
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  % --- Background ---
+  \fill[NavyBlue] (current page.south west) rectangle (current page.north east);
+
+  % --- Top decorative band ---
+  \fill[ModuleBlue] (current page.north west) rectangle
+    ([yshift=-4cm]current page.north east);
+
+  % --- Circuit board decorative pattern ---
+  \foreach \x in {1,2,...,20}{
+    \foreach \y in {1,2,3}{
+      \fill[white, opacity=0.05]
+        ([xshift=\x cm - 0.5cm, yshift=-\y cm]current page.north west) circle (2pt);
+    }
+  }
+
+  % --- Decorative circles top-right ---
+  \foreach \r/\op in {5/0.06, 8/0.04, 11/0.02}{
+    \fill[white, opacity=\op]
+      ([xshift=-3cm, yshift=-3cm]current page.north east) circle (\r cm);
+  }
+
+  % --- Bottom accent strip ---
+  \fill[AccentTeal] (current page.south west) rectangle
+    ([yshift=2cm]current page.south east);
+
+  % --- Book title ---
+  \node[text=white, font=\fontsize{36}{42}\selectfont\bfseries\sffamily,
+        align=center, text width=16cm]
+    at ([yshift=4cm]current page.center)
+    {Foundations of\\Computer Science};
+
+  % --- Subtitle ---
+  \node[text=FunMint, font=\Large\sffamily\itshape]
+    at ([yshift=1.8cm]current page.center)
+    {A Complete Theory \& Lab Manual};
+
+  % --- Author ---
+  \node[text=white!80, font=\large\sffamily]
+    at ([yshift=0.5cm]current page.center)
+    {Computer Science Department};
+
+  % --- Year ---
+  \node[text=white!60, font=\normalsize\sffamily]
+    at ([yshift=-0.3cm]current page.center)
+    {\the\year\ Edition};
+
+  % --- Large Byte Mascot ---
+  \begin{scope}[shift={([xshift=4cm, yshift=-2.5cm]current page.center)}]
+    % Robot body
+    \fill[FunSky!30] (-1.2,-1.5) rectangle (1.2,1.5);
+    \draw[FunSky, line width=3pt, rounded corners=6pt]
+      (-1.2,-1.5) rectangle (1.2,1.5);
+    % Eyes
+    \fill[white] (-0.45,0.4) circle (0.28);
+    \fill[white] (0.45,0.4) circle (0.28);
+    \fill[NavyBlue] (-0.45,0.4) circle (0.18);
+    \fill[NavyBlue] (0.45,0.4) circle (0.18);
+    \fill[white] (-0.38,0.46) circle (0.06);
+    \fill[white] (0.52,0.46) circle (0.06);
+    % Smile
+    \draw[LabGreen, line width=2.5pt]
+      (-0.5,-0.3) .. controls (-0.2,0.15) and (0.2,0.15) .. (0.5,-0.3);
+    % Antenna
+    \draw[NavyBlue, line width=2pt] (0,1.5) -- (0,2.1);
+    \fill[FunPink] (0,2.1) circle (0.15);
+    % Arms
+    \draw[FunSky, line width=2.5pt, rounded corners=3pt]
+      (-1.2,0.2) -- (-1.8,-0.3) -- (-1.6,-0.8);
+    \draw[FunSky, line width=2.5pt, rounded corners=3pt]
+      (1.2,0.2) -- (1.8,0) -- (2.0,0.5);
+    % Wave hand
+    \fill[FunSky!60] (2.0,0.5) circle (0.18);
+    % Label
+    \node[font=\small\bfseries\sffamily, text=NavyBlue] at (0,-1.9) {BYTE};
+    % Speech bubble
+    \node[draw=FunSky, fill=white, rounded corners=6pt, 
+          font=\footnotesize\sffamily, text=NavyBlue,
+          inner sep=4pt, anchor=south west]
+      at (1.5,1.0) {Let's learn!};
+  \end{scope}
+
+  % --- Module icons strip ---
+  \foreach \icon/\lbl/\x in {
+    \faDesktop/Computers/2,
+    \faWindows/Windows/4.5,
+    \faKeyboard/Shortcuts/7,
+    \faFileWord/Word/9.5,
+    \faFileExcel/Excel/12,
+    \faFilePowerpoint/PowerPoint/14.5,
+    \faGlobe/Internet/17,
+    \faTrophy/Project/19.5}{
+      \node[text=white, font=\scriptsize\sffamily, align=center]
+        at ([xshift=\x cm - 10.5cm, yshift=1cm]current page.south)
+        {{\Large\icon}\\[2pt]\lbl};
+  }
+\end{tikzpicture}
+\end{titlepage}

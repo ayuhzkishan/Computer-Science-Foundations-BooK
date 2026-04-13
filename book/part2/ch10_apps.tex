@@ -1,0 +1,129 @@
+% ============================================================================
+% Chapter 10: Using Windows Applications
+% ============================================================================
+
+\chapter{Using Windows Applications}
+\label{ch:apps}
+
+\begin{objectives}
+  \item Open and use built-in Windows applications
+  \item Identify the purpose of Notepad, WordPad, Paint, and Calculator
+  \item Navigate a basic application window (title bar, menus, toolbar)
+  \item Save and close work in an application
+\end{objectives}
+
+\bytetip[fun]{Windows comes with free apps already installed --- like getting free games with a new phone! Let's explore the cool tools you already have.}
+
+% ---------------------------------------------------------------
+\section{Built-In Windows Applications}
+\label{sec:builtin-apps}
+\index{Windows!applications}
+
+Windows comes with several useful applications pre-installed. Here are four you'll use often:
+
+% --- Figure 10.1: Applications Overview Cards ---
+\begin{figure}[H]
+\centering
+\begin{tabularx}{\textwidth}{@{}*{4}{>{\centering\arraybackslash}X}@{}}
+  \begin{tcolorbox}[colback=ModuleBlue!8, colframe=ModuleBlue, width=3.2cm, height=4.2cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{ModuleBlue}{\faStickyNote}}\vspace{6pt}\\
+    \textbf{Notepad}\vspace{3pt}\\
+    {\footnotesize Simple text editor\\for quick notes.}\vspace{4pt}\\
+    {\scriptsize\itshape Best for: Plain text}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=LabGreen!8, colframe=LabGreen, width=3.2cm, height=4.2cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{LabGreen}{\faFile}}\vspace{6pt}\\
+    \textbf{WordPad}\vspace{3pt}\\
+    {\footnotesize Basic word processor\\with formatting.}\vspace{4pt}\\
+    {\scriptsize\itshape Best for: Short docs}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunPurple!8, colframe=FunPurple, width=3.2cm, height=4.2cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{FunPurple}{\faPaintBrush}}\vspace{6pt}\\
+    \textbf{Paint}\vspace{3pt}\\
+    {\footnotesize Drawing \& basic\\image editing.}\vspace{4pt}\\
+    {\scriptsize\itshape Best for: Drawings}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=NoteOrange!8, colframe=NoteOrange, width=3.2cm, height=4.2cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{NoteOrange}{\faCalculator}}\vspace{6pt}\\
+    \textbf{Calculator}\vspace{3pt}\\
+    {\footnotesize Maths operations\\and conversions.}\vspace{4pt}\\
+    {\scriptsize\itshape Best for: Maths}
+  \end{tcolorbox}
+\end{tabularx}
+\caption{Four built-in Windows applications you should know}
+\label{fig:app-cards}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{Understanding Application Windows}
+\label{sec:app-windows}
+\index{window!elements}
+
+Every application opens in a \textbf{window}. All windows share common elements:
+
+\begin{theorybox}[Parts of an Application Window]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=3pt]
+  \item \textbf{Title Bar} --- Shows the file name and app name; has Minimise, Maximise, and Close buttons
+  \item \textbf{Menu Bar} --- Contains menus like File, Edit, Format, View, Help
+  \item \textbf{Toolbar / Ribbon} --- Quick-access buttons for common tasks
+  \item \textbf{Work Area} --- The main area where you type, draw, or view content
+  \item \textbf{Status Bar} --- Shows helpful info at the bottom (zoom, line count, etc.)
+\end{itemize}
+\end{theorybox}
+
+% --- Figure 10.2: Paint Toolbar Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Toolbar strip
+  \fill[ShadeGray] (0,0) rectangle (14,1.2);
+  \draw[NavyBlue, line width=1pt] (0,0) rectangle (14,1.2);
+  
+  % Sections
+  \fill[FunSky!20] (0.2,0.15) rectangle (2.5,1.05);
+  \fill[LabGreen!15] (2.7,0.15) rectangle (5.0,1.05);
+  \fill[FunPurple!15] (5.2,0.15) rectangle (8.0,1.05);
+  \fill[FunYellow!20] (8.2,0.15) rectangle (11.0,1.05);
+  \fill[FunCoral!15] (11.2,0.15) rectangle (13.8,1.05);
+  
+  % Section labels (inside)
+  \node[font=\tiny\sffamily\bfseries, text=FunSky!80!black] at (1.35,0.6) {Selection};
+  \node[font=\tiny\sffamily\bfseries, text=LabGreen!80!black] at (3.85,0.6) {Drawing};
+  \node[font=\tiny\sffamily\bfseries, text=FunPurple!80!black] at (6.6,0.6) {Shapes};
+  \node[font=\tiny\sffamily\bfseries, text=FunYellow!80!black] at (9.6,0.6) {Colours};
+  \node[font=\tiny\sffamily\bfseries, text=FunCoral!80!black] at (12.5,0.6) {Eraser};
+  
+  % Labels above with arrows
+  \foreach \x/\lbl in {1.35/Selection\\Tools, 3.85/Drawing\\Tools, 6.6/Shape\\Library, 9.6/Colour\\Palette, 12.5/Eraser\\Tool}{
+    \draw[NavyBlue, line width=0.8pt, ->] (\x, 1.8) -- (\x, 1.25);
+    \node[above, font=\scriptsize\sffamily, text=NavyBlue, align=center] at (\x, 1.8) {\lbl};
+  }
+\end{tikzpicture}
+\caption{The Paint toolbar --- key sections labelled}
+\label{fig:paint-toolbar}
+\end{figure}
+
+\bytetip[tip]{To open any app quickly, press the \key{Windows} key and start typing the app's name. Windows Search will find it instantly --- no need to click through menus!}
+
+\begin{tryit}
+Open \textbf{MS Paint} and draw a simple house with a door, two windows, and a sun in the sky. Use at least \textbf{three different colours}. Save your masterpiece as ``MyHouse.png'' on the Desktop!
+\end{tryit}
+
+\begin{funfact}
+MS Paint has been included with every version of Windows since \textbf{Windows 1.0 in 1985}. That makes it over 40 years old! Microsoft once threatened to remove it, but there was such a public outcry that they kept it. People \emph{love} Paint!
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name four built-in Windows applications and describe what each does.
+  \item What are the main parts of an application window?
+  \item How do you open an application using Windows Search?
+  \item What is the difference between Notepad and WordPad?
+  \item How do you close an application window?
+\end{reviewqs}
+
+\begin{challenge}
+Open the \textbf{Calculator} app and use it to solve these problems: (a) 256 $\times$ 48, (b) 7894 $\div$ 23, (c) 15\% of 680. Write down your answers. Then switch to \textbf{Scientific mode} (click the menu $\rightarrow$ Scientific) and calculate $2^{10}$. What do you get?
+\end{challenge}

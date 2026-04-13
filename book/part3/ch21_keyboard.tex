@@ -1,0 +1,178 @@
+% ============================================================================
+% Chapter 21: Keyboard and Mouse Skills
+% ============================================================================
+
+\chapter{Keyboard and Mouse Skills}
+\label{ch:keyboard-mouse}
+
+\begin{objectives}
+  \item Identify and name key groups on a keyboard
+  \item Use the mouse confidently for all basic actions
+  \item Understand ergonomic typing posture
+  \item Practise touch-typing techniques
+\end{objectives}
+
+\bytetip[tip]{The keyboard and mouse are your main tools for communicating with the computer. Mastering them is like learning to ride a bicycle --- once you've got it, you've got it for life!}
+
+\section{The Keyboard Layout}
+\label{sec:keyboard-layout}
+\index{keyboard!layout}
+
+% --- Figure 21.1: Keyboard Map ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={font=\tiny\sffamily\bfseries}]
+  % Function keys (Row 0)
+  \foreach \i/\k in {0/Esc, 1.5/F1, 2.5/F2, 3.5/F3, 4.5/F4, 6/F5, 7/F6, 8/F7, 9/F8, 10.5/F9, 11.5/F10, 12.5/F11, 13.5/F12}{
+    \node[draw=FunPurple, fill=FunPurple!15, rounded corners=2pt, 
+          minimum width=0.8cm, minimum height=0.55cm] at (\i, 0) {\k};
+  }
+  
+  % Number row (Row 1)
+  \foreach \i/\k in {0/\texttildelow, 0.9/1, 1.8/2, 2.7/3, 3.6/4, 4.5/5, 5.4/6, 6.3/7, 7.2/8, 8.1/9, 9.0/0, 9.9/-, 10.8/=}{
+    \node[draw=FunSky, fill=FunSky!15, rounded corners=2pt, 
+          minimum width=0.75cm, minimum height=0.55cm] at (\i, -0.85) {\k};
+  }
+  \node[draw=FunYellow!80!black, fill=FunYellow!20, rounded corners=2pt,
+        minimum width=1.8cm, minimum height=0.55cm] at (12.2, -0.85) {Backspace};
+  
+  % QWERTY rows
+  % Row 2
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=1.2cm, minimum height=0.55cm] at (0.3, -1.7) {Tab};
+  \foreach \i/\k in {1.3/Q, 2.2/W, 3.1/E, 4.0/R, 4.9/T, 5.8/Y, 6.7/U, 7.6/I, 8.5/O, 9.4/P}{
+    \node[draw=NavyBlue!30, fill=ShadeGray, rounded corners=2pt, 
+          minimum width=0.75cm, minimum height=0.55cm] at (\i, -1.7) {\k};
+  }
+  \node[draw=FunYellow!80!black, fill=FunYellow!20, rounded corners=2pt,
+        minimum width=1.6cm, minimum height=0.55cm] at (12.0, -1.7) {Enter};
+  
+  % Row 3
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=1.5cm, minimum height=0.55cm] at (0.5, -2.55) {Caps};
+  \foreach \i/\k in {1.6/A, 2.5/S, 3.4/D, 4.3/F, 5.2/G, 6.1/H, 7.0/J, 7.9/K, 8.8/L}{
+    \node[draw=NavyBlue!30, fill=ShadeGray, rounded corners=2pt, 
+          minimum width=0.75cm, minimum height=0.55cm] at (\i, -2.55) {\k};
+  }
+  
+  % Row 4
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=2cm, minimum height=0.55cm] at (0.7, -3.4) {Shift};
+  \foreach \i/\k in {2.0/Z, 2.9/X, 3.8/C, 4.7/V, 5.6/B, 6.5/N, 7.4/M}{
+    \node[draw=NavyBlue!30, fill=ShadeGray, rounded corners=2pt, 
+          minimum width=0.75cm, minimum height=0.55cm] at (\i, -3.4) {\k};
+  }
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=2cm, minimum height=0.55cm] at (12.0, -3.4) {Shift};
+  
+  % Space bar row
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=1.2cm, minimum height=0.55cm] at (0.3, -4.25) {Ctrl};
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=0.9cm, minimum height=0.55cm] at (1.5, -4.25) {Win};
+  \node[draw=FunCoral, fill=FunCoral!15, rounded corners=2pt,
+        minimum width=0.9cm, minimum height=0.55cm] at (2.5, -4.25) {Alt};
+  \node[draw=NavyBlue!30, fill=ShadeGray, rounded corners=2pt,
+        minimum width=5cm, minimum height=0.55cm] at (6, -4.25) {Space Bar};
+  
+  % Arrow keys
+  \foreach \i/\k in {11/\faArrowLeft, 12/\faArrowDown, 13/\faArrowRight}{
+    \node[draw=FunMint, fill=FunMint!15, rounded corners=2pt,
+          minimum width=0.75cm, minimum height=0.55cm] at (\i, -4.25) {\k};
+  }
+  \node[draw=FunMint, fill=FunMint!15, rounded corners=2pt,
+        minimum width=0.75cm, minimum height=0.55cm] at (12, -3.4) {\faArrowUp};
+  
+  % Legend
+  \node[font=\scriptsize\sffamily, anchor=west] at (-0.5, -5.5) {
+    \tikz\fill[FunPurple!15] (0,0) rectangle (0.3,0.3); Function Keys \quad
+    \tikz\fill[FunSky!15] (0,0) rectangle (0.3,0.3); Number Row \quad
+    \tikz\fill[ShadeGray] (0,0) rectangle (0.3,0.3); Letter Keys \quad
+    \tikz\fill[FunCoral!15] (0,0) rectangle (0.3,0.3); Modifiers \quad
+    \tikz\fill[FunMint!15] (0,0) rectangle (0.3,0.3); Navigation \quad
+    \tikz\fill[FunYellow!20] (0,0) rectangle (0.3,0.3); Special
+  };
+\end{tikzpicture}
+\caption{A colour-coded keyboard map showing key groups}
+\label{fig:keyboard-map}
+\end{figure}
+
+\section{Mouse Anatomy and Actions}
+\label{sec:mouse-anatomy}
+\index{mouse!anatomy}
+
+% --- Figure 21.2: Mouse Anatomy ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.2]
+  % Mouse body (top view)
+  \draw[NavyBlue, line width=2pt, rounded corners=15pt] (-1.2,-2) -- (-1.2,1.5) 
+    .. controls (-1.2,2.5) and (1.2,2.5) .. (1.2,1.5) -- (1.2,-2)
+    .. controls (1.2,-2.8) and (-1.2,-2.8) .. (-1.2,-2);
+  
+  % Dividing line
+  \draw[NavyBlue!50, line width=1pt] (0,2.2) -- (0,0.3);
+  
+  % Left button
+  \fill[FunSky!20] (-1.1,0.5) -- (-1.1,1.5) .. controls (-1.1,2.3) and (-0.1,2.3) .. (-0.1,1.5) -- (-0.1,0.5) -- cycle;
+  \node[font=\tiny\sffamily\bfseries, text=FunSky!80!black, align=center] at (-0.6, 1.3) {Left\\Button};
+  
+  % Right button
+  \fill[FunCoral!20] (1.1,0.5) -- (1.1,1.5) .. controls (1.1,2.3) and (0.1,2.3) .. (0.1,1.5) -- (0.1,0.5) -- cycle;
+  \node[font=\tiny\sffamily\bfseries, text=FunCoral!80!black, align=center] at (0.6, 1.3) {Right\\Button};
+  
+  % Scroll wheel
+  \fill[FunMint!40] (-0.15,0.3) rectangle (0.15,0.8);
+  \draw[NavyBlue, line width=1pt] (-0.15,0.3) rectangle (0.15,0.8);
+  
+  % Labels
+  \draw[FunSky, line width=1.2pt, ->] (-2.5,1.3) -- (-1.3,1.3);
+  \node[left, font=\scriptsize\sffamily, text=FunSky, align=right] at (-2.5,1.3) {Click \& Select};
+  
+  \draw[FunCoral, line width=1.2pt, ->] (2.5,1.3) -- (1.3,1.3);
+  \node[right, font=\scriptsize\sffamily, text=FunCoral, align=left] at (2.5,1.3) {Context Menu};
+  
+  \draw[FunMint, line width=1.2pt, ->] (2.0,0.55) -- (0.3,0.55);
+  \node[right, font=\scriptsize\sffamily, text=FunMint, align=left] at (2.0,0.55) {Scroll Up/Down};
+\end{tikzpicture}
+\caption{Mouse anatomy --- learn what each part does}
+\label{fig:mouse-anatomy}
+\end{figure}
+
+% --- Table 21.1: Mouse Actions ---
+\begin{table}[H]
+\centering
+\caption{Mouse actions and what they do}
+\label{tab:mouse-actions}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l X X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Action}} & \textcolor{white}{\textbf{How To Do It}} & \textcolor{white}{\textbf{What Happens}} \\
+\midrule
+\rowcolor{RowLight} Single Click & Press left button once & Selects item \\
+\rowcolor{RowDark} Double Click & Press left button twice quickly & Opens item \\
+\rowcolor{RowLight} Right Click & Press right button once & Opens context menu \\
+\rowcolor{RowDark} Click \& Drag & Hold left, move mouse & Moves or selects area \\
+\rowcolor{RowLight} Scroll & Roll scroll wheel & Page moves up or down \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\bytetip[fun]{The first computer mouse was invented in 1964 by \textbf{Douglas Engelbart}. It was made of wood and had only one button! It was called a ``mouse'' because the cable coming out of the back looked like a tail.}
+
+\begin{funfact}
+Modern optical mice use a tiny camera that takes up to \textbf{18,000 pictures per second} of the surface below to detect movement. That's faster than any video camera you've ever seen!
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name and describe five key groups on a keyboard.
+  \item What is the difference between single-click and double-click?
+  \item What key do you press to type capital letters temporarily?
+  \item Name the three main parts of a mouse.
+  \item What does the scroll wheel do?
+\end{reviewqs}
+
+\begin{challenge}
+Time yourself typing a paragraph of 50 words using proper finger placement (don't look at the keyboard!). Record how long it took. Practise for a week and time yourself again. How much did you improve?
+\end{challenge}

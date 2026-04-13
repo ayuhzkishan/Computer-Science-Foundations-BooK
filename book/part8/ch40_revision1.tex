@@ -1,0 +1,103 @@
+% ============================================================================
+% Chapter 40: Revision — Computer Fundamentals
+% ============================================================================
+\chapter{Revision --- Computer Fundamentals}
+\label{ch:revision-fundamentals}
+
+\begin{objectives}
+  \item Revise key concepts from Parts I--III
+  \item Test your knowledge with comprehensive review questions
+  \item Reinforce understanding through diagrams and tables
+  \item Identify areas that need more practice
+\end{objectives}
+
+\bytetip[tip]{This is your one-stop revision chapter for everything we covered about computer basics, hardware, software, and Windows. Use it to prepare for tests!}
+
+\section{Key Concepts Summary}
+\label{sec:revision-summary}
+
+% --- Figure 40.1: Master Concept Map ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  concept/.style={draw=#1, fill=#1!10, rounded corners=6pt, minimum width=2.5cm, minimum height=0.9cm, font=\scriptsize\sffamily\bfseries, align=center, line width=1pt},
+  level distance=2.5cm, sibling distance=3cm
+]
+  % Central node
+  \node[concept=NavyBlue, minimum width=3cm, minimum height=1.2cm, font=\small\sffamily\bfseries] (center) at (6,0) {Computer\\Fundamentals};
+  
+  % Branch 1: Hardware
+  \node[concept=ModuleBlue] (hw) at (0,2.5) {Hardware};
+  \node[concept=FunSky, minimum width=2cm] (cpu) at (-2,4.5) {CPU};
+  \node[concept=FunSky, minimum width=2cm] (ram) at (0,4.5) {RAM/ROM};
+  \node[concept=FunSky, minimum width=2cm] (io) at (2,4.5) {I/O Devices};
+  
+  % Branch 2: Software
+  \node[concept=LabGreen] (sw) at (6,3) {Software};
+  \node[concept=FunMint, minimum width=2cm] (sys) at (4.5,4.5) {System};
+  \node[concept=FunMint, minimum width=2cm] (app) at (7.5,4.5) {Application};
+  
+  % Branch 3: Windows
+  \node[concept=FunPurple] (win) at (12,2.5) {Windows};
+  \node[concept=FunPink, minimum width=2cm] (desk) at (10.5,4.5) {Desktop};
+  \node[concept=FunPink, minimum width=2cm] (files) at (13.5,4.5) {Files};
+  
+  % Branch 4: Skills
+  \node[concept=NoteOrange] (skills) at (6,-2.5) {Skills};
+  \node[concept=FunYellow!80!black, minimum width=2cm] (kb) at (3.5,-4) {Keyboard};
+  \node[concept=FunYellow!80!black, minimum width=2cm] (mouse) at (6,-4) {Mouse};
+  \node[concept=FunYellow!80!black, minimum width=2cm] (sc) at (8.5,-4) {Shortcuts};
+  
+  % Connections
+  \draw[NavyBlue, line width=1.2pt] (center) -- (hw);
+  \draw[NavyBlue, line width=1.2pt] (center) -- (sw);
+  \draw[NavyBlue, line width=1.2pt] (center) -- (win);
+  \draw[NavyBlue, line width=1.2pt] (center) -- (skills);
+  \draw[ModuleBlue, line width=0.8pt] (hw) -- (cpu); \draw[ModuleBlue, line width=0.8pt] (hw) -- (ram); \draw[ModuleBlue, line width=0.8pt] (hw) -- (io);
+  \draw[LabGreen, line width=0.8pt] (sw) -- (sys); \draw[LabGreen, line width=0.8pt] (sw) -- (app);
+  \draw[FunPurple, line width=0.8pt] (win) -- (desk); \draw[FunPurple, line width=0.8pt] (win) -- (files);
+  \draw[NoteOrange, line width=0.8pt] (skills) -- (kb); \draw[NoteOrange, line width=0.8pt] (skills) -- (mouse); \draw[NoteOrange, line width=0.8pt] (skills) -- (sc);
+\end{tikzpicture}
+\caption{Master concept map for computer fundamentals}
+\label{fig:master-concept}
+\end{figure}
+
+\section{Quick-Fire Revision}
+\label{sec:quickfire}
+
+\begin{table}[H]
+\centering
+\caption{Quick-fire revision --- fill in the blanks}
+\label{tab:revision-blanks}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{l X l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Statement}} & \textcolor{white}{\textbf{Answer}} \\
+\midrule
+\rowcolor{RowLight} 1 & CPU stands for \rule{4cm}{0.4pt} & \\
+\rowcolor{RowDark} 2 & RAM is \rule{2cm}{0.4pt} memory (volatile/non-volatile) & \\
+\rowcolor{RowLight} 3 & The two main types of software are \rule{2cm}{0.4pt} and \rule{2cm}{0.4pt} & \\
+\rowcolor{RowDark} 4 & The shortcut to copy is \rule{3cm}{0.4pt} & \\
+\rowcolor{RowLight} 5 & A file's address in Explorer is called its \rule{2cm}{0.4pt} & \\
+\rowcolor{RowDark} 6 & The Recycle Bin stores \rule{3cm}{0.4pt} files & \\
+\rowcolor{RowLight} 7 & GUI stands for \rule{4cm}{0.4pt} & \\
+\rowcolor{RowDark} 8 & POST stands for \rule{4cm}{0.4pt} & \\
+\rowcolor{RowLight} 9 & \rule{2cm}{0.4pt} is the brain of the computer & \\
+\rowcolor{RowDark} 10 & \rule{2cm}{0.4pt} key + S saves a file & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{reviewqs}
+  \item Draw and label the IPO cycle.
+  \item List the 5 characteristics of a computer.
+  \item Compare RAM and ROM in a table with at least 4 differences.
+  \item Explain the boot process in 5 steps.
+  \item Name 5 input devices and 5 output devices.
+  \item What is the difference between hardware and software?
+  \item Write the keyboard shortcuts for: Copy, Cut, Paste, Undo, Save, Select All.
+  \item What are the main elements of the Windows desktop?
+  \item Explain the file naming rules in Windows.
+  \item Draw a folder hierarchy with at least 3 levels.
+\end{reviewqs}

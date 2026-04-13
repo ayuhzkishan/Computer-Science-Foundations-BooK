@@ -1,0 +1,83 @@
+% ============================================================================
+% Chapter 30: Formatting in Excel
+% ============================================================================
+\chapter{Formatting in Excel}
+\label{ch:excel-format}
+
+\begin{objectives}
+  \item Format cells: font, colour, borders, alignment
+  \item Apply number formats (currency, percentage, date)
+  \item Use cell styles and conditional formatting
+  \item Merge cells for headers
+\end{objectives}
+
+\bytetip[tip]{A well-formatted spreadsheet is SO much easier to read than a plain one. Let's make your data look professional!}
+
+\section{Cell Formatting}
+\label{sec:cell-format}
+\index{MS Excel!formatting}
+
+You can format cells just like text in Word --- change font, size, colour, bold, italic, and alignment. Select cells first, then use the Home tab.
+
+\begin{shortcutbox}
+\begin{tabular}{ll}
+  \key{Ctrl}+\key{B} & Bold selected cells \\
+  \key{Ctrl}+\key{1} & Open Format Cells dialog \\
+  \key{Ctrl}+\key{Shift}+\key{\$} & Apply Currency format \\
+  \key{Ctrl}+\key{Shift}+\key{\%} & Apply Percentage format \\
+\end{tabular}
+\end{shortcutbox}
+
+\section{Number Formats}
+\label{sec:number-formats}
+\index{MS Excel!number formats}
+
+\begin{table}[H]
+\centering
+\caption{Common number formats in Excel}
+\label{tab:number-formats}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Format}} & \textcolor{white}{\textbf{Example}} & \textcolor{white}{\textbf{Use For}} \\
+\midrule
+\rowcolor{RowLight} General & 1234.5 & Default, no specific format \\
+\rowcolor{RowDark} Number & 1,234.50 & Numbers with decimal places \\
+\rowcolor{RowLight} Currency & \$1,234.50 & Money and prices \\
+\rowcolor{RowDark} Percentage & 85\% & Ratios and proportions \\
+\rowcolor{RowLight} Date & 13/04/2026 & Calendar dates \\
+\rowcolor{RowDark} Text & 001234 & Text that looks like numbers (PINs, codes) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Merging Cells}
+\label{sec:merge}
+\index{MS Excel!merge cells}
+
+\textbf{Merge \& Centre} combines multiple cells into one large cell. It's perfect for creating headers that span multiple columns.
+
+How to merge: Select the cells $\rightarrow$ Home tab $\rightarrow$ \textbf{Merge \& Centre} button.
+
+\begin{warnbox}
+When you merge cells, only the data in the \textbf{top-left cell} is kept. All other data in the selected range is \textbf{deleted}. Always merge \emph{before} typing your header, or make sure only one cell has data.
+\end{warnbox}
+
+\bytetip[fun]{Excel can display numbers in many ways. The number 0.85 can be shown as ``0.85,'' ``85\%,'' or even ``85/100'' (fraction format). It's the same number --- just different outfits!}
+
+\begin{funfact}
+The most popular font in Excel is \textbf{Calibri} (11pt) --- the same default font used in Word. Before 2007, the default was \textbf{Arial} (10pt). The change happened because Calibri is specifically designed for on-screen reading.
+\end{funfact}
+
+\begin{reviewqs}
+  \item How do you apply bold formatting to a cell in Excel?
+  \item Name four number formats available in Excel.
+  \item What does Merge \& Centre do?
+  \item What shortcut opens the Format Cells dialog?
+  \item Why should you be careful when merging cells that contain data?
+\end{reviewqs}
+
+\begin{challenge}
+Create a ``Monthly Budget'' spreadsheet with columns: Item, Cost, Category. Enter at least 8 items. Format the Cost column as \textbf{Currency}. Bold and colour the header row. Add borders to all cells. Merge cells A1:C1 for a title.
+\end{challenge}

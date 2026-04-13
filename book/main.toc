@@ -1,0 +1,186 @@
+\contentsline {chapter}{Preface}{iii}{chapter*.1}%
+\contentsline {chapter}{How to Use This Book}{v}{chapter*.2}%
+\contentsline {part}{I\hspace {1em}Getting Started with Computers}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Introduction to Computers}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}What Is a Computer?}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Characteristics of a Computer}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Computers in Daily Life}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Data and Information}{7}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Parts of a Computer}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Computer System}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Hardware vs Software}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Input and Output Devices}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The CPU --- The Brain}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Types of Computers}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Different Types of Computers}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Comparing Computer Types}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Which Computer Should You Use?}{14}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Basics of Software}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}What Is Software?}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Types of Software}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}System Software}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Application Software}{18}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Hardware + Software = A Working Computer!}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Common Software Examples}{18}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Computer Lab Rules \& Safety}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Why Do We Need Lab Rules?}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Correct Sitting Posture}{21}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Lab Rules Everyone Must Follow}{22}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Part I --- Hands-On Practicals}{25}{chapter.6}%
+\contentsline {part}{II\hspace {1em}Windows Operating System}{33}{part.2}%
+\contentsline {chapter}{\numberline {7}Introduction to Operating Systems}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}What Is an Operating System?}{35}{section.7.1}%
+\contentsline {section}{\numberline {7.2}A Brief History of Windows}{36}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Functions of an Operating System}{36}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Starting and Shutting Down Windows}{39}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Boot Process}{39}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Shutdown Options}{40}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Windows Desktop Environment}{43}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The Windows Desktop}{43}{section.9.1}%
+\contentsline {chapter}{\numberline {10}File and Folder Management}{45}{chapter.10}%
+\contentsline {section}{\numberline {10.1}What Are Files and Folders?}{45}{section.10.1}%
+\contentsline {section}{\numberline {10.2}File Operations}{45}{section.10.2}%
+\contentsline {section}{\numberline {10.3}File Naming Rules}{46}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Using Windows Applications}{49}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Built-In Windows Applications}{49}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Understanding Application Windows}{49}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Control Panel and Settings}{53}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Settings vs Control Panel}{53}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Common Settings You Can Change}{54}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Storage Devices}{55}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Types of Storage}{55}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Cloud Storage}{56}{section.13.2}%
+\contentsline {chapter}{\numberline {14}Connecting to the Internet}{59}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Types of Internet Connections}{59}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Connecting to Wi-Fi}{59}{section.14.2}%
+\contentsline {chapter}{\numberline {15}Computer Security Basics}{61}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Why Security Matters}{61}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Password Strength}{61}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Common Threats}{62}{section.15.3}%
+\contentsline {chapter}{\numberline {16}Basic Troubleshooting}{65}{chapter.16}%
+\contentsline {section}{\numberline {16.1}The Troubleshooting Flowchart}{65}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Common Problems and Fixes}{67}{section.16.2}%
+\contentsline {chapter}{\numberline {17}Part II --- Hands-On Practicals}{69}{chapter.17}%
+\contentsline {part}{III\hspace {1em}Computer Basics and Shortcuts}{77}{part.3}%
+\contentsline {chapter}{\numberline {18}Advanced Computer Concepts}{79}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Computers in the Real World}{80}{section.18.1}%
+\contentsline {section}{\numberline {18.2}The IPO Cycle Revisited}{81}{section.18.2}%
+\contentsline {chapter}{\numberline {19}Hardware in Detail}{83}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Inside the CPU}{83}{section.19.1}%
+\contentsline {section}{\numberline {19.2}RAM vs ROM}{84}{section.19.2}%
+\contentsline {chapter}{\numberline {20}Software in Detail}{87}{chapter.20}%
+\contentsline {section}{\numberline {20.1}System Software Revisited}{87}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Application Software Categories}{88}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Open Source vs Proprietary}{88}{section.20.3}%
+\contentsline {chapter}{\numberline {21}Operating Systems in Depth}{91}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Comparing Operating Systems}{91}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Multitasking}{91}{section.21.2}%
+\contentsline {section}{\numberline {21.3}GUI --- Graphical User Interface}{92}{section.21.3}%
+\contentsline {chapter}{\numberline {22}Advanced File Management}{93}{chapter.22}%
+\contentsline {section}{\numberline {22.1}File Extensions}{93}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Searching for Files}{93}{section.22.2}%
+\contentsline {section}{\numberline {22.3}Compressing (Zipping) Files}{94}{section.22.3}%
+\contentsline {chapter}{\numberline {23}Keyboard and Mouse Skills}{97}{chapter.23}%
+\contentsline {section}{\numberline {23.1}The Keyboard Layout}{97}{section.23.1}%
+\contentsline {section}{\numberline {23.2}Mouse Anatomy and Actions}{98}{section.23.2}%
+\contentsline {chapter}{\numberline {24}Keyboard Shortcuts}{101}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Why Use Shortcuts?}{101}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Essential Shortcuts Cheat Sheet}{101}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Shortcuts Save Time}{102}{section.24.3}%
+\contentsline {chapter}{\numberline {25}Part III --- Hands-On Practicals}{105}{chapter.25}%
+\contentsline {part}{IV\hspace {1em}Microsoft Word}{113}{part.4}%
+\contentsline {chapter}{\numberline {26}Introduction to MS Word}{115}{chapter.26}%
+\contentsline {section}{\numberline {26.1}The MS Word Window}{115}{section.26.1}%
+\contentsline {section}{\numberline {26.2}Creating and Saving Documents}{116}{section.26.2}%
+\contentsline {chapter}{\numberline {27}Editing Text in MS Word}{117}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Selecting Text}{117}{section.27.1}%
+\contentsline {section}{\numberline {27.2}Copy, Cut, and Paste}{117}{section.27.2}%
+\contentsline {section}{\numberline {27.3}Find and Replace}{118}{section.27.3}%
+\contentsline {section}{\numberline {27.4}Spell Check}{118}{section.27.4}%
+\contentsline {chapter}{\numberline {28}Formatting in MS Word}{121}{chapter.28}%
+\contentsline {section}{\numberline {28.1}Font Formatting}{121}{section.28.1}%
+\contentsline {section}{\numberline {28.2}Text Alignment}{122}{section.28.2}%
+\contentsline {section}{\numberline {28.3}Line Spacing}{122}{section.28.3}%
+\contentsline {section}{\numberline {28.4}Lists}{122}{section.28.4}%
+\contentsline {chapter}{\numberline {29}Inserting Elements}{125}{chapter.29}%
+\contentsline {section}{\numberline {29.1}Inserting Tables}{125}{section.29.1}%
+\contentsline {section}{\numberline {29.2}Inserting Pictures and Shapes}{125}{section.29.2}%
+\contentsline {section}{\numberline {29.3}Headers, Footers, and Page Numbers}{126}{section.29.3}%
+\contentsline {chapter}{\numberline {30}Page Layout and Printing}{129}{chapter.30}%
+\contentsline {section}{\numberline {30.1}Portrait vs Landscape}{129}{section.30.1}%
+\contentsline {section}{\numberline {30.2}Margins}{130}{section.30.2}%
+\contentsline {section}{\numberline {30.3}Printing a Document}{130}{section.30.3}%
+\contentsline {chapter}{\numberline {31}Part IV --- Hands-On Practicals}{133}{chapter.31}%
+\contentsline {part}{V\hspace {1em}Microsoft Excel}{143}{part.5}%
+\contentsline {chapter}{\numberline {32}Introduction to MS Excel}{145}{chapter.32}%
+\contentsline {section}{\numberline {32.1}The Excel Window}{145}{section.32.1}%
+\contentsline {section}{\numberline {32.2}Understanding Cell Addresses}{146}{section.32.2}%
+\contentsline {chapter}{\numberline {33}Working with Worksheets}{149}{chapter.33}%
+\contentsline {section}{\numberline {33.1}Managing Worksheets}{149}{section.33.1}%
+\contentsline {section}{\numberline {33.2}Entering Data}{149}{section.33.2}%
+\contentsline {section}{\numberline {33.3}AutoFill}{149}{section.33.3}%
+\contentsline {chapter}{\numberline {34}Formatting in Excel}{151}{chapter.34}%
+\contentsline {section}{\numberline {34.1}Cell Formatting}{151}{section.34.1}%
+\contentsline {section}{\numberline {34.2}Number Formats}{152}{section.34.2}%
+\contentsline {section}{\numberline {34.3}Merging Cells}{152}{section.34.3}%
+\contentsline {chapter}{\numberline {35}Formulas and Functions}{155}{chapter.35}%
+\contentsline {section}{\numberline {35.1}Writing Formulas}{155}{section.35.1}%
+\contentsline {section}{\numberline {35.2}Essential Functions}{155}{section.35.2}%
+\contentsline {section}{\numberline {35.3}The Fill Handle}{156}{section.35.3}%
+\contentsline {chapter}{\numberline {36}Charts and Data Management}{159}{chapter.36}%
+\contentsline {section}{\numberline {36.1}Types of Charts}{159}{section.36.1}%
+\contentsline {section}{\numberline {36.2}Sorting Data}{160}{section.36.2}%
+\contentsline {chapter}{\numberline {37}Part V --- Hands-On Practicals}{161}{chapter.37}%
+\contentsline {part}{VI\hspace {1em}Microsoft PowerPoint}{169}{part.6}%
+\contentsline {chapter}{\numberline {38}Introduction to MS PowerPoint}{171}{chapter.38}%
+\contentsline {section}{\numberline {38.1}The PowerPoint Window}{171}{section.38.1}%
+\contentsline {section}{\numberline {38.2}Creating a Presentation}{172}{section.38.2}%
+\contentsline {chapter}{\numberline {39}Designing Slides}{175}{chapter.39}%
+\contentsline {section}{\numberline {39.1}Adding Content to Slides}{175}{section.39.1}%
+\contentsline {section}{\numberline {39.2}Good Slide Design Rules}{176}{section.39.2}%
+\contentsline {chapter}{\numberline {40}Transitions and Animations}{179}{chapter.40}%
+\contentsline {section}{\numberline {40.1}Transitions vs Animations}{179}{section.40.1}%
+\contentsline {section}{\numberline {40.2}Adding Transitions}{179}{section.40.2}%
+\contentsline {section}{\numberline {40.3}Adding Animations}{180}{section.40.3}%
+\contentsline {section}{\numberline {40.4}Running a Slideshow}{180}{section.40.4}%
+\contentsline {chapter}{\numberline {41}Part VI --- Hands-On Practicals}{183}{chapter.41}%
+\contentsline {part}{VII\hspace {1em}The Internet and the Web}{191}{part.7}%
+\contentsline {chapter}{\numberline {42}How the Internet Works}{193}{chapter.42}%
+\contentsline {section}{\numberline {42.1}What Is the Internet?}{193}{section.42.1}%
+\contentsline {section}{\numberline {42.2}Internet vs World Wide Web}{193}{section.42.2}%
+\contentsline {section}{\numberline {42.3}Understanding URLs}{194}{section.42.3}%
+\contentsline {chapter}{\numberline {43}Web Browsing and Searching}{195}{chapter.43}%
+\contentsline {section}{\numberline {43.1}Using a Web Browser}{195}{section.43.1}%
+\contentsline {section}{\numberline {43.2}Searching Effectively}{195}{section.43.2}%
+\contentsline {section}{\numberline {43.3}Evaluating Websites}{195}{section.43.3}%
+\contentsline {chapter}{\numberline {44}Email and Online Communication}{197}{chapter.44}%
+\contentsline {section}{\numberline {44.1}What Is Email?}{197}{section.44.1}%
+\contentsline {section}{\numberline {44.2}Parts of an Email}{197}{section.44.2}%
+\contentsline {section}{\numberline {44.3}Email Etiquette}{197}{section.44.3}%
+\contentsline {chapter}{\numberline {45}Online Safety and Digital Citizenship}{199}{chapter.45}%
+\contentsline {section}{\numberline {45.1}What Is Digital Citizenship?}{199}{section.45.1}%
+\contentsline {section}{\numberline {45.2}Staying Safe Online}{199}{section.45.2}%
+\contentsline {section}{\numberline {45.3}Cyberbullying}{200}{section.45.3}%
+\contentsline {chapter}{\numberline {46}Part VII --- Hands-On Practicals}{201}{chapter.46}%
+\contentsline {part}{VIII\hspace {1em}Review, Projects, and Beyond}{207}{part.8}%
+\contentsline {chapter}{\numberline {47}Revision --- Computer Fundamentals}{209}{chapter.47}%
+\contentsline {section}{\numberline {47.1}Key Concepts Summary}{209}{section.47.1}%
+\contentsline {section}{\numberline {47.2}Quick-Fire Revision}{210}{section.47.2}%
+\contentsline {chapter}{\numberline {48}Revision --- MS Office and Internet}{211}{chapter.48}%
+\contentsline {section}{\numberline {48.1}MS Office Quick Comparison}{211}{section.48.1}%
+\contentsline {section}{\numberline {48.2}MS Word Revision}{212}{section.48.2}%
+\contentsline {section}{\numberline {48.3}MS Excel Revision}{212}{section.48.3}%
+\contentsline {section}{\numberline {48.4}MS PowerPoint Revision}{212}{section.48.4}%
+\contentsline {section}{\numberline {48.5}Internet \& Safety Revision}{213}{section.48.5}%
+\contentsline {chapter}{\numberline {49}Cross-Module Projects}{215}{chapter.49}%
+\contentsline {section}{\numberline {49.1}Project 1: My Digital Portfolio}{215}{section.49.1}%
+\contentsline {section}{\numberline {49.2}Project 2: School Event Planner}{216}{section.49.2}%
+\contentsline {section}{\numberline {49.3}Project 3: Technology Research Report}{216}{section.49.3}%
+\contentsline {chapter}{\numberline {50}The Future of Technology}{219}{chapter.50}%
+\contentsline {section}{\numberline {50.1}Emerging Technologies}{219}{section.50.1}%
+\contentsline {section}{\numberline {50.2}Artificial Intelligence (AI)}{219}{section.50.2}%
+\contentsline {section}{\numberline {50.3}Internet of Things (IoT)}{220}{section.50.3}%
+\contentsline {section}{\numberline {50.4}Your Journey Continues!}{220}{section.50.4}%
+\contentsline {chapter}{Glossary}{223}{section*.77}%
+\contentsline {chapter}{Index}{227}{section*.79}%
+\contentsfinish 

@@ -1,0 +1,101 @@
+% ============================================================================
+% Chapter 14: Computer Security Basics
+% ============================================================================
+
+\chapter{Computer Security Basics}
+\label{ch:security}
+
+\begin{objectives}
+  \item Understand why computer security is important
+  \item Create strong passwords and recognise weak ones
+  \item Identify common threats: viruses, malware, phishing
+  \item Use Windows security features to stay safe
+\end{objectives}
+
+\bytetip[tip]{Your computer is like your house --- you wouldn't leave the front door wide open, right? Computer security is about \textbf{locking the digital doors}!}
+
+\section{Why Security Matters}
+\label{sec:why-security}
+\index{security}
+
+Every day, millions of computers are targeted by hackers, viruses, and scams. Good security habits protect your personal information, school work, and the computer itself.
+
+\section{Password Strength}
+\label{sec:passwords}
+\index{password!strength}
+
+Not all passwords are equal. Here's how to judge password strength:
+
+% --- Figure 14.1: Password Strength Meter ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Strength bar
+  \fill[WarnRed] (0,0) rectangle (3,0.8);
+  \fill[NoteOrange] (3,0) rectangle (6,0.8);
+  \fill[FunYellow!80!black] (6,0) rectangle (9.5,0.8);
+  \fill[LabGreen] (9.5,0) rectangle (13,0.8);
+  
+  % Labels
+  \node[font=\small\bfseries\sffamily, text=white] at (1.5,0.4) {Weak};
+  \node[font=\small\bfseries\sffamily, text=white] at (4.5,0.4) {Fair};
+  \node[font=\small\bfseries\sffamily, text=white] at (7.75,0.4) {Good};
+  \node[font=\small\bfseries\sffamily, text=white] at (11.25,0.4) {Strong};
+  
+  % Example passwords with pointers
+  \draw[WarnRed, line width=1.5pt, ->] (1.0,-0.3) -- (1.0,-1.0);
+  \node[below, font=\scriptsize\sffamily, text=WarnRed, align=center] at (1.0,-1.0) {\texttt{abc}\\Cracked in seconds};
+  
+  \draw[NoteOrange, line width=1.5pt, ->] (4.5,-0.3) -- (4.5,-1.0);
+  \node[below, font=\scriptsize\sffamily, text=NoteOrange, align=center] at (4.5,-1.0) {\texttt{pass123}\\Cracked in minutes};
+  
+  \draw[LabGreen, line width=1.5pt, ->] (11.0,-0.3) -- (11.0,-1.0);
+  \node[below, font=\scriptsize\sffamily, text=LabGreen, align=center] at (11.0,-1.0) {\texttt{My\$chool2024}\\Very hard to crack};
+\end{tikzpicture}
+\caption{Password strength meter --- aim for the green zone!}
+\label{fig:password-meter}
+\end{figure}
+
+\begin{theorybox}[Creating a Strong Password]
+A strong password should have:
+\begin{itemize}[leftmargin=*, label={\textcolor{LabGreen}{\ding{51}}}, itemsep=2pt]
+  \item At least \textbf{8 characters} (12+ is better)
+  \item A mix of \textbf{uppercase} and \textbf{lowercase} letters
+  \item At least \textbf{one number} (0--9)
+  \item At least \textbf{one special character} (\!, @, \#, \$, \%, etc.)
+  \item \textbf{No personal info} (not your name, birthday, or ``password'')
+\end{itemize}
+\end{theorybox}
+
+\section{Common Threats}
+\label{sec:threats}
+\index{virus}\index{malware}\index{phishing}
+
+\begin{itemize}[leftmargin=*, label={\textcolor{WarnRed}{\faExclamationTriangle}}, itemsep=4pt]
+  \item \textbf{Virus}\index{virus} --- A program that spreads by infecting other files and can damage your system
+  \item \textbf{Malware}\index{malware} --- Any malicious software (viruses, spyware, ransomware)
+  \item \textbf{Phishing}\index{phishing} --- Fake emails or websites that trick you into sharing passwords
+  \item \textbf{Spam}\index{spam} --- Unwanted junk messages, often containing scams or malware
+\end{itemize}
+
+\begin{warnbox}
+Never click links in emails from unknown senders! Phishing emails often look like they're from real companies (banks, schools, social media). Always check the sender's email address carefully.
+\end{warnbox}
+
+\bytetip[warn]{Windows has a built-in security tool called \textbf{Windows Defender}. Make sure it's always turned on! It scans for viruses and blocks threats automatically. You can check it in Settings $\rightarrow$ Privacy \& Security $\rightarrow$ Windows Security.}
+
+\begin{funfact}
+The first computer virus was called \textbf{``Creeper''} and was created in 1971 --- just as an experiment! It displayed the message: ``I'm the creeper, catch me if you can!'' A program called ``Reaper'' was written to delete it. That makes Reaper the world's first antivirus!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What makes a strong password? List four characteristics.
+  \item What is a computer virus?
+  \item How is phishing different from a virus?
+  \item Name the built-in security tool in Windows.
+  \item Give three tips for staying safe online.
+\end{reviewqs}
+
+\begin{challenge}
+Create \textbf{three strong passwords} using the rules you learned. Each must be at least 12 characters and include uppercase, lowercase, numbers, and symbols. Write them down (but don't use them for real accounts --- this is just practice!).
+\end{challenge}

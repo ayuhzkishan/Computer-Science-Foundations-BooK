@@ -1,0 +1,109 @@
+% ============================================================================
+% Chapter 7: Starting and Shutting Down Windows
+% ============================================================================
+
+\chapter{Starting and Shutting Down Windows}
+\label{ch:startup}
+
+\begin{objectives}
+  \item Describe the boot process when a computer starts
+  \item Explain the difference between Shut Down, Restart, and Sleep
+  \item Safely start and shut down a Windows computer
+  \item Understand what happens during the POST check
+\end{objectives}
+
+\bytetip[tip]{Starting a computer isn't as simple as pressing a button --- there's a whole sequence of events happening behind the scenes! Let's peek under the hood.}
+
+% ---------------------------------------------------------------
+\section{The Boot Process}
+\label{sec:boot-process}
+\index{boot process}\index{POST}
+
+When you press the power button, the computer goes through a series of steps before the desktop appears. This is called the \hl{boot process}\index{boot process}.
+
+% --- Figure 7.1: Boot Process Flowchart ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.0cm, auto]
+  \node[terminal] (start) {Press Power Button};
+  \node[process, below=of start] (post) {POST Check\\(Hardware OK?)};
+  \node[decision, below=of post, minimum width=2.5cm] (check) {Passed?};
+  \node[process, below left=1.2cm and 2cm of check, fill=WarnRed!10, draw=WarnRed] (error) {Error Beep/\\Message};
+  \node[process, below=1.2cm of check] (bios) {BIOS/UEFI Loads};
+  \node[process, below=of bios] (osload) {OS Loads from\\Storage (SSD/HDD)};
+  \node[process, below=of osload] (login) {Login Screen\\Appears};
+  \node[terminal, below=of login, fill=LabGreen!10, draw=LabGreen] (desktop) {Desktop Ready!};
+  
+  % Arrows
+  \draw[thickarrow] (start) -- (post);
+  \draw[thickarrow] (post) -- (check);
+  \draw[labelarrow=LabGreen, line width=1.5pt] (check.south) -- (bios)
+    node[midway, right, font=\scriptsize\sffamily\bfseries, text=LabGreen] {YES};
+  \draw[labelarrow=WarnRed, line width=1.5pt] (check.west) -| (error)
+    node[near start, above, font=\scriptsize\sffamily\bfseries, text=WarnRed] {NO};
+  \draw[thickarrow] (bios) -- (osload);
+  \draw[thickarrow] (osload) -- (login);
+  \draw[thickarrow] (login) -- (desktop);
+\end{tikzpicture}
+\caption{The boot process --- from power button to desktop}
+\label{fig:boot-flowchart}
+\end{figure}
+
+\begin{theorybox}[POST --- Power-On Self-Test]
+\textbf{POST}\index{POST} stands for Power-On Self-Test. It's a quick check the computer performs when it starts up to make sure all the essential hardware (RAM, keyboard, storage) is working. If something is wrong, you'll hear beeping sounds or see an error message.
+\end{theorybox}
+
+% ---------------------------------------------------------------
+\section{Shutdown Options}
+\label{sec:shutdown-options}
+\index{shutdown}\index{restart}\index{sleep mode}
+
+When you're done using the computer, you have three choices:
+
+% --- Figure 7.2: Shutdown Options Comparison ---
+\begin{figure}[H]
+\centering
+\begin{tabularx}{\textwidth}{@{}*{3}{>{\centering\arraybackslash}X}@{}}
+  \begin{tcolorbox}[colback=FunCoral!8, colframe=FunCoral, width=3.8cm, height=4.5cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{FunCoral}{\faPowerOff}}\vspace{8pt}\\
+    \textbf{Shut Down}\vspace{6pt}\\
+    {\footnotesize Turns off completely.\\All programs close.\\Use at end of day.}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunYellow!8, colframe=FunYellow!80!black, width=3.8cm, height=4.5cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{FunYellow!80!black}{\faRedo}}\vspace{8pt}\\
+    \textbf{Restart}\vspace{6pt}\\
+    {\footnotesize Turns off, then\\turns back on.\\Use after updates.}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunSky!8, colframe=FunSky, width=3.8cm, height=4.5cm, valign=center, halign=center, arc=8pt]
+    {\Huge\textcolor{FunSky}{\faMoon}}\vspace{8pt}\\
+    \textbf{Sleep}\vspace{6pt}\\
+    {\footnotesize Low power mode.\\Work is saved in RAM.\\Use for short breaks.}
+  \end{tcolorbox}
+\end{tabularx}
+\caption{Three ways to power off --- choose the right one!}
+\label{fig:shutdown-options}
+\end{figure}
+
+\begin{warnbox}
+\textbf{Never turn off a computer by holding the power button} (force shutdown) unless it's completely frozen and won't respond. Force shutting down can cause data loss or even damage files!
+\end{warnbox}
+
+\bytetip[warn]{Always \textbf{save your work} before shutting down or restarting! Unsaved files will be lost. Get into the habit of pressing \key{Ctrl}+\key{S} regularly.}
+
+\begin{funfact}
+Early computers in the 1960s had no ``shut down'' option. Operators literally had to flip large physical switches to turn them off, and the boot-up process could take \textbf{hours}! Today, your computer can start in under 10 seconds with an SSD.
+\end{funfact}
+
+\begin{reviewqs}
+  \item What does POST stand for, and what does it do?
+  \item List the steps of the boot process in order.
+  \item What is the difference between Shut Down and Sleep?
+  \item When should you use ``Restart'' instead of ``Shut Down''?
+  \item Why should you never force-shutdown a computer unless it's frozen?
+\end{reviewqs}
+
+\begin{challenge}
+Next time you turn on a computer, \textbf{time the boot process} with a stopwatch. How long does it take from pressing the power button to seeing the desktop? Compare with a classmate. Who has the faster computer, and why do you think that is?
+\end{challenge}

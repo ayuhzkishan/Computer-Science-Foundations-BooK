@@ -1,0 +1,14 @@
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={
+    draw=black, align=center
+  }
+]
+  \node[card] (desktop) at (0,0) {
+    {\Huge A}\\[6pt]
+    B
+  };
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,89 @@
+% ============================================================================
+% Chapter 20: Advanced File Management
+% ============================================================================
+
+\chapter{Advanced File Management}
+\label{ch:files-adv}
+
+\begin{objectives}
+  \item Understand file extensions and what they mean
+  \item Use advanced search to find files quickly
+  \item Manage file properties and attributes
+  \item Compress (zip) and extract files
+\end{objectives}
+
+\bytetip[tip]{You learned the basics of files in Part II. Now let's become file management \textbf{experts} --- you'll learn tricks that even many adults don't know!}
+
+\section{File Extensions}
+\label{sec:extensions}
+\index{file extension}
+
+Every file has an \hl{extension} --- the part after the dot in the filename. It tells the computer what type of file it is and which program should open it.
+
+\begin{table}[H]
+\centering
+\caption{Common file extensions and their meanings}
+\label{tab:extensions}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Extension}} & \textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Description}} & \textcolor{white}{\textbf{Opens With}} \\
+\midrule
+\rowcolor{RowLight} .txt & Text & Plain text file & Notepad \\
+\rowcolor{RowDark} .docx & Document & Word document & MS Word \\
+\rowcolor{RowLight} .xlsx & Spreadsheet & Excel workbook & MS Excel \\
+\rowcolor{RowDark} .pptx & Presentation & PowerPoint slides & MS PowerPoint \\
+\rowcolor{RowLight} .pdf & Document & Portable document & PDF reader \\
+\rowcolor{RowDark} .jpg / .png & Image & Photo or picture & Photos / Paint \\
+\rowcolor{RowLight} .mp3 & Audio & Music file & Media Player \\
+\rowcolor{RowDark} .mp4 & Video & Video file & Media Player \\
+\rowcolor{RowLight} .zip & Archive & Compressed file(s) & File Explorer \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Searching for Files}
+\label{sec:search-files}
+\index{file!search}
+
+Lost a file? Use Windows Search:
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Press \key{Windows}+\key{S} or click the search bar.
+  \item Type part of the file name.
+  \item Filter by type: Documents, Photos, Videos, etc.
+  \item Double-click the result to open it.
+\end{enumerate}
+
+\section{Compressing (Zipping) Files}
+\label{sec:zip}
+\index{compression}\index{zip file}
+
+\hl{Compressing} a file makes it smaller, which is great for sharing via email or USB.
+
+\begin{labstep}[How to Zip a File]
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Right-click the file or folder you want to compress.
+  \item Select ``Compress to ZIP file'' (or ``Send to $\rightarrow$ Compressed folder'').
+  \item A new \texttt{.zip} file appears in the same location.
+  \item To \textbf{extract}: right-click the zip file $\rightarrow$ ``Extract All.''
+\end{enumerate}
+\end{labstep}
+
+\bytetip[warn]{Changing a file's extension (e.g., renaming \texttt{.docx} to \texttt{.txt}) doesn't convert the file --- it just confuses the computer about how to open it! Use ``Save As'' to properly convert file types.}
+
+\begin{funfact}
+The ZIP file format was invented by \textbf{Phil Katz} in 1989. The name ``zip'' was chosen to imply speed --- the idea was that zipping files together would be as fast as a zipper closing on a jacket!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is a file extension, and why is it important?
+  \item Name the file extensions for: a Word document, an image, a video.
+  \item How do you search for a file on Windows?
+  \item What does ``compressing'' a file do?
+  \item Why should you NOT manually change a file's extension?
+\end{reviewqs}
+
+\begin{challenge}
+Create a folder called ``ZipTest'' with three files inside (any types). Right-click the folder and compress it into a ZIP file. Check the file sizes: how much smaller is the ZIP compared to the original folder? Express it as a percentage!
+\end{challenge}

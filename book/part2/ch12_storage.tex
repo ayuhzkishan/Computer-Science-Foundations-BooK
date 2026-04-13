@@ -1,0 +1,104 @@
+% ============================================================================
+% Chapter 12: Storage Devices
+% ============================================================================
+
+\chapter{Storage Devices}
+\label{ch:storage}
+
+\begin{objectives}
+  \item Name and describe different types of storage devices
+  \item Compare storage devices by capacity, speed, and portability
+  \item Understand the difference between primary and secondary storage
+  \item Explain what cloud storage is and how it works
+\end{objectives}
+
+\bytetip[tip]{Storage is where your computer keeps everything --- from your homework to your favourite photos. Think of it like a digital wardrobe for all your stuff!}
+
+\section{Types of Storage}
+\label{sec:storage-types}
+\index{storage!types}
+
+\begin{theorybox}[Primary vs Secondary Storage]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item \textbf{Primary storage}\index{primary storage} (RAM) --- Temporary, fast, loses data when powered off
+  \item \textbf{Secondary storage}\index{secondary storage} (HDD, SSD, USB) --- Permanent, keeps data even when off
+\end{itemize}
+\end{theorybox}
+
+% --- Figure 12.1: Storage Capacity Bar Chart ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, bar width=14pt,
+  xlabel={Typical Capacity (GB)},
+  xlabel style={font=\small\sffamily},
+  symbolic y coords={DVD, USB 4GB, USB 64GB, SSD 512GB, HDD 1TB, Cloud},
+  ytick=data,
+  yticklabel style={font=\small\sffamily},
+  xticklabel style={font=\small\sffamily},
+  nodes near coords,
+  nodes near coords style={font=\tiny\sffamily\bfseries},
+  xmin=0, xmax=1100,
+  width=12cm, height=7cm,
+  enlarge y limits=0.15,
+]
+\addplot[fill=FunCoral!70, draw=FunCoral] coordinates {(4.7,DVD)};
+\addplot[fill=FunSky!70, draw=FunSky] coordinates {(4,USB 4GB)};
+\addplot[fill=FunMint!70, draw=FunMint] coordinates {(64,USB 64GB)};
+\addplot[fill=FunPurple!70, draw=FunPurple] coordinates {(512,SSD 512GB)};
+\addplot[fill=ModuleBlue!70, draw=ModuleBlue] coordinates {(1000,HDD 1TB)};
+\addplot[fill=LabGreen!70, draw=LabGreen] coordinates {(1000,Cloud)};
+\end{axis}
+\end{tikzpicture}
+\caption{Comparing storage device capacities (Cloud shown as 1000+ GB)}
+\label{fig:storage-chart}
+\end{figure}
+
+% --- Table 12.1: Storage Device Comparison ---
+\begin{table}[H]
+\centering
+\caption{Comparing different storage devices}
+\label{tab:storage-compare}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X l l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Device}} & \textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Capacity}} & \textcolor{white}{\textbf{Speed}} & \textcolor{white}{\textbf{Portable}} \\
+\midrule
+\rowcolor{RowLight} HDD & Magnetic & 500 GB -- 4 TB & Medium & \textcolor{WarnRed}{\ding{55}} \\
+\rowcolor{RowDark} SSD & Flash & 128 GB -- 2 TB & Fast & \textcolor{WarnRed}{\ding{55}} \\
+\rowcolor{RowLight} USB Drive & Flash & 4 GB -- 256 GB & Medium & \textcolor{LabGreen}{\ding{51}} \\
+\rowcolor{RowDark} DVD & Optical & 4.7 GB & Slow & \textcolor{LabGreen}{\ding{51}} \\
+\rowcolor{RowLight} Cloud & Online & Unlimited & Varies & \textcolor{LabGreen}{\ding{51}} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Cloud Storage}
+\label{sec:cloud}
+\index{cloud storage}
+
+\hl{Cloud storage} lets you save files on the internet instead of your computer. Services like \textbf{Google Drive}, \textbf{OneDrive}, and \textbf{Dropbox} let you access your files from any device, anywhere!
+
+\begin{realworld}
+When you save a photo to Google Photos or upload a document to Google Drive, you're using cloud storage. The file isn't on your phone or laptop --- it's on a powerful computer (called a \textbf{server}) in a data centre, possibly thousands of kilometres away!
+\end{realworld}
+
+\bytetip[fun]{If you stacked all the data stored in the world's cloud servers as printed paper, the pile would reach from Earth to Pluto --- and back --- \textbf{multiple times}!}
+
+\begin{funfact}
+The first USB flash drive was sold in 2000 and could store just \textbf{8 MB} of data --- that's not even enough for one high-quality photo today! Modern USB drives can hold up to \textbf{2 TB}, which is 250,000 times more.
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the difference between primary and secondary storage?
+  \item Name four types of secondary storage devices.
+  \item Which storage device is the fastest: HDD, SSD, or DVD?
+  \item What is cloud storage, and name two cloud storage services.
+  \item Why is an SSD faster than an HDD?
+\end{reviewqs}
+
+\begin{challenge}
+Check how much free storage your school computer has. Right-click on \textbf{This PC} $\rightarrow$ \textbf{Properties} (or check the C: drive). Write down: (a) Total capacity, (b) Used space, (c) Free space. Calculate what percentage is used!
+\end{challenge}

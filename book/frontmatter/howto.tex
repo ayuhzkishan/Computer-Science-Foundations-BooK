@@ -1,0 +1,69 @@
+% ============================================================================
+% howto.tex — How to Use This Book
+% ============================================================================
+
+\chapter*{How to Use This Book}
+\addcontentsline{toc}{chapter}{How to Use This Book}
+\markboth{How to Use This Book}{How to Use This Book}
+
+This book is packed with colourful boxes, icons, and special sections to help you learn. Here's a quick guide to what each one means:
+
+\vspace{10pt}
+
+% --- Legend Panel ---
+\begin{center}
+\begin{tikzpicture}[
+  every node/.style={font=\small\sffamily, align=left},
+  boxnode/.style={rounded corners=6pt, minimum width=4.5cm, minimum height=1.2cm,
+                  draw, line width=1pt, inner sep=6pt, align=left},
+]
+
+% Row 1
+\node[boxnode, fill=HeaderBg, draw=ModuleBlue] (t1) at (0,0) 
+  {\faBook\ \textbf{Theory Box}\\Learn the concept};
+\node[boxnode, fill=FunYellow!20, draw=FunYellow!80!black] (t2) at (5.5,0) 
+  {\faStar\ \textbf{Fun Fact}\\Cool trivia};
+\node[boxnode, fill=NoteOrange!10, draw=NoteOrange] (t3) at (11,0) 
+  {\faInfoCircle\ \textbf{Note}\\Important info};
+
+% Row 2
+\node[boxnode, fill=WarnRed!8, draw=WarnRed] (t4) at (0,-2) 
+  {\faExclamationTriangle\ \textbf{Warning}\\Be careful!};
+\node[boxnode, fill=FunPurple!8, draw=FunPurple] (t5) at (5.5,-2) 
+  {\faKeyboard\ \textbf{Shortcuts}\\Save time};
+\node[boxnode, fill=FunMint!15, draw=FunMint!80!black] (t6) at (11,-2) 
+  {\faLightbulb\ \textbf{Try It}\\Quick challenge};
+
+% Row 3
+\node[boxnode, fill=FunSky!15, draw=FunSky] (t7) at (0,-4) 
+  {\faRobot\ \textbf{Byte's Tip}\\Robot advice};
+\node[boxnode, fill=LabGreen!5, draw=LabGreen] (t8) at (5.5,-4) 
+  {\faFlask\ \textbf{Lab Activity}\\Hands-on practical};
+\node[boxnode, fill=FunPink!10, draw=FunPink] (t9) at (11,-4) 
+  {\faTrophy\ \textbf{Challenge}\\Extra task};
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{12pt}
+
+\subsection*{Other Symbols You'll See}
+
+\begin{itemize}[leftmargin=2cm, itemsep=6pt]
+  \item[\key{Ctrl}] \textbf{Keyboard keys} are shown as styled key caps like this.
+  \item[\textcolor{LabGreen}{\ding{51}}] A \textbf{check mark} means ``Yes'' or ``Correct.''
+  \item[\textcolor{WarnRed}{\ding{55}}] A \textbf{cross mark} means ``No'' or ``Incorrect.''
+  \item[\faAngleRight] Points in a \textbf{learning objectives} list.
+  \item[\faQuestionCircle] Marks a \textbf{review question} at the end of a chapter.
+  \item[\stepcircle{1}] A \textbf{step number} in a lab practical.
+\end{itemize}
+
+\vspace{10pt}
+
+\begin{notebox}
+Every chapter follows this pattern: \textbf{Learn} (theory) $\rightarrow$ \textbf{Practice} (shortcuts \& tips) $\rightarrow$ \textbf{Do} (lab practicals). Work through them in order for the best experience!
+\end{notebox}
+
+\vspace{6pt}
+
+\bytetip[tip]{Look for the \textbf{QR codes} at the end of each Part --- they link to extra resources, videos, and activities chosen by your teacher. Scan them with your phone's camera!}

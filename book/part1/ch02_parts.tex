@@ -1,0 +1,212 @@
+% ============================================================================
+% Chapter 2: Parts of a Computer
+% ============================================================================
+
+\chapter{Parts of a Computer}
+\label{ch:parts}
+
+\begin{objectives}
+  \item Identify the main physical parts of a computer system
+  \item Distinguish between input devices and output devices
+  \item Explain the difference between hardware and software
+  \item Understand the role of the CPU (processor)
+\end{objectives}
+
+\bytetip[tip]{In this chapter, you'll meet all the ``body parts'' of a computer. Think of it like learning anatomy --- but way more fun and with zero exams on bones!}
+
+% ---------------------------------------------------------------
+\section{The Computer System}
+\label{sec:computer-system}
+\index{computer system}
+
+A \hl{computer system} is made up of different parts that work together. Just like a human body has a brain, eyes, ears, and hands, a computer has its own special parts.
+
+% --- Figure 2.1: Labeled Computer Setup ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.8cm]
+  % Monitor
+  \node[draw=NavyBlue, fill=NavyBlue!5, rounded corners=3pt,
+        minimum width=5cm, minimum height=3.5cm, line width=1.5pt] (monitor) {};
+  \node[draw=NavyBlue!50, fill=ModuleBlue!8, minimum width=4.4cm, minimum height=2.8cm] 
+    at (monitor.center) {};
+  \node[font=\tiny\sffamily, text=NavyBlue!50] at (monitor.center) {Desktop};
+  % Monitor stand
+  \fill[NavyBlue!30] ([yshift=-0.1cm]monitor.south) ++(-0.3,0) rectangle ++(0.6,-0.4);
+  \fill[NavyBlue!20] ([yshift=-0.5cm]monitor.south) ++(-0.8,0) rectangle ++(1.6,-0.15);
+  
+  % Monitor label
+  \node[right=2.5cm of monitor, font=\small\sffamily\bfseries, text=NavyBlue, align=left] (monlabel)
+    {Monitor\\[-1pt]\footnotesize Output Device};
+  \draw[thickarrow, ModuleBlue] (monlabel.west) -- ([xshift=0.2cm]monitor.east);
+  
+  % CPU Tower
+  \node[draw=NavyBlue, fill=ShadeGray, rounded corners=2pt,
+        minimum width=1.5cm, minimum height=4cm, line width=1.5pt,
+        left=2.5cm of monitor] (cpu) {};
+  \fill[NavyBlue!20] ([yshift=0.8cm]cpu.center) ++(-0.4,0) rectangle ++(0.8,0.15);
+  \fill[LabGreen!40] ([yshift=0.3cm]cpu.center) circle (0.08);
+  % CPU label
+  \node[left=1.2cm of cpu, font=\small\sffamily\bfseries, text=NavyBlue, align=right] (cpulabel)
+    {CPU / System Unit\\[-1pt]\footnotesize The ``Brain''};
+  \draw[thickarrow, ModuleBlue] (cpulabel.east) -- ([xshift=-0.2cm]cpu.west);
+  
+  % Keyboard
+  \node[draw=NavyBlue, fill=ShadeGray, rounded corners=2pt,
+        minimum width=4.5cm, minimum height=0.8cm, line width=1pt,
+        below=1.5cm of monitor] (keyboard) {};
+  % Key dots
+  \foreach \x in {-1.8,-1.4,...,1.8}{
+    \fill[NavyBlue!30] ([xshift=\x cm]keyboard.center) ++(0,0.1) rectangle ++(0.25,0.2);
+  }
+  \node[below=0.5cm of keyboard, font=\small\sffamily\bfseries, text=NavyBlue] (keylabel)
+    {Keyboard --- Input Device};
+  \draw[thickarrow, ModuleBlue] (keylabel) -- (keyboard);
+  
+  % Mouse
+  \node[draw=NavyBlue, fill=ShadeGray, rounded corners=8pt,
+        minimum width=0.8cm, minimum height=1.2cm, line width=1pt,
+        right=1cm of keyboard] (mouse) {};
+  \draw[NavyBlue!50, line width=0.5pt] (mouse.north) -- ++(0, 0.4);
+  \node[right=0.5cm of mouse, font=\small\sffamily\bfseries, text=NavyBlue, align=left] (mouselabel)
+    {Mouse\\[-1pt]\footnotesize Input Device};
+  \draw[thickarrow, ModuleBlue] (mouselabel.west) -- (mouse.east);
+  
+  % Speakers
+  \node[draw=NavyBlue, fill=FunSky!15, rounded corners=3pt,
+        minimum width=0.7cm, minimum height=1.4cm, line width=1pt,
+        right=3.5cm of monitor.north east, anchor=north] (speaker) {};
+  \node[circle, draw=NavyBlue!50, minimum size=0.4cm] at (speaker.center) {};
+  \node[above=0.3cm of speaker, font=\small\sffamily\bfseries, text=NavyBlue] (spklabel)
+    {Speakers --- Output};
+  \draw[thickarrow, ModuleBlue] (spklabel) -- (speaker);
+  
+  % Cables (dashed)
+  \draw[gray, dashed, line width=1pt] (cpu.east) -- (monitor.west);
+  \draw[gray, dashed, line width=1pt] (cpu.south) |- (keyboard.west);
+\end{tikzpicture}
+\caption{A typical desktop computer setup with all parts labelled}
+\label{fig:computer-setup}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{Hardware vs Software}
+\label{sec:hw-vs-sw}
+\index{hardware}\index{software}
+
+The parts of a computer fall into two big categories: \textbf{hardware} and \textbf{software}.
+
+\begin{theorybox}[Hardware and Software]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item \textbf{Hardware}\index{hardware} = The physical parts you can \emph{touch} (monitor, keyboard, mouse, CPU)
+  \item \textbf{Software}\index{software} = The programs and instructions that tell the hardware what to do (Windows, MS Word, games)
+\end{itemize}
+Without hardware, software has nothing to run on. Without software, hardware is just an expensive paperweight!
+\end{theorybox}
+
+% --- Figure 2.2: Hardware vs Software Split Panel ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Left panel - Hardware
+  \fill[ModuleBlue!12] (0,0) rectangle (5.5,5);
+  \draw[ModuleBlue, line width=2pt] (0,0) rectangle (5.5,5);
+  \node[font=\large\bfseries\sffamily, text=ModuleBlue] at (2.75,4.5) {\faServer\ HARDWARE};
+  \node[font=\small\sffamily, text=NavyBlue, align=left, anchor=north west] at (0.5,4.0) {
+    \faDesktop\quad Monitor\\[4pt]
+    \faKeyboard\quad Keyboard\\[4pt]
+    \faMouse\quad Mouse\\[4pt]
+    \faPrint\quad Printer\\[4pt]
+    \faMemory\quad RAM Chip
+  };
+  
+  % Right panel - Software
+  \fill[LabGreen!10] (6.5,0) rectangle (12,5);
+  \draw[LabGreen, line width=2pt] (6.5,0) rectangle (12,5);
+  \node[font=\large\bfseries\sffamily, text=LabGreen] at (9.25,4.5) {\faCode\ SOFTWARE};
+  \node[font=\small\sffamily, text=NavyBlue, align=left, anchor=north west] at (7.0,4.0) {
+    \faWindows\quad Windows OS\\[4pt]
+    \faFileWord\quad MS Word\\[4pt]
+    \faPaintBrush\quad MS Paint\\[4pt]
+    \faCalculator\quad Calculator\\[4pt]
+    \faChrome\quad Chrome
+  };
+  
+  % Center divider with arrow
+  \draw[FunPurple, line width=2pt, <->] (5.5,2.5) -- (6.5,2.5);
+  \node[fill=white, font=\scriptsize\bfseries\sffamily, text=FunPurple, inner sep=3pt, align=center] 
+    at (6.0,2.5) {Work\\Together};
+\end{tikzpicture}
+\caption{Hardware (physical parts) vs Software (programs) --- they need each other!}
+\label{fig:hw-vs-sw}
+\end{figure}
+
+% ---------------------------------------------------------------
+\section{Input and Output Devices}
+\label{sec:input-output}
+\index{input device}\index{output device}
+
+\begin{theorybox}[Input and Output]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item \textbf{Input devices}\index{input device} send data \emph{into} the computer (e.g., keyboard, mouse)
+  \item \textbf{Output devices}\index{output device} show results \emph{from} the computer (e.g., monitor, printer)
+\end{itemize}
+\end{theorybox}
+
+% --- Table 2.1: Input vs Output Devices ---
+\begin{table}[H]
+\centering
+\caption{Input devices vs Output devices}
+\label{tab:input-output}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ll}
+\toprule
+\cellcolor{ModuleBlue}\textcolor{white}{\faHandPointer\ \textbf{Input Devices}} &
+\cellcolor{LabGreen}\textcolor{white}{\faEye\ \textbf{Output Devices}} \\
+\midrule
+\rowcolor{RowLight}
+Keyboard & Monitor \\
+\rowcolor{RowDark}
+Mouse & Printer \\
+\rowcolor{RowLight}
+Scanner & Speakers \\
+\rowcolor{RowDark}
+Microphone & Projector \\
+\rowcolor{RowLight}
+Webcam & Headphones \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bytetip[tip]{The CPU is like the \textbf{brain} of the computer --- it does ALL the thinking! Every instruction, every calculation, every decision goes through the CPU. Without it, a computer is just a fancy box.}
+
+% ---------------------------------------------------------------
+\section{The CPU --- The Brain}
+\label{sec:cpu}
+\index{CPU}\index{processor}
+
+The \hl{CPU} (Central Processing Unit)\index{CPU} is the most important part inside the computer. It processes all the data and instructions. When people say a computer is ``fast,'' they usually mean it has a powerful CPU.
+
+\begin{notebox}
+The CPU is a small chip --- usually no bigger than a postage stamp --- but it contains \textbf{billions} of tiny electronic switches called transistors. These switches flip on and off billions of times every second to process data!
+\end{notebox}
+
+\begin{funfact}
+The CPU inside your school's computer is more powerful than all the computers NASA used to send astronauts to the Moon in 1969. That's right --- your calculator app has more computing power than the Apollo spacecraft! \faRocket
+\end{funfact}
+
+% ---------------------------------------------------------------
+% End-of-Chapter
+% ---------------------------------------------------------------
+
+\begin{reviewqs}
+  \item Name the four main parts of a desktop computer setup.
+  \item What is the difference between hardware and software? Give two examples of each.
+  \item Classify these devices as Input or Output: Printer, Keyboard, Scanner, Speakers, Mouse.
+  \item What does CPU stand for, and what is its role?
+  \item Can a computer work with only hardware and no software? Explain why or why not.
+\end{reviewqs}
+
+\begin{challenge}
+Draw a labelled diagram of a computer setup on a blank sheet of paper. Include at least \textbf{six} parts and mark each one as either ``Input,'' ``Output,'' or ``Processing.'' Add colour to make it look like a poster you'd hang in a computer lab!
+\end{challenge}

@@ -1,0 +1,112 @@
+% ============================================================================
+% Chapter 15: Basic Troubleshooting
+% ============================================================================
+
+\chapter{Basic Troubleshooting}
+\label{ch:troubleshoot}
+
+\begin{objectives}
+  \item Identify common computer problems
+  \item Follow a logical troubleshooting process
+  \item Fix simple issues like frozen screens and no sound
+  \item Know when to ask for help from a teacher or IT support
+\end{objectives}
+
+\bytetip[tip]{Things go wrong sometimes --- that's perfectly normal! The important thing is knowing how to fix them calmly and logically. Let's learn the troubleshooting mindset!}
+
+\section{The Troubleshooting Flowchart}
+\label{sec:troubleshoot-flow}
+\index{troubleshooting}
+
+When something goes wrong, follow this step-by-step process:
+
+% --- Figure 15.1: Troubleshooting Flowchart ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.9cm]
+  \node[terminal] (s1) {Problem Occurs};
+  \node[process, below=of s1] (s2) {Try Restarting\\the App};
+  \node[decision, below=of s2, minimum width=2.5cm] (d1) {Fixed?};
+  \node[process, below=1cm of d1] (s3) {Restart the\\Computer};
+  \node[decision, below=of s3, minimum width=2.5cm] (d2) {Fixed?};
+  \node[process, below=1cm of d2] (s4) {Check All Cable\\Connections};
+  \node[decision, below=of s4, minimum width=2.5cm] (d3) {Fixed?};
+  \node[terminal, below=1cm of d3, fill=FunSky!10, draw=FunSky] (s5) 
+    {Ask Your Teacher\\/ IT Support};
+  
+  % Right side "Yes" exits
+  \node[terminal, right=2.5cm of d1, fill=LabGreen!10, draw=LabGreen] (done1) {Done!};
+  \node[terminal, right=2.5cm of d2, fill=LabGreen!10, draw=LabGreen] (done2) {Done!};
+  \node[terminal, right=2.5cm of d3, fill=LabGreen!10, draw=LabGreen] (done3) {Done!};
+  
+  % Main flow
+  \draw[thickarrow] (s1) -- (s2);
+  \draw[thickarrow] (s2) -- (d1);
+  \draw[labelarrow=WarnRed, line width=1.5pt] (d1.south) -- (s3) 
+    node[midway, left, font=\scriptsize\sffamily\bfseries, text=WarnRed] {NO};
+  \draw[thickarrow] (s3) -- (d2);
+  \draw[labelarrow=WarnRed, line width=1.5pt] (d2.south) -- (s4) 
+    node[midway, left, font=\scriptsize\sffamily\bfseries, text=WarnRed] {NO};
+  \draw[thickarrow] (s4) -- (d3);
+  \draw[labelarrow=WarnRed, line width=1.5pt] (d3.south) -- (s5) 
+    node[midway, left, font=\scriptsize\sffamily\bfseries, text=WarnRed] {NO};
+  
+  % Yes branches
+  \draw[labelarrow=LabGreen, line width=1.5pt] (d1.east) -- (done1)
+    node[midway, above, font=\scriptsize\sffamily\bfseries, text=LabGreen] {YES};
+  \draw[labelarrow=LabGreen, line width=1.5pt] (d2.east) -- (done2)
+    node[midway, above, font=\scriptsize\sffamily\bfseries, text=LabGreen] {YES};
+  \draw[labelarrow=LabGreen, line width=1.5pt] (d3.east) -- (done3)
+    node[midway, above, font=\scriptsize\sffamily\bfseries, text=LabGreen] {YES};
+\end{tikzpicture}
+\caption{The troubleshooting flowchart --- follow each step before escalating}
+\label{fig:troubleshoot}
+\end{figure}
+
+\section{Common Problems and Fixes}
+\label{sec:common-problems}
+
+\begin{table}[H]
+\centering
+\caption{Common computer problems and quick fixes}
+\label{tab:common-fixes}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l X X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Problem}} & \textcolor{white}{\textbf{Possible Cause}} & \textcolor{white}{\textbf{Quick Fix}} \\
+\midrule
+\rowcolor{RowLight} Screen is black & Monitor off or cable loose & Check power \& cables \\
+\rowcolor{RowDark} No sound & Volume muted or low & Click speaker icon, unmute \\
+\rowcolor{RowLight} App frozen & Program crashed & \key{Ctrl}+\key{Alt}+\key{Del} $\rightarrow$ Task Manager \\
+\rowcolor{RowDark} No internet & Wi-Fi disconnected & Reconnect to Wi-Fi \\
+\rowcolor{RowLight} Slow computer & Too many apps open & Close unused programs \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\bytetip[warn]{If your screen is completely frozen and nothing responds, hold the \key{Power} button for 5--10 seconds to force restart. But only do this as a \textbf{last resort} --- it can cause data loss!}
+
+\begin{shortcutbox}
+\begin{tabular}{ll}
+  \key{Ctrl}+\key{Alt}+\key{Del} & Open security options / Task Manager \\
+  \key{Ctrl}+\key{Shift}+\key{Esc} & Open Task Manager directly \\
+  \key{Alt}+\key{F4} & Close the current window/program \\
+\end{tabular}
+\end{shortcutbox}
+
+\begin{funfact}
+The \key{Ctrl}+\key{Alt}+\key{Del} shortcut was invented by \textbf{David Bradley}, an IBM engineer, in 1981. He originally designed it as a quick way to restart during development. He once joked: ``I may have invented it, but Bill Gates made it famous!''
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the first thing you should try when an app stops responding?
+  \item How do you open Task Manager?
+  \item Name three common computer problems and their fixes.
+  \item When should you ask your teacher for help instead of trying to fix it yourself?
+  \item What does \key{Ctrl}+\key{Alt}+\key{Del} do?
+\end{reviewqs}
+
+\begin{challenge}
+Open \textbf{Task Manager} (\key{Ctrl}+\key{Shift}+\key{Esc}). Look at the \textbf{Processes} tab. Which program is using the most memory? Which is using the most CPU? Write down your findings!
+\end{challenge}

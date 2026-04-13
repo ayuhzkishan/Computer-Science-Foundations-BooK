@@ -1,0 +1,142 @@
+% ============================================================================
+% Chapter 26: Inserting Elements in MS Word
+% ============================================================================
+\chapter{Inserting Elements}
+\label{ch:word-insert}
+
+\begin{objectives}
+  \item Insert and format tables in a document
+  \item Add pictures, shapes, and WordArt
+  \item Insert headers, footers, and page numbers
+  \item Use the Insert tab effectively
+\end{objectives}
+
+\bytetip[tip]{Plain text is fine, but adding tables, images, and shapes makes your document look \textbf{professional}. Let's learn how to spice things up!}
+
+\section{Inserting Tables}
+\label{sec:insert-tables}
+\index{MS Word!tables}
+
+% --- Figure 26.1: Table Anatomy ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Draw a 3x3 table
+  \foreach \r in {0,1.2,2.4,3.6}{
+    \draw[NavyBlue, line width=1pt] (0,\r) -- (9,\r);
+  }
+  \foreach \c in {0,3,6,9}{
+    \draw[NavyBlue, line width=1pt] (\c,0) -- (\c,3.6);
+  }
+  
+  % Highlighted cell
+  \fill[FunYellow!40] (3,1.2) rectangle (6,2.4);
+  
+  % Content
+  \node[font=\small\sffamily] at (1.5,3.0) {Name};
+  \node[font=\small\sffamily] at (4.5,3.0) {Age};
+  \node[font=\small\sffamily] at (7.5,3.0) {Class};
+  \node[font=\small\sffamily] at (1.5,1.8) {Alice};
+  \node[font=\small\sffamily] at (4.5,1.8) {13};
+  \node[font=\small\sffamily] at (7.5,1.8) {8th};
+  
+  % Labels
+  % Row label
+  \draw[FunCoral, line width=1.5pt, decorate, decoration={brace, amplitude=5pt}] 
+    (9.3,2.4) -- (9.3,1.2);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=FunCoral] at (9.5,1.8) {Row};
+  
+  % Column label
+  \draw[FunPurple, line width=1.5pt, decorate, decoration={brace, amplitude=5pt, mirror}] 
+    (3,-0.3) -- (6,-0.3);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=FunPurple] at (4.5,-0.5) {Column};
+  
+  % Cell label
+  \draw[FunYellow!80!black, line width=1.2pt, ->] (4.5,1.8) -- (4.5,0.5) -- (6.5,0.5);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=FunYellow!80!black] at (6.5,0.5) {Cell (selected)};
+  
+  % Border label
+  \draw[NavyBlue, line width=1.2pt, ->] (-1.5, 2.4) -- (-0.1, 2.4);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=NavyBlue, align=center] at (-1.5,2.4) {Border/\\Gridline};
+\end{tikzpicture}
+\caption{Anatomy of a table: rows, columns, cells, and borders}
+\label{fig:table-anatomy}
+\end{figure}
+
+To insert a table: \textbf{Insert} tab $\rightarrow$ \textbf{Table} $\rightarrow$ drag to select the number of rows and columns.
+
+\section{Inserting Pictures and Shapes}
+\label{sec:insert-pictures}
+\index{MS Word!pictures}\index{MS Word!shapes}
+
+\begin{labstep}[Inserting a Picture]
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Click where you want the picture to appear.
+  \item Go to \textbf{Insert} tab $\rightarrow$ \textbf{Pictures}.
+  \item Choose ``This Device'' to insert from your computer, or ``Online Pictures'' for web images.
+  \item Select the image and click \textbf{Insert}.
+  \item Resize by dragging the corner handles. Use the \textbf{Layout Options} button to choose how text wraps around the image.
+\end{enumerate}
+\end{labstep}
+
+% --- Figure 26.2: Insert Tab Visual Map ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Tab strip
+  \fill[ModuleBlue!15] (0,0) rectangle (14,1.5);
+  \draw[ModuleBlue, line width=1.5pt] (0,0) rectangle (14,1.5);
+  \node[font=\small\bfseries\sffamily, text=ModuleBlue, anchor=west] at (0.3,1.2) {INSERT TAB};
+  
+  % Groups
+  \foreach \x/\w/\lbl/\icons in {
+    0.3/1.5/Pages/{\faFile},
+    2.0/1.8/Tables/{\faTable},
+    4.0/2.0/Pictures/{\faImage},
+    6.2/2.2/Illustrations/{\faShapes},
+    8.6/2.5/Header \& Footer/{\faHeading},
+    11.3/1.5/Text/{\faFont},
+    13.0/0.8/Symbols/{\faOm}
+  }{
+    \draw[ModuleBlue!40, line width=0.5pt] (\x, 0.1) rectangle (\x+\w, 0.9);
+    \node[font=\scriptsize\sffamily, text=NavyBlue] at (\x+\w/2, 0.5) {\icons};
+  }
+  
+  % Labels below
+  \foreach \x/\w/\lbl in {0.3/1.5/Pages, 2.0/1.8/Tables, 4.0/2.0/Pictures, 6.2/2.2/Illustrations, 8.6/2.5/Header \& Footer, 11.3/1.5/Text, 13.0/0.8/Sym.}{
+    \node[font=\tiny\sffamily\bfseries, text=NavyBlue] at (\x+\w/2, -0.3) {\lbl};
+  }
+\end{tikzpicture}
+\caption{The Insert tab groups --- your gateway to adding elements}
+\label{fig:insert-tab}
+\end{figure}
+
+\section{Headers, Footers, and Page Numbers}
+\label{sec:headers-footers}
+\index{MS Word!headers}\index{MS Word!page numbers}
+
+\begin{theorybox}[Headers and Footers]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=3pt]
+  \item A \textbf{Header} appears at the \textbf{top} of every page (e.g., document title, your name)
+  \item A \textbf{Footer} appears at the \textbf{bottom} of every page (e.g., page number, date)
+  \item To add them: \textbf{Insert} tab $\rightarrow$ \textbf{Header} or \textbf{Footer} or \textbf{Page Number}
+\end{itemize}
+\end{theorybox}
+
+\bytetip[fun]{You can insert \textbf{WordArt} to create fancy decorated text for titles and headings. Go to Insert $\rightarrow$ WordArt and choose a style. It's like having a graphic designer inside your computer!}
+
+\begin{funfact}
+The WordArt feature was introduced in \textbf{Word 97} and became an instant hit. Students in the late '90s used it on literally everything --- to the point where teachers had to \emph{ban} excessive WordArt usage in assignments!
+\end{funfact}
+
+\begin{reviewqs}
+  \item How do you insert a table in MS Word?
+  \item What are the parts of a table called?
+  \item How do you insert a picture from your computer?
+  \item What is the difference between a header and a footer?
+  \item How do you add page numbers to a document?
+\end{reviewqs}
+
+\begin{challenge}
+Create a document with: (a) A WordArt title, (b) A 3-column, 5-row table of your classmates' names, favourite colours, and hobbies, (c) An inserted picture, (d) Page numbers in the footer. Save as ``FormattedDoc.docx.''
+\end{challenge}

@@ -1,0 +1,123 @@
+% ============================================================================
+% Chapter 27: Page Layout and Printing
+% ============================================================================
+\chapter{Page Layout and Printing}
+\label{ch:word-layout}
+
+\begin{objectives}
+  \item Change page orientation between portrait and landscape
+  \item Set page margins and paper size
+  \item Preview and print a document
+  \item Add page borders and watermarks
+\end{objectives}
+
+\bytetip[tip]{Before you print, you need to make sure your page looks right on paper. Layout settings control how your document will appear when printed.}
+
+\section{Portrait vs Landscape}
+\label{sec:orientation}
+\index{MS Word!orientation}
+
+% --- Figure 27.1: Portrait vs Landscape ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Portrait
+  \draw[ModuleBlue, line width=1.5pt] (0,0) rectangle (3.5,5);
+  \foreach \y in {4.2,3.8,3.4,3.0,2.6}{
+    \draw[NavyBlue!20, line width=0.5pt] (0.4,\y) -- (3.1,\y);
+  }
+  \node[below, font=\small\bfseries\sffamily, text=ModuleBlue] at (1.75,-0.3) {Portrait};
+  \node[below, font=\scriptsize\sffamily, text=NavyBlue] at (1.75,-0.7) {Best for: Letters, Reports};
+  
+  % Landscape
+  \draw[LabGreen, line width=1.5pt] (6,0.75) rectangle (11,4.25);
+  \foreach \y in {3.6,3.2,2.8,2.4}{
+    \draw[NavyBlue!20, line width=0.5pt] (6.4,\y) -- (10.6,\y);
+  }
+  \node[below, font=\small\bfseries\sffamily, text=LabGreen] at (8.5,0.45) {Landscape};
+  \node[below, font=\scriptsize\sffamily, text=NavyBlue] at (8.5,0.05) {Best for: Tables, Charts};
+  
+  % Margin indicators on portrait
+  \draw[FunCoral, dashed, line width=0.8pt] (0.4,0.4) rectangle (3.1,4.6);
+  \draw[FunCoral, line width=0.8pt, <->] (0,2.5) -- (0.4,2.5);
+  \node[left, font=\tiny\sffamily, text=FunCoral] at (0,2.5) {Margin};
+\end{tikzpicture}
+\caption{Portrait (tall) vs Landscape (wide) orientation}
+\label{fig:orientation}
+\end{figure}
+
+To change orientation: \textbf{Layout} tab $\rightarrow$ \textbf{Orientation} $\rightarrow$ choose Portrait or Landscape.
+
+\section{Margins}
+\label{sec:margins}
+\index{MS Word!margins}
+
+% --- Figure 27.2: Margin Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.8]
+  % Page outline
+  \draw[NavyBlue, line width=2pt] (0,0) rectangle (8,11);
+  
+  % Margin regions
+  \fill[FunSky!15] (0,0) rectangle (8,1.2);        % bottom
+  \fill[FunSky!15] (0,9.8) rectangle (8,11);       % top
+  \fill[FunSky!15] (0,1.2) rectangle (1.2,9.8);    % left
+  \fill[FunSky!15] (6.8,1.2) rectangle (8,9.8);    % right
+  
+  % Printable area
+  \fill[white] (1.2,1.2) rectangle (6.8,9.8);
+  \node[font=\small\sffamily, text=NavyBlue!40] at (4,5.5) {Printable Area};
+  
+  % Measurement arrows
+  \draw[FunCoral, line width=1.2pt, <->] (0,10.5) -- (1.2,10.5);
+  \node[above, font=\tiny\sffamily\bfseries, text=FunCoral] at (0.6,10.5) {Left: 1"};
+  
+  \draw[FunCoral, line width=1.2pt, <->] (6.8,10.5) -- (8,10.5);
+  \node[above, font=\tiny\sffamily\bfseries, text=FunCoral] at (7.4,10.5) {Right: 1"};
+  
+  \draw[FunCoral, line width=1.2pt, <->] (8.5,9.8) -- (8.5,11);
+  \node[right, font=\tiny\sffamily\bfseries, text=FunCoral] at (8.5,10.4) {Top: 1"};
+  
+  \draw[FunCoral, line width=1.2pt, <->] (8.5,0) -- (8.5,1.2);
+  \node[right, font=\tiny\sffamily\bfseries, text=FunCoral] at (8.5,0.6) {Bottom: 1"};
+\end{tikzpicture}
+\caption{Page margins define the space between text and the edge of the paper}
+\label{fig:margins}
+\end{figure}
+
+\section{Printing a Document}
+\label{sec:printing}
+\index{MS Word!printing}
+
+\begin{labstep}[How to Print]
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Press \key{Ctrl}+\key{P} or go to File $\rightarrow$ Print.
+  \item The \textbf{Print Preview} shows how your document will look on paper.
+  \item Choose the number of copies.
+  \item Select your printer from the list.
+  \item Click \textbf{Print}.
+\end{enumerate}
+\end{labstep}
+
+\begin{notebox}
+Always check the \textbf{Print Preview} before printing! This prevents wasting paper on a document that doesn't look right. Think green --- save trees! \faTree
+\end{notebox}
+
+\bytetip[warn]{Before printing, make sure a printer is connected and turned on. If you see ``Printer Offline,'' check the cable, Wi-Fi connection, or ask your teacher for help.}
+
+\begin{funfact}
+The average office worker uses about \textbf{10,000 sheets} of paper per year. That's equivalent to one whole tree! Using Print Preview and printing only what you need helps save the environment.
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the difference between Portrait and Landscape?
+  \item How do you change page margins in Word?
+  \item What keyboard shortcut opens the Print dialog?
+  \item Why should you always use Print Preview before printing?
+  \item What are margins, and why are they important?
+\end{reviewqs}
+
+\begin{challenge}
+Create a document with: Portrait orientation, ``Moderate'' margins, a page border (Design tab $\rightarrow$ Page Borders), and your name in the header. Open Print Preview and take a screenshot of how it looks. Save as ``LayoutPractice.docx.''
+\end{challenge}

@@ -1,0 +1,77 @@
+% ============================================================================
+% Chapter 29: Working with Worksheets
+% ============================================================================
+\chapter{Working with Worksheets}
+\label{ch:excel-worksheets}
+
+\begin{objectives}
+  \item Add, rename, delete, and rearrange worksheets
+  \item Enter different types of data (text, numbers, dates)
+  \item Adjust column widths and row heights
+  \item Use AutoFill to quickly enter data series
+\end{objectives}
+
+\bytetip[tip]{A workbook is like a notebook with multiple pages. Each page is a \textbf{worksheet} (or ``sheet''). You can have as many sheets as you need!}
+
+\section{Managing Worksheets}
+\label{sec:manage-sheets}
+\index{MS Excel!worksheets}
+
+\begin{theorybox}[Worksheet Operations]
+\begin{tabular}{ll}
+  \textbf{Action} & \textbf{How To Do It} \\
+  \midrule
+  Add a new sheet & Click the \textbf{+} button next to sheet tabs \\
+  Rename a sheet & Double-click the sheet tab and type a new name \\
+  Delete a sheet & Right-click the tab $\rightarrow$ Delete \\
+  Move a sheet & Click and drag the tab to a new position \\
+  Copy a sheet & Right-click $\rightarrow$ Move or Copy $\rightarrow$ check ``Create a copy'' \\
+\end{tabular}
+\end{theorybox}
+
+\section{Entering Data}
+\label{sec:entering-data}
+\index{MS Excel!data entry}
+
+Excel cells can hold three types of data:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=3pt]
+  \item \textbf{Text} (labels) --- aligned to the left by default (e.g., ``Name'', ``Total'')
+  \item \textbf{Numbers} --- aligned to the right by default (e.g., 42, 3.14, -5)
+  \item \textbf{Dates} --- displayed in date format (e.g., 13/04/2026)
+\end{itemize}
+
+\section{AutoFill}
+\label{sec:autofill}
+\index{MS Excel!AutoFill}
+
+\hl{AutoFill} is one of Excel's most powerful features. It automatically fills cells with a pattern you start.
+
+\begin{labstep}[Using AutoFill]
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Type \textbf{1} in cell A1 and \textbf{2} in cell A2.
+  \item Select both cells (A1:A2).
+  \item Hover over the small square at the bottom-right corner (the \textbf{fill handle}).
+  \item Click and drag down to A10.
+  \item Excel automatically fills: 3, 4, 5, 6, 7, 8, 9, 10!
+\end{enumerate}
+\end{labstep}
+
+AutoFill also works with: days of the week, months, dates, and custom patterns.
+
+\bytetip[fun]{AutoFill is smart enough to continue patterns like ``Mon, Tue, Wed\ldots'' or ``Jan, Feb, Mar\ldots'' It even works with ``Quarter 1, Quarter 2, Quarter 3\ldots'' --- try it!}
+
+\begin{funfact}
+Excel's grid has been the same size since Excel 2007: 16,384 columns and 1,048,576 rows. Before that (Excel 2003), it only had 256 columns and 65,536 rows. The upgrade was a big deal for scientists and data analysts!
+\end{funfact}
+
+\begin{reviewqs}
+  \item How do you rename a worksheet?
+  \item What three types of data can you enter in a cell?
+  \item What is AutoFill and how do you use it?
+  \item How do you add a new worksheet to a workbook?
+  \item How can you adjust the width of a column?
+\end{reviewqs}
+
+\begin{challenge}
+Create a workbook with 3 sheets: ``Names'', ``Marks'', and ``Summary.'' In ``Names,'' use AutoFill to create a numbered list (1--20) in column A. In column B, add 20 names. Rename all three sheet tabs with meaningful names.
+\end{challenge}

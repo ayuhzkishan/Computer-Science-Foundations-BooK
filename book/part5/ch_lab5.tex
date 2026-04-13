@@ -1,0 +1,140 @@
+% ============================================================================
+% Lab Chapter for Part V — Practicals 1–8
+% ============================================================================
+\chapter{Part V --- Hands-On Practicals}
+\label{ch:lab5}
+
+\bytetip[fun]{Spreadsheet time! These practicals will take you from entering your first number to creating charts that would impress your maths teacher.}
+
+\begin{labactivity}{1}{Exploring the Excel Interface}{10 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Identify all parts of the Excel window.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Open Excel and create a new blank workbook.
+  \item Click on cell A1. Notice the cell address in the Name Box.
+  \item Click on cell D5. What does the Name Box show now?
+  \item Look at the Formula Bar --- what does it display?
+  \item Find the Sheet Tabs at the bottom. How many sheets are there?
+\end{enumerate}
+\textbf{Expected Outcome:} Students identify Name Box, Formula Bar, and Sheet Tabs.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{2}{Entering and Formatting Data}{15 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 15 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Enter data and apply basic formatting.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item In A1, type ``Student Name.'' In B1, type ``Maths.'' In C1, type ``Science.''
+  \item Enter 5 students' names and marks in the rows below.
+  \item Bold the header row. Change the header background to blue with white text.
+  \item Apply borders to all data cells (Home $\rightarrow$ Borders).
+  \item Adjust column widths by double-clicking the column border.
+  \item Save as ``StudentMarks.xlsx.''
+\end{enumerate}
+\textbf{Expected Outcome:} A formatted table with 5 students' marks.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{3}{Using AutoFill}{10 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Use AutoFill to create data series.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item In A1 type ``Monday.'' Use AutoFill to fill A1:A7 with days of the week.
+  \item In B1 type ``January.'' Use AutoFill to fill B1:B12 with months.
+  \item In C1 type 2, in C2 type 4. Select both and AutoFill to C10 (even numbers).
+  \item In D1 type ``Quarter 1.'' AutoFill down to D4.
+  \item Observe how Excel recognises each pattern!
+\end{enumerate}
+\textbf{Expected Outcome:} Students fill 4 different series using AutoFill.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{4}{Writing Basic Formulas}{15 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 15 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Create formulas using +, -, *, /.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Open ``StudentMarks.xlsx'' from Practical 2.
+  \item In D1 type ``Total.'' In D2 type \texttt{=B2+C2} and press Enter.
+  \item Use the fill handle to copy the formula down for all 5 students.
+  \item In E1 type ``Average.'' In E2 type \texttt{=(B2+C2)/2} and fill down.
+  \item Click on D2 and check the formula in the Formula Bar.
+  \item Save the file.
+\end{enumerate}
+\textbf{Expected Outcome:} Students calculate totals and averages using formulas.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{5}{Using Functions (SUM, AVERAGE, MAX, MIN)}{15 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 15 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Use built-in functions to analyse data.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Continue with ``StudentMarks.xlsx.''
+  \item In B8 type ``Sum:'' In C8 type \texttt{=SUM(B2:B6)}. What result do you get?
+  \item In B9 type ``Average:'' In C9 type \texttt{=AVERAGE(B2:B6)}.
+  \item In B10 type ``Highest:'' In C10 type \texttt{=MAX(B2:B6)}.
+  \item In B11 type ``Lowest:'' In C11 type \texttt{=MIN(B2:B6)}.
+  \item Repeat for the Science column (column C).
+  \item Save.
+\end{enumerate}
+\textbf{Expected Outcome:} Students use 4 functions correctly.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{6}{Number Formatting}{10 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 10 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Apply different number formats to cells.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Create a new sheet. Enter prices of 5 items in column B.
+  \item Select B1:B5. Apply \textbf{Currency} format (\key{Ctrl}+\key{Shift}+\key{\$}).
+  \item In C1:C5 enter percentages (e.g., 0.85). Apply \textbf{Percentage} format.
+  \item In D1:D5 enter dates. Apply a date format (Format Cells $\rightarrow$ Date).
+  \item Compare how the same number looks in different formats.
+\end{enumerate}
+\textbf{Expected Outcome:} Students apply 3 different number formats.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{7}{Creating Charts}{15 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 15 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Create bar and pie charts from data.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Open ``StudentMarks.xlsx.''
+  \item Select cells A1:C6 (names and marks for both subjects).
+  \item Insert $\rightarrow$ Charts $\rightarrow$ \textbf{Clustered Bar Chart}.
+  \item Add a chart title: ``Student Marks Comparison.''
+  \item Now select one student's marks to create a \textbf{Pie Chart}.
+  \item Add data labels to the pie chart (Chart Design $\rightarrow$ Add Chart Element).
+  \item Save.
+\end{enumerate}
+\textbf{Expected Outcome:} A bar chart and a pie chart from the same data.
+\welldone
+\end{labactivity}
+
+\begin{labactivity}{8}{Sorting and Complete Spreadsheet}{15 min}
+\youwillneed{\faDesktop\ Computer \quad \faClock\ 15 min \quad \faFileExcel\ MS Excel}
+\textbf{Objective:} Sort data and create a polished spreadsheet.\\[4pt]
+\textbf{Steps:}
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=4pt]
+  \item Open ``StudentMarks.xlsx.''
+  \item Click anywhere in the Total column. Data tab $\rightarrow$ Sort Largest to Smallest.
+  \item Observe how all rows rearrange together.
+  \item Add conditional formatting: select marks $\rightarrow$ Home $\rightarrow$ Conditional Formatting $\rightarrow$ Colour Scales.
+  \item Add a merged title row at the top: ``Class 8 --- Term 1 Results.''
+  \item Save and check Print Preview.
+\end{enumerate}
+\textbf{Expected Outcome:} A professional sorted and formatted spreadsheet.
+\welldone
+\end{labactivity}
+
+\vspace{12pt}
+\begin{center}
+  \qrcode[height=2cm]{https://example.com/module5}\\[6pt]
+  {\small\sffamily\textcolor{NavyBlue}{Scan for extra Part V resources and activities!}}
+\end{center}

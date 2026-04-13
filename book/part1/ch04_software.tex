@@ -1,0 +1,161 @@
+% ============================================================================
+% Chapter 4: Basics of Software
+% ============================================================================
+
+\chapter{Basics of Software}
+\label{ch:software-basics}
+
+\begin{objectives}
+  \item Define software and explain why computers need it
+  \item Distinguish between system software and application software
+  \item Give examples of common system and application software
+  \item Understand how hardware and software work together
+\end{objectives}
+
+\bytetip[tip]{If hardware is the computer's \textbf{body}, then software is its \textbf{mind}. Without software, a computer is just an expensive box of metal and plastic!}
+
+% ---------------------------------------------------------------
+\section{What Is Software?}
+\label{sec:what-is-software}
+\index{software!definition}
+
+\hl{Software} is a set of instructions (programs) that tells the computer hardware what to do. You can't touch software --- it exists as code stored in the computer's memory.
+
+\begin{theorybox}[Definition: Software]
+\textbf{Software}\index{software} is a collection of programs, data, and instructions that tell the computer how to perform specific tasks. Unlike hardware, software has no physical form --- you can't pick it up or hold it.
+\end{theorybox}
+
+% ---------------------------------------------------------------
+\section{Types of Software}
+\label{sec:software-types}
+\index{software!types}
+
+Software is divided into two main categories:
+
+% --- Figure 4.1: Software Types Pyramid ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Bottom layer - System Software
+  \fill[NavyBlue!85] (-5,0) -- (5,0) -- (3.5,2.5) -- (-3.5,2.5) -- cycle;
+  \node[text=white, font=\bfseries\sffamily, align=center] at (0,0.8) 
+    {System Software --- The Foundation};
+  \node[text=white!80, font=\scriptsize\sffamily] at (0,0.2) 
+    {Windows \quad|\quad Linux \quad|\quad macOS \quad|\quad Android};
+  
+  % Top layer - Application Software
+  \fill[ModuleBlue] (-3.5,2.5) -- (3.5,2.5) -- (2,4.5) -- (-2,4.5) -- cycle;
+  \node[text=white, font=\bfseries\sffamily, align=center] at (0,3.3) 
+    {Application Software};
+  \node[text=white!80, font=\scriptsize\sffamily] at (0,2.8) 
+    {Word \quad|\quad Paint \quad|\quad Games \quad|\quad Calculator};
+  
+  % Arrow with label
+  \draw[FunYellow, line width=2pt, ->, >=Stealth] (5.5,1.0) -- (5.5,3.5);
+  \node[right=0.1cm, font=\scriptsize\sffamily, text=NavyBlue, align=left, text width=3.5cm] 
+    at (5.7,2.2) {System software loads first, then apps run on top};
+\end{tikzpicture}
+\caption{Software types: system software supports application software}
+\label{fig:software-pyramid}
+\end{figure}
+
+\subsection{System Software}
+\index{system software}
+
+\textbf{System software}\index{system software} manages the computer's hardware and provides a platform for other software to run. The most important system software is the \textbf{Operating System} (OS)\index{operating system}.
+
+Examples: \textbf{Windows}, \textbf{macOS}, \textbf{Linux}, \textbf{Android}, \textbf{iOS}
+
+\subsection{Application Software}
+\index{application software}
+
+\textbf{Application software}\index{application software} (or ``apps'') are programs you use to perform specific tasks --- like writing a document, browsing the internet, or playing a game.
+
+Examples: \textbf{MS Word}, \textbf{MS Paint}, \textbf{Calculator}, \textbf{Google Chrome}, \textbf{Minecraft}
+
+% ---------------------------------------------------------------
+\section{Hardware + Software = A Working Computer!}
+\label{sec:hw-plus-sw}
+
+Neither hardware nor software can work alone. They need each other!
+
+% --- Figure 4.2: Hardware + Software = Magic! ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.8cm]
+  \node[hwbox, minimum width=3cm, fill=HeaderBg] (hw) 
+    {\faMicrochip\ Hardware};
+  
+  \node[right=0.6cm of hw, font=\Huge\bfseries, text=FunPink] (plus) {+};
+  
+  \node[hwbox, minimum width=3cm, fill=LabGreen!10, draw=LabGreen, right=0.6cm of plus] (sw) 
+    {\faCode\ Software};
+  
+  \node[right=0.6cm of sw, font=\Huge\bfseries, text=FunYellow!80!black] (equals) {=};
+  
+  \node[hwbox, minimum width=3.5cm, fill=FunPurple!10, draw=FunPurple, right=0.6cm of equals] (result) 
+    {\faStar\ Working Computer!};
+\end{tikzpicture}
+\caption{Hardware and software must work together}
+\label{fig:hw-plus-sw}
+\end{figure}
+
+\begin{realworld}
+Think of it like a music player. The \textbf{hardware} is the speaker and screen. The \textbf{software} is the music app. Without the app, the speaker stays silent. Without the speaker, the app can't play any sound. They \emph{need} each other!
+\end{realworld}
+
+% ---------------------------------------------------------------
+\section{Common Software Examples}
+\label{sec:common-software}
+
+% --- Table 4.1: Common Software Examples ---
+\begin{table}[H]
+\centering
+\caption{Common software examples and what they do}
+\label{tab:software-examples}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Type}} & 
+\textcolor{white}{\textbf{Name}} & 
+\textcolor{white}{\textbf{What It Does}} \\
+\midrule
+\rowcolor{RowLight}
+System Software & Windows 11 & Manages the computer \\
+\rowcolor{RowDark}
+System Software & Android & Runs your smartphone \\
+\rowcolor{RowLight}
+Application & MS Word & Word processing (writing documents) \\
+\rowcolor{RowDark}
+Application & MS Paint & Drawing \& image editing \\
+\rowcolor{RowLight}
+Application & Calculator & Maths operations \\
+\rowcolor{RowDark}
+Application & Chrome & Browse the internet \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\bytetip[fun]{Every time you open an app on your phone, you're running \textbf{application software} on top of \textbf{system software} (Android or iOS). It's like a building: the OS is the foundation, and apps are the rooms you actually live in!}
+
+\begin{funfact}
+The first ever software bug was an \emph{actual} bug! In 1947, engineers found a moth stuck inside a computer at Harvard University. They taped it into their logbook and wrote ``first actual case of bug being found.'' That's how the term ``computer bug'' was born!
+\end{funfact}
+
+% ---------------------------------------------------------------
+% End-of-Chapter
+% ---------------------------------------------------------------
+
+\begin{reviewqs}
+  \item What is software? How is it different from hardware?
+  \item Name the two main types of software.
+  \item Give three examples of \textbf{system software}.
+  \item Give four examples of \textbf{application software}.
+  \item Can hardware work without software? Explain your answer.
+  \item What is an operating system, and why is it important?
+\end{reviewqs}
+
+\begin{challenge}
+Make a two-column table in your notebook. In the left column, list \textbf{10 software programs} you've used. In the right column, classify each one as either ``System Software'' or ``Application Software.'' Bonus: add a third column describing what each program does!
+\end{challenge}

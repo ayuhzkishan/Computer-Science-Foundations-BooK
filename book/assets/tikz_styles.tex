@@ -1,0 +1,69 @@
+% ============================================================================
+% tikz_styles.tex — Global TikZ Styles for the Book
+% ============================================================================
+
+\tikzset{
+  % Hardware component box
+  hwbox/.style={
+    draw=NavyBlue, fill=HeaderBg, rounded corners=6pt,
+    minimum width=2.5cm, minimum height=1.2cm,
+    font=\small\bfseries\sffamily, align=center,
+    drop shadow={shadow xshift=1.5pt, shadow yshift=-1.5pt, opacity=0.3}
+  },
+  % Arrow style
+  thickarrow/.style={
+    ->, line width=2pt, color=ModuleBlue,
+    >=Stealth[round]
+  },
+  % Flowchart decision
+  decision/.style={
+    diamond, draw=NoteOrange, fill=FunYellow!30,
+    minimum width=3cm, minimum height=1.5cm,
+    font=\small\sffamily, align=center,
+    inner sep=1pt
+  },
+  % Flowchart process
+  process/.style={
+    rectangle, draw=LabGreen, fill=LabGreen!10,
+    rounded corners=4pt, minimum width=3.5cm, minimum height=1cm,
+    font=\small\sffamily, align=center
+  },
+  % Flowchart terminal
+  terminal/.style={
+    rectangle, draw=NavyBlue, fill=NavyBlue!10,
+    rounded corners=10pt, minimum width=3.5cm, minimum height=1cm,
+    font=\small\sffamily\bfseries, align=center
+  },
+  % Icon label node
+  iconlabel/.style={
+    circle, draw=ModuleBlue, fill=ModuleBlue, text=white,
+    font=\bfseries\sffamily, minimum size=0.7cm, inner sep=0
+  },
+  % Comparison column header
+  colhead/.style={
+    fill=NavyBlue, text=white, font=\bfseries\sffamily\small,
+    minimum height=0.8cm, align=center
+  },
+  % Step circle (for TikZ nodes, not inline)
+  stepcircle node/.style={
+    circle, draw=LabGreen, fill=LabGreen, text=white,
+    font=\bfseries\sffamily\small, minimum size=0.6cm, inner sep=0
+  },
+  % Info card style
+  infocard/.style={
+    draw=#1, fill=#1!8, rounded corners=8pt,
+    minimum width=3.5cm, minimum height=3cm,
+    font=\small\sffamily, align=center,
+    line width=1.2pt
+  },
+  % Labeled arrow
+  labelarrow/.style={
+    ->, line width=1.5pt, color=#1,
+    >=Stealth[round]
+  },
+  % Timeline node
+  timenode/.style={
+    circle, draw=#1, fill=#1, text=white,
+    font=\tiny\bfseries\sffamily, minimum size=0.8cm, inner sep=0
+  },
+}

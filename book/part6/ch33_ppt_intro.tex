@@ -1,0 +1,105 @@
+% ============================================================================
+% Chapter 33: Introduction to MS PowerPoint
+% ============================================================================
+\chapter{Introduction to MS PowerPoint}
+\label{ch:ppt-intro}
+
+\begin{objectives}
+  \item Open PowerPoint and identify the main interface elements
+  \item Understand the purpose of presentations and slides
+  \item Create a new presentation and add slides
+  \item Apply themes and design templates
+\end{objectives}
+
+\bytetip[tip]{PowerPoint is your tool for telling stories visually. Whether it's a school project, a science presentation, or a birthday slideshow --- PowerPoint makes you look like a pro!}
+
+\section{The PowerPoint Window}
+\label{sec:ppt-window}
+\index{MS PowerPoint!interface}
+
+% --- Figure 33.1: PowerPoint Window ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.65]
+  \draw[NavyBlue, line width=2pt, rounded corners=3pt] (0,0) rectangle (16,11);
+  
+  % Title bar + Ribbon
+  \fill[NavyBlue!80] (0.1,10.2) rectangle (15.9,11);
+  \node[text=white, font=\tiny\sffamily] at (8,10.6) {Presentation1 --- PowerPoint};
+  \fill[FunCoral!10] (0.1,8.8) rectangle (15.9,10.2);
+  \node[font=\tiny\sffamily, text=NavyBlue] at (8,9.5) {Home \quad Insert \quad Design \quad Transitions \quad Animations \quad Slide Show};
+  
+  % Slide panel (left)
+  \fill[ShadeGray] (0.1,0.5) rectangle (3.5,8.8);
+  \foreach \y/\n in {7.5/1, 5.5/2, 3.5/3, 1.5/4}{
+    \draw[NavyBlue!30, line width=0.5pt, rounded corners=2pt] (0.4,\y-0.8) rectangle (3.2,\y+0.8);
+    \fill[white] (0.4,\y-0.8) rectangle (3.2,\y+0.8);
+    \node[font=\tiny\sffamily\bfseries, text=NavyBlue] at (0.5,\y+0.6) {\n};
+  }
+  % Highlight slide 1
+  \draw[ModuleBlue, line width=1.5pt, rounded corners=2pt] (0.4,6.7) rectangle (3.2,8.3);
+  
+  % Main slide area
+  \fill[white] (4,1.5) rectangle (15,8.5);
+  \draw[NavyBlue!30, line width=1pt] (4,1.5) rectangle (15,8.5);
+  \node[font=\sffamily, text=NavyBlue!30] at (9.5,6.5) {Click to add title};
+  \node[font=\small\sffamily, text=NavyBlue!20] at (9.5,4) {Click to add subtitle};
+  
+  % Status bar
+  \fill[ShadeGray] (0.1,0) rectangle (15.9,0.5);
+  \node[font=\tiny\sffamily, text=NavyBlue, anchor=west] at (0.5,0.25) {Slide 1 of 4};
+  
+  % Labels
+  \draw[FunPurple, line width=1pt, ->] (-1.5,5) -- (0,5);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunPurple, align=right] at (-1.5,5) {Slide\\Panel};
+  
+  \draw[NoteOrange, line width=1pt, ->] (16.5,5) -- (15.1,5);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=NoteOrange, align=left] at (16.5,5) {Slide\\Editing\\Area};
+\end{tikzpicture}
+\caption{The PowerPoint window with key elements labelled}
+\label{fig:ppt-window}
+\end{figure}
+
+\section{Creating a Presentation}
+\label{sec:create-ppt}
+\index{MS PowerPoint!creating}
+
+\begin{labstep}[Creating Your First Presentation]
+\begin{enumerate}[label=\protect\stepcircle{\arabic*}, leftmargin=2cm, itemsep=3pt]
+  \item Open PowerPoint. Choose a \textbf{theme} or ``Blank Presentation.''
+  \item Click ``Click to add title'' and type your title.
+  \item Click ``Click to add subtitle'' and type your subtitle.
+  \item Add a new slide: Home tab $\rightarrow$ \textbf{New Slide} (or \key{Ctrl}+\key{M}).
+  \item Choose a \textbf{slide layout} (Title, Content, Comparison, etc.).
+  \item Save as ``MyPresentation.pptx'' (\key{Ctrl}+\key{S}).
+\end{enumerate}
+\end{labstep}
+
+\begin{theorybox}[Slide Layouts]
+PowerPoint offers several built-in slide layouts:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=2pt]
+  \item \textbf{Title Slide} --- For the first slide (title + subtitle)
+  \item \textbf{Title and Content} --- Title + bullet points or images
+  \item \textbf{Two Content} --- Side-by-side content comparison
+  \item \textbf{Blank} --- Empty slide for custom designs
+  \item \textbf{Section Header} --- To divide your presentation into parts
+\end{itemize}
+\end{theorybox}
+
+\bytetip[fun]{The average human attention span is about \textbf{8 seconds}. That's why good presentations use visuals, short text, and engaging animations. Nobody wants to read a wall of text on a slide!}
+
+\begin{funfact}
+An estimated \textbf{35 million PowerPoint presentations} are created every single day worldwide. That's over 400 presentations every second! Microsoft estimates that about 500 million people use PowerPoint regularly.
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name four parts of the PowerPoint window.
+  \item How do you add a new slide to a presentation?
+  \item Name three slide layouts and describe when you'd use each.
+  \item What is the shortcut to save a presentation?
+  \item What file extension do PowerPoint files use?
+\end{reviewqs}
+
+\begin{challenge}
+Create a 5-slide presentation about ``My Favourite Book/Movie.'' Slide 1: Title. Slide 2: Summary. Slide 3: Main characters. Slide 4: Why you like it. Slide 5: Rating out of 10. Apply a design theme and save.
+\end{challenge}

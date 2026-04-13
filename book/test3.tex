@@ -1,0 +1,17 @@
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\input{preamble}
+\input{assets/tikz_styles}
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={
+    draw=#1, fill=#1!8, rounded corners=10pt,
+    minimum width=3.4cm, minimum height=4cm,
+    line width=1.5pt, align=center, font=\small\sffamily
+  }
+]
+  \node[card=blue] (desktop) at (0,0) {
+    Desktop\\
+    Powerful
+  };
+\end{tikzpicture}
+\end{document}

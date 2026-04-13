@@ -1,0 +1,136 @@
+% ============================================================================
+% Chapter 25: Formatting in MS Word
+% ============================================================================
+\chapter{Formatting in MS Word}
+\label{ch:word-format}
+
+\begin{objectives}
+  \item Apply font formatting: bold, italic, underline, font size, font colour
+  \item Change text alignment: left, centre, right, justify
+  \item Adjust line spacing and paragraph spacing
+  \item Use bullet points and numbered lists
+\end{objectives}
+
+\bytetip[tip]{Formatting is what turns a boring block of text into a beautiful, readable document. Think of it like decorating a room --- same space, totally different vibe!}
+
+\section{Font Formatting}
+\label{sec:font-format}
+\index{MS Word!formatting}
+
+% --- Figure 25.2: Font Formatting Examples ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  fmtcard/.style={draw=#1, fill=#1!10, rounded corners=6pt, minimum width=2.8cm, minimum height=1.8cm, align=center, font=\small\sffamily, line width=1pt}
+]
+  \node[fmtcard=ModuleBlue] at (0,0) {Computer\\\footnotesize Normal};
+  \node[fmtcard=FunCoral] at (3.3,0) {\textbf{Computer}\\\footnotesize\key{Ctrl}+\key{B}};
+  \node[fmtcard=FunPurple] at (6.6,0) {\textit{Computer}\\\footnotesize\key{Ctrl}+\key{I}};
+  \node[fmtcard=LabGreen] at (9.9,0) {\underline{Computer}\\\footnotesize\key{Ctrl}+\key{U}};
+  \node[fmtcard=NoteOrange] at (13.2,0) {\sout{Computer}\\\footnotesize Strikethrough};
+\end{tikzpicture}
+\caption{Different font formatting styles applied to the same word}
+\label{fig:font-formats}
+\end{figure}
+
+\begin{shortcutbox}
+\begin{tabular}{ll}
+  \key{Ctrl}+\key{B} & Bold \\
+  \key{Ctrl}+\key{I} & Italic \\
+  \key{Ctrl}+\key{U} & Underline \\
+  \key{Ctrl}+\key{Shift}+\key{>} & Increase font size \\
+  \key{Ctrl}+\key{Shift}+\key{<} & Decrease font size \\
+\end{tabular}
+\end{shortcutbox}
+
+\section{Text Alignment}
+\label{sec:alignment}
+\index{MS Word!alignment}
+
+% --- Figure 25.1: Text Alignment Visual Demo ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Left aligned
+  \node[draw=ModuleBlue, fill=ModuleBlue!5, rounded corners=4pt, minimum width=3cm, minimum height=2.5cm, align=left, font=\tiny\sffamily, text width=2.5cm] (left) at (0,0) {
+    This text is left\\aligned. Lines\\start from the\\left side.
+  };
+  \node[below=0.2cm of left, font=\scriptsize\sffamily\bfseries, text=ModuleBlue] {Left \key{Ctrl}+\key{L}};
+  
+  % Centre aligned
+  \node[draw=FunPurple, fill=FunPurple!5, rounded corners=4pt, minimum width=3cm, minimum height=2.5cm, align=center, font=\tiny\sffamily, text width=2.5cm] (centre) at (4,0) {
+    This text is\\centred. Every\\line is in the\\middle.
+  };
+  \node[below=0.2cm of centre, font=\scriptsize\sffamily\bfseries, text=FunPurple] {Centre \key{Ctrl}+\key{E}};
+  
+  % Right aligned
+  \node[draw=FunCoral, fill=FunCoral!5, rounded corners=4pt, minimum width=3cm, minimum height=2.5cm, align=right, font=\tiny\sffamily, text width=2.5cm] (right) at (8,0) {
+    This text is right\\aligned. Lines\\end at the\\right side.
+  };
+  \node[below=0.2cm of right, font=\scriptsize\sffamily\bfseries, text=FunCoral] {Right \key{Ctrl}+\key{R}};
+  
+  % Justify
+  \node[draw=LabGreen, fill=LabGreen!5, rounded corners=4pt, minimum width=3cm, minimum height=2.5cm, align=justify, font=\tiny\sffamily, text width=2.5cm] (justify) at (12,0) {
+    Justified text is\\flush on both the\\left and right\\sides evenly.
+  };
+  \node[below=0.2cm of justify, font=\scriptsize\sffamily\bfseries, text=LabGreen] {Justify \key{Ctrl}+\key{J}};
+\end{tikzpicture}
+\caption{Four text alignment options in MS Word}
+\label{fig:alignment}
+\end{figure}
+
+\section{Line Spacing}
+\label{sec:line-spacing}
+\index{MS Word!line spacing}
+
+% --- Table 25.1: Line Spacing Options ---
+\begin{table}[H]
+\centering
+\caption{Line spacing options and when to use them}
+\label{tab:line-spacing}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Spacing}} & \textcolor{white}{\textbf{Value}} & \textcolor{white}{\textbf{When To Use}} \\
+\midrule
+\rowcolor{RowLight} Single & 1.0 & Compact notes, short documents \\
+\rowcolor{RowDark} 1.5 Lines & 1.5 & Most school assignments (recommended) \\
+\rowcolor{RowLight} Double & 2.0 & Essays the teacher will annotate \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Lists}
+\label{sec:lists}
+\index{MS Word!lists}
+
+Word supports two types of lists:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=2pt]
+  \item \textbf{Bulleted lists} --- for items with no specific order (like this one!)
+  \item \textbf{Numbered lists} --- for steps or items in a specific order
+\end{itemize}
+
+To create a list: Home tab $\rightarrow$ click the Bullets \faBars\ or Numbering \faListOl\ button.
+
+\bytetip[fun]{The word ``font'' comes from the French word ``fonte,'' meaning ``something that has been melted.'' This is because early printing used melted metal to create letter shapes. Now we just click a dropdown menu --- much less dangerous!}
+
+\begin{tryit}
+Open a new Word document and type a title ``My Favourite Things.'' Make the title \textbf{bold}, \textit{size 18}, and \textcolor{ModuleBlue}{blue}. Below it, create a bulleted list of 5 things you love. Then change the alignment of the title to \textbf{centre}. Finally, set the line spacing to 1.5.
+\end{tryit}
+
+\begin{funfact}
+There are over \textbf{200,000 fonts} available in the world! Windows comes with about 200 pre-installed. The most commonly used fonts for school work are \textbf{Calibri}, \textbf{Arial}, and \textbf{Times New Roman}.
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name four types of font formatting you can apply in Word.
+  \item What are the four text alignment options and their shortcuts?
+  \item What line spacing is recommended for school assignments?
+  \item How do you create a bulleted list in Word?
+  \item What is the shortcut for bold?
+\end{reviewqs}
+
+\begin{challenge}
+Create a \textbf{one-page formatted document} about your school. It must include: a centred bold title (size 20), a subtitle in italic, two paragraphs with justified alignment, a bulleted list of school subjects, and at least 3 different font colours. Save it as ``MySchool.docx.''
+\end{challenge}

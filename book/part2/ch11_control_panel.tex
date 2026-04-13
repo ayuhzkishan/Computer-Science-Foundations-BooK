@@ -1,0 +1,84 @@
+% ============================================================================
+% Chapter 11: Control Panel and Settings
+% ============================================================================
+
+\chapter{Control Panel and Settings}
+\label{ch:control-panel}
+
+\begin{objectives}
+  \item Access the Windows Settings and Control Panel
+  \item Change basic system settings (display, date/time, volume)
+  \item Understand the purpose of common Control Panel categories
+  \item Personalise the computer's appearance
+\end{objectives}
+
+\bytetip[tip]{The Control Panel and Settings are like the ``command centre'' of your computer. This is where you tweak, tune, and customise everything!}
+
+% ---------------------------------------------------------------
+\section{Settings vs Control Panel}
+\label{sec:settings-vs-cp}
+\index{Control Panel}\index{Settings}
+
+Windows has two places to change settings:
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=3pt]
+  \item \textbf{Settings} (modern, touch-friendly) --- press \key{Windows}+\key{I}
+  \item \textbf{Control Panel} (classic, more detailed) --- search ``Control Panel'' in Start
+\end{itemize}
+
+% --- Figure 11.1: Control Panel Categories Grid ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  tile/.style={
+    draw=#1, fill=#1!10, rounded corners=6pt,
+    minimum width=3cm, minimum height=2cm,
+    align=center, font=\small\sffamily, line width=1pt
+  }
+]
+  % Row 1
+  \node[tile=ModuleBlue] at (0,0) {{\Large\textcolor{ModuleBlue}{\faDesktop}}\\System};
+  \node[tile=FunPurple] at (3.8,0) {{\Large\textcolor{FunPurple}{\faSun}}\\Display};
+  \node[tile=NoteOrange] at (7.6,0) {{\Large\textcolor{NoteOrange}{\faClock}}\\Date/Time};
+  
+  % Row 2
+  \node[tile=LabGreen] at (0,-2.8) {{\Large\textcolor{LabGreen}{\faPrint}}\\Printers};
+  \node[tile=FunSky] at (3.8,-2.8) {{\Large\textcolor{FunSky}{\faNetworkWired}}\\Network};
+  \node[tile=FunCoral] at (7.6,-2.8) {{\Large\textcolor{FunCoral}{\faUserShield}}\\Accounts};
+  
+  % Row 3
+  \node[tile=WarnRed] at (0,-5.6) {{\Large\textcolor{WarnRed}{\faLock}}\\Security};
+  \node[tile=FunMint] at (3.8,-5.6) {{\Large\textcolor{FunMint}{\faVolumeUp}}\\Sound};
+  \node[tile=FunPink] at (7.6,-5.6) {{\Large\textcolor{FunPink}{\faCubes}}\\Programs};
+\end{tikzpicture}
+\caption{Control Panel categories --- your computer's command centre}
+\label{fig:cp-grid}
+\end{figure}
+
+\section{Common Settings You Can Change}
+\label{sec:common-settings}
+
+\begin{enumerate}[label=\textcolor{ModuleBlue}{\textbf{\arabic*.}}, itemsep=4pt]
+  \item \textbf{Display Settings} --- Change screen brightness, resolution, and text size
+  \item \textbf{Date and Time} --- Set the correct date, time, and time zone
+  \item \textbf{Sound Settings} --- Adjust volume, choose notification sounds
+  \item \textbf{Personalisation} --- Change wallpaper, colours, lock screen image
+  \item \textbf{User Accounts} --- Create accounts, set passwords, manage users
+\end{enumerate}
+
+\bytetip[warn]{Be careful when changing settings you don't understand! Some changes (like network or security settings) can stop your internet from working or lock you out. If in doubt, ask your teacher.}
+
+\begin{funfact}
+The Control Panel has been part of Windows since \textbf{Windows 3.0} in 1990. Microsoft has been slowly moving features into the newer ``Settings'' app, but the classic Control Panel still exists and is used by IT professionals every day!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the keyboard shortcut to open Windows Settings?
+  \item Name four categories found in the Control Panel.
+  \item How would you change your desktop wallpaper?
+  \item What is the difference between Settings and Control Panel?
+  \item Why should you be careful when changing system settings?
+\end{reviewqs}
+
+\begin{challenge}
+Open \textbf{Settings} $\rightarrow$ \textbf{Personalisation} and change your desktop wallpaper to a solid colour. Then change the system accent colour to match. Finally, change it all back to what it was before!
+\end{challenge}

@@ -1,0 +1,89 @@
+% ============================================================================
+% Chapter 34: Designing Slides
+% ============================================================================
+\chapter{Designing Slides}
+\label{ch:ppt-design}
+
+\begin{objectives}
+  \item Add and format text, images, and shapes on slides
+  \item Apply design themes and customise colours
+  \item Use SmartArt for professional diagrams
+  \item Follow the rules of good slide design
+\end{objectives}
+
+\bytetip[tip]{A great slide has \textbf{more visuals and less text}. Remember the 6×6 rule: no more than 6 bullet points per slide, and no more than 6 words per bullet!}
+
+\section{Adding Content to Slides}
+\label{sec:add-content}
+\index{MS PowerPoint!content}
+
+You can add many types of content through the \textbf{Insert} tab:
+
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=3pt]
+  \item \textbf{Text Boxes} --- Add text anywhere on the slide
+  \item \textbf{Pictures} --- Insert photos from your computer or online
+  \item \textbf{Shapes} --- Arrows, rectangles, stars, callouts
+  \item \textbf{SmartArt} --- Professional diagrams (flowcharts, hierarchies, cycles)
+  \item \textbf{Tables} --- Organised data in rows and columns
+  \item \textbf{Videos} --- Embed videos directly into slides
+\end{itemize}
+
+\section{Good Slide Design Rules}
+\label{sec:design-rules}
+
+% --- Figure 34.1: Good vs Bad Slide Design ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Bad slide
+  \node[draw=WarnRed, fill=WarnRed!5, rounded corners=4pt,
+        minimum width=6cm, minimum height=4cm, align=center] (bad) at (0,0) {};
+  \node[font=\tiny\sffamily, text=NavyBlue, text width=5cm, align=left] at (0,0) {
+    Today we will talk about computers and how they work and all the parts inside them including the CPU and the RAM and the hard drive and the motherboard and also the power supply and the graphics card and the cooling fan and\ldots
+  };
+  \node[below=0.2cm, font=\small\bfseries\sffamily, text=WarnRed] at (bad.south) {\ding{55} Too much text!};
+  
+  % Good slide
+  \node[draw=LabGreen, fill=LabGreen!5, rounded corners=4pt,
+        minimum width=6cm, minimum height=4cm, align=center] (good) at (8.5,0) {};
+  \node[font=\small\bfseries\sffamily, text=NavyBlue] at (8.5,1.2) {Inside a Computer};
+  \node[font=\tiny\sffamily, text=NavyBlue, align=left] at (8.5,0) {
+    \textcolor{LabGreen}{\faAngleRight}\ CPU --- the brain\\
+    \textcolor{LabGreen}{\faAngleRight}\ RAM --- short-term memory\\
+    \textcolor{LabGreen}{\faAngleRight}\ Storage --- long-term memory
+  };
+  \node[font=\tiny\sffamily\itshape, text=NavyBlue!50] at (8.5,-1.2) {[image of computer here]};
+  \node[below=0.2cm, font=\small\bfseries\sffamily, text=LabGreen] at (good.south) {\ding{51} Clear and visual!};
+\end{tikzpicture}
+\caption{Bad slide (left) vs good slide (right) --- less text, more impact}
+\label{fig:good-bad-slide}
+\end{figure}
+
+\begin{theorybox}[Golden Rules of Slide Design]
+\begin{enumerate}[label=\textcolor{ModuleBlue}{\textbf{\arabic*.}}, itemsep=3pt]
+  \item \textbf{Keep text short} --- Use keywords, not sentences
+  \item \textbf{Use large fonts} --- At least size 24 for body text, 36+ for titles
+  \item \textbf{One idea per slide} --- Don't overcrowd
+  \item \textbf{Use images and diagrams} --- Visuals are remembered 6× better than text
+  \item \textbf{Consistent design} --- Use the same theme, fonts, and colours throughout
+  \item \textbf{High contrast} --- Dark text on light background, or light text on dark
+\end{enumerate}
+\end{theorybox}
+
+\bytetip[warn]{Don't use too many different fonts, colours, or animations in one presentation. It looks chaotic and unprofessional. Stick to \textbf{2 fonts}, \textbf{3--4 colours}, and \textbf{subtle animations}.}
+
+\begin{funfact}
+The ``Death by PowerPoint'' problem is so well-known that Amazon's Jeff Bezos \textbf{banned PowerPoint} in meetings! Instead, Amazon employees write memos, and everyone reads them silently at the start of each meeting.
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name five types of content you can insert into a slide.
+  \item What is SmartArt and when would you use it?
+  \item State three rules of good slide design.
+  \item What is the 6×6 rule?
+  \item Why is high contrast important in slide design?
+\end{reviewqs}
+
+\begin{challenge}
+Create a 3-slide presentation redesign: take a ``bad'' slide (with too much text) and improve it by splitting the content across 3 slides with clear visuals, short bullet points, and images. Save as ``DesignChallenge.pptx.''
+\end{challenge}

@@ -1,0 +1,165 @@
+% ============================================================================
+% Chapter 31: Formulas and Functions
+% ============================================================================
+\chapter{Formulas and Functions}
+\label{ch:excel-formulas}
+
+\begin{objectives}
+  \item Write basic formulas using +, -, *, /
+  \item Use functions: SUM, AVERAGE, MIN, MAX, COUNT
+  \item Understand cell references in formulas
+  \item Use the fill handle to copy formulas
+\end{objectives}
+
+\bytetip[tip]{This is where Excel truly shines! Formulas and functions turn your spreadsheet from a simple table into a powerful calculator. Let's unlock this superpower!}
+
+\section{Writing Formulas}
+\label{sec:formulas}
+\index{MS Excel!formulas}
+
+Every formula in Excel starts with an \textbf{equals sign} (\texttt{=}).
+
+% --- Figure 31.1: Anatomy of a Formula ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Formula text
+  \node[font=\Large\ttfamily\bfseries, text=NavyBlue] (formula) at (5,2) {=SUM(B2:B6)};
+  
+  % Bracket labels
+  \draw[WarnRed, line width=1.5pt, ->] (1.6,2) -- (1.6,0.5);
+  \node[below, font=\small\sffamily\bfseries, text=WarnRed, align=center] at (1.6,0.5) {\texttt{=}\\Always starts\\with equals};
+  
+  \draw[FunPurple, line width=1.5pt, ->] (3.2,2) -- (3.2,0.5);
+  \node[below, font=\small\sffamily\bfseries, text=FunPurple, align=center] at (3.2,0.5) {\texttt{SUM}\\Function name\\(what to do)};
+  
+  \draw[NoteOrange, line width=1.5pt, ->] (4.4,2) -- (4.4,0.5);
+  \node[below, font=\small\sffamily\bfseries, text=NoteOrange, align=center] at (4.4,0.5) {\texttt{(}\\Opening\\bracket};
+  
+  \draw[LabGreen, line width=1.5pt, ->] (6.0,2) -- (6.0,0.5);
+  \node[below, font=\small\sffamily\bfseries, text=LabGreen, align=center] at (6.0,0.5) {\texttt{B2:B6}\\Cell range\\(B2 through B6)};
+  
+  \draw[FunSky, line width=1.5pt, ->] (7.6,2) -- (7.6,0.5);
+  \node[below, font=\small\sffamily\bfseries, text=FunSky, align=center] at (7.6,0.5) {\texttt{)}\\Closing\\bracket};
+\end{tikzpicture}
+\caption{Anatomy of a formula --- every part explained}
+\label{fig:formula-anatomy}
+\end{figure}
+
+\section{Essential Functions}
+\label{sec:functions}
+\index{MS Excel!functions}
+
+% --- Figure 31.2: Functions Comparison Cards ---
+\begin{figure}[H]
+\centering
+\begin{tabularx}{\textwidth}{@{}*{5}{>{\centering\arraybackslash}X}@{}}
+  \begin{tcolorbox}[colback=ModuleBlue!8, colframe=ModuleBlue, width=2.4cm, height=3.6cm, valign=center, halign=center, arc=6pt]
+    {\Large\faPlus}\vspace{4pt}\\
+    \textbf{SUM}\vspace{2pt}\\
+    {\scriptsize\texttt{=SUM(A1:A5)}}\vspace{2pt}\\
+    {\scriptsize Adds all}\vspace{2pt}\\
+    {\scriptsize Result: \textbf{50}}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunPurple!8, colframe=FunPurple, width=2.4cm, height=3.6cm, valign=center, halign=center, arc=6pt]
+    {\Large\faDivide}\vspace{4pt}\\
+    \textbf{AVERAGE}\vspace{2pt}\\
+    {\scriptsize\texttt{=AVERAGE(..)}}\vspace{2pt}\\
+    {\scriptsize Finds mean}\vspace{2pt}\\
+    {\scriptsize Result: \textbf{10}}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=FunCoral!8, colframe=FunCoral, width=2.4cm, height=3.6cm, valign=center, halign=center, arc=6pt]
+    {\Large\faArrowDown}\vspace{4pt}\\
+    \textbf{MIN}\vspace{2pt}\\
+    {\scriptsize\texttt{=MIN(A1:A5)}}\vspace{2pt}\\
+    {\scriptsize Smallest}\vspace{2pt}\\
+    {\scriptsize Result: \textbf{2}}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=LabGreen!8, colframe=LabGreen, width=2.4cm, height=3.6cm, valign=center, halign=center, arc=6pt]
+    {\Large\faArrowUp}\vspace{4pt}\\
+    \textbf{MAX}\vspace{2pt}\\
+    {\scriptsize\texttt{=MAX(A1:A5)}}\vspace{2pt}\\
+    {\scriptsize Largest}\vspace{2pt}\\
+    {\scriptsize Result: \textbf{18}}
+  \end{tcolorbox}
+  &
+  \begin{tcolorbox}[colback=NoteOrange!8, colframe=NoteOrange, width=2.4cm, height=3.6cm, valign=center, halign=center, arc=6pt]
+    {\Large\faHashtag}\vspace{4pt}\\
+    \textbf{COUNT}\vspace{2pt}\\
+    {\scriptsize\texttt{=COUNT(..)}}\vspace{2pt}\\
+    {\scriptsize Counts num}\vspace{2pt}\\
+    {\scriptsize Result: \textbf{5}}
+  \end{tcolorbox}
+\end{tabularx}
+\caption{Five essential Excel functions you must know}
+\label{fig:functions-cards}
+\end{figure}
+
+% --- Table 31.1: Common Functions Reference ---
+\begin{table}[H]
+\centering
+\caption{Common Excel functions reference}
+\label{tab:functions}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l X l l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Function}} & \textcolor{white}{\textbf{What It Does}} & \textcolor{white}{\textbf{Example}} & \textcolor{white}{\textbf{Result}} \\
+\midrule
+\rowcolor{RowLight} SUM & Adds all values in a range & \texttt{=SUM(A1:A5)} & 50 \\
+\rowcolor{RowDark} AVERAGE & Finds the mean (average) & \texttt{=AVERAGE(A1:A5)} & 10 \\
+\rowcolor{RowLight} MIN & Finds the smallest value & \texttt{=MIN(A1:A5)} & 2 \\
+\rowcolor{RowDark} MAX & Finds the largest value & \texttt{=MAX(A1:A5)} & 18 \\
+\rowcolor{RowLight} COUNT & Counts cells with numbers & \texttt{=COUNT(A1:A5)} & 5 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{The Fill Handle}
+\label{sec:fill-handle}
+\index{MS Excel!fill handle}
+
+% --- Figure 31.3: Fill Handle Demo ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  % Cells
+  \foreach \y/\val/\style in {5/1/solid, 4/2/solid, 3/3/dashed, 2/4/dashed, 1/5/dashed, 0/6/dashed}{
+    \draw[NavyBlue!50, line width=0.5pt, \style] (0,\y) rectangle (2,\y+1);
+    \node[font=\small\sffamily] at (1,\y+0.5) {\val};
+    \node[font=\tiny\sffamily, text=NavyBlue!60] at (-0.4,\y+0.5) {A\the\numexpr 6-\y};
+  }
+  
+  % Fill handle square
+  \fill[LabGreen] (1.85,4.85) rectangle (2.15,5.15);
+  
+  % Arrow
+  \draw[LabGreen, line width=2pt, ->] (2,4.85) -- (2,0.5);
+  \node[right=0.5cm of {(2,2.5)}, font=\small\sffamily\bfseries, text=LabGreen, align=center] {Drag down to\\fill the series!};
+\end{tikzpicture}
+\caption{The fill handle copies formulas and extends data patterns}
+\label{fig:fill-handle}
+\end{figure}
+
+\bytetip[warn]{Remember: formulas always start with \texttt{=}. If you type \texttt{SUM(A1:A5)} without the equals sign, Excel treats it as text, not a formula! You'll see the text ``SUM(A1:A5)'' instead of the result.}
+
+\bytetip[fun]{Excel can handle formulas with up to \textbf{8,192 characters} and \textbf{64 levels of nested functions}. Some finance professionals write formulas so complex they look like alien code!}
+
+\begin{funfact}
+The most commonly used function in Excel is \textbf{SUM}, followed by AVERAGE and VLOOKUP. Together, these three functions are used in over \textbf{90\%} of all Excel spreadsheets worldwide!
+\end{funfact}
+
+\begin{reviewqs}
+  \item What symbol must every formula start with?
+  \item Write the formula to add cells B1 through B10.
+  \item What does the AVERAGE function do?
+  \item What is the difference between MIN and MAX?
+  \item What is the fill handle and how do you use it?
+\end{reviewqs}
+
+\begin{challenge}
+Create a ``Test Scores'' spreadsheet with 5 students and 3 subjects. In column E, use \texttt{=SUM} to calculate each student's total. In row 8, use \texttt{=AVERAGE} for each subject's average. In row 9, use \texttt{=MAX} for the highest score. In row 10, use \texttt{=MIN} for the lowest.
+\end{challenge}

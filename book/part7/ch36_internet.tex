@@ -1,0 +1,97 @@
+% ============================================================================
+% Chapter 36: How the Internet Works
+% ============================================================================
+\chapter{How the Internet Works}
+\label{ch:internet}
+
+\begin{objectives}
+  \item Define the Internet and explain how it connects people
+  \item Understand the roles of ISPs, routers, and servers
+  \item Differentiate between the Internet and the World Wide Web
+  \item Know what URLs, links, and web pages are
+\end{objectives}
+
+\bytetip[tip]{The Internet is the biggest network ever created --- it connects \textbf{billions} of devices across every country on Earth. Let's understand how this magic works!}
+
+\section{What Is the Internet?}
+\label{sec:what-internet}
+\index{Internet}
+
+\begin{theorybox}[Definition: The Internet]
+The \textbf{Internet}\index{Internet} is a global network of interconnected computers that communicate using standard protocols (rules). It allows people to share information, communicate, and access services from anywhere in the world.
+\end{theorybox}
+
+% --- Figure 36.1: How You Connect to a Website ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.2cm]
+  \node[hwbox, fill=FunSky!10, minimum width=2cm] (you) {\faLaptop\\Your PC};
+  \node[hwbox, fill=FunMint!10, draw=FunMint, minimum width=2cm, right=of you] (router) {\faWifi\\Router};
+  \node[hwbox, fill=NoteOrange!10, draw=NoteOrange, minimum width=2cm, right=of router] (isp) {\faBuilding\\ISP};
+  \node[hwbox, fill=FunPurple!10, draw=FunPurple, minimum width=2cm, right=of isp] (net) {\faGlobe\\Internet};
+  \node[hwbox, fill=LabGreen!10, draw=LabGreen, minimum width=2cm, right=of net] (server) {\faServer\\Web Server};
+  
+  \draw[thickarrow] (you) -- (router);
+  \draw[thickarrow] (router) -- (isp);
+  \draw[thickarrow] (isp) -- (net);
+  \draw[thickarrow] (net) -- (server);
+  
+  \node[below=0.5cm, font=\scriptsize\sffamily\itshape, text=NavyBlue, text width=14cm, align=center] at ($(isp)!0.5!(net)+(0,-0.3)$) {Your request travels through cables and satellites across the world to reach the server, and the response comes back the same way --- all in under a second!};
+\end{tikzpicture}
+\caption{How your computer connects to a website on the Internet}
+\label{fig:internet-path}
+\end{figure}
+
+\section{Internet vs World Wide Web}
+\label{sec:vs-www}
+\index{World Wide Web}
+
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item The \textbf{Internet}\index{Internet} is the \emph{physical network} --- the cables, routers, and satellites
+  \item The \textbf{World Wide Web} (WWW)\index{WWW} is a \emph{service} that runs on the Internet --- the collection of websites you browse
+  \item Think of the Internet as the \textbf{road system}, and the Web as the \textbf{shops and buildings} along those roads
+\end{itemize}
+
+\section{Understanding URLs}
+\label{sec:urls}
+\index{URL}
+
+% --- Figure 36.2: URL Anatomy ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \node[font=\large\ttfamily\bfseries, text=NavyBlue] at (6,2) {https://www.google.com/search};
+  
+  \draw[FunCoral, line width=1.5pt, ->] (1.2,2) -- (1.2,0.5);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=FunCoral, align=center] at (1.2,0.5) {\texttt{https://}\\Protocol\\(secure connection)};
+  
+  \draw[LabGreen, line width=1.5pt, ->] (4.5,2) -- (4.5,0.5);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=LabGreen, align=center] at (4.5,0.5) {\texttt{www.}\\World Wide\\Web prefix};
+  
+  \draw[FunPurple, line width=1.5pt, ->] (7.2,2) -- (7.2,0.5);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=FunPurple, align=center] at (7.2,0.5) {\texttt{google.com}\\Domain name\\(website address)};
+  
+  \draw[NoteOrange, line width=1.5pt, ->] (10.2,2) -- (10.2,0.5);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=NoteOrange, align=center] at (10.2,0.5) {\texttt{/search}\\Path\\(specific page)};
+\end{tikzpicture}
+\caption{Anatomy of a URL --- every part has a purpose}
+\label{fig:url-anatomy}
+\end{figure}
+
+\bytetip[fun]{The first-ever website was created by \textbf{Tim Berners-Lee} on December 20, 1990. It described the World Wide Web project itself. The website is still online today at \texttt{info.cern.ch}!}
+
+\begin{funfact}
+There are currently over \textbf{2 billion websites} on the Internet, but only about 400 million are actively maintained. The rest are ``parked'' domain names or abandoned sites.
+\end{funfact}
+
+\begin{reviewqs}
+  \item What is the Internet? Define it in your own words.
+  \item What is the difference between the Internet and the World Wide Web?
+  \item What does ISP stand for, and what does it do?
+  \item What are the parts of a URL?
+  \item Who invented the World Wide Web?
+\end{reviewqs}
+
+\begin{challenge}
+Visit \textbf{5 different websites} and write down the full URL of each. For each URL, identify: the protocol, domain name, and path. Present your findings in a neat table.
+\end{challenge}

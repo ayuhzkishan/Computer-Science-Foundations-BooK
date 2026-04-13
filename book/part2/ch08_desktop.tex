@@ -1,0 +1,133 @@
+% ============================================================================
+% Chapter 8: Windows Desktop Environment
+% ============================================================================
+
+\chapter{Windows Desktop Environment}
+\label{ch:desktop}
+
+\begin{objectives}
+  \item Identify the main elements of the Windows desktop
+  \item Explain the purpose of the Taskbar, Start Menu, and System Tray
+  \item Use desktop icons and shortcuts effectively
+  \item Navigate the Windows desktop with confidence
+\end{objectives}
+
+\bytetip[fun]{The desktop is your computer's ``home screen'' --- like the home screen on a phone, but with WAY more power. Let's explore every corner of it!}
+
+% ---------------------------------------------------------------
+\section{The Windows Desktop}
+\label{sec:windows-desktop}
+\index{desktop}\index{Windows!desktop}
+
+When Windows finishes loading, you see the \hl{desktop}. This is your main workspace --- everything starts here.
+
+% --- Figure 8.1: Annotated Desktop ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.75]
+  % Screen outline
+  \draw[NavyBlue, line width=2pt, rounded corners=4pt] (0,0) rectangle (16,10);
+  
+  % Desktop background
+  \fill[NavyBlue!5] (0.15,0.8) rectangle (15.85,9.85);
+  
+  % Taskbar
+  \fill[NavyBlue!80] (0.15,0) rectangle (15.85,0.8);
+  
+  % Start button
+  \fill[ModuleBlue] (0.15,0) rectangle (1.0,0.8);
+  \node[text=white, font=\scriptsize\bfseries] at (0.575,0.4) {\faWindows};
+  
+  % Pinned taskbar icons
+  \foreach \x/\icon in {1.5/\faFolder, 2.2/\faChrome, 2.9/\faFileWord, 3.6/\faStore}{
+    \node[text=white!80, font=\scriptsize] at (\x, 0.4) {\icon};
+  }
+  
+  % System tray (right side)
+  \node[text=white!70, font=\tiny\sffamily] at (13.5,0.4) {\faWifi\quad \faVolumeUp\quad \faBatteryFull};
+  \node[text=white!90, font=\tiny\sffamily] at (15.0,0.4) {12:30 PM};
+  
+  % Desktop icons
+  \foreach \y/\icon/\lbl in {8.5/\faTrash/Recycle Bin, 7.0/\faChrome/Chrome, 5.5/\faFolder/Documents}{
+    \node[text=NavyBlue, font=\large] at (1.2, \y) {\icon};
+    \node[font=\tiny\sffamily, text=NavyBlue] at (1.2, \y-0.5) {\lbl};
+  }
+  
+  % Open window (File Explorer)
+  \fill[white] (4,2.5) rectangle (13,8.5);
+  \fill[ModuleBlue!80] (4,7.8) rectangle (13,8.5);
+  \node[text=white, font=\tiny\sffamily\bfseries, anchor=west] at (4.3,8.15) {File Explorer};
+  \node[text=white, font=\tiny\bfseries, anchor=east] at (12.7,8.15) {$\times$};
+  
+  % Labels with arrows (outside screen)
+  % Desktop
+  \draw[FunPurple, line width=1.2pt, ->] (-2.5, 6) -- (2, 6);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunPurple, align=right] at (-2.5,6) {Desktop\\Icons};
+  
+  % Taskbar
+  \draw[FunCoral, line width=1.2pt, ->] (-2.5, 0.4) -- (0.1, 0.4);
+  \node[left, font=\scriptsize\sffamily\bfseries, text=FunCoral, align=right] at (-2.5,0.4) {Taskbar};
+  
+  % Start
+  \draw[LabGreen, line width=1.2pt, ->] (0.575, -1.2) -- (0.575, -0.1);
+  \node[below, font=\scriptsize\sffamily\bfseries, text=LabGreen] at (0.575,-1.2) {Start Button};
+  
+  % System tray
+  \draw[NoteOrange, line width=1.2pt, ->] (17.5, 0.4) -- (15.9, 0.4);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=NoteOrange, align=left] at (17.5,0.4) {System Tray\\(Notifications)};
+  
+  % Window
+  \draw[ModuleBlue, line width=1.2pt, ->] (17, 7) -- (13.1, 7);
+  \node[right, font=\scriptsize\sffamily\bfseries, text=ModuleBlue, align=left] at (17,7) {Open\\Window};
+\end{tikzpicture}
+\caption{The Windows desktop with all main elements labelled}
+\label{fig:desktop-annotated}
+\end{figure}
+
+% --- Table 8.1: Desktop Elements Quick Reference ---
+\begin{table}[H]
+\centering
+\caption{Desktop elements quick reference}
+\label{tab:desktop-elements}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{c l X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Icon}} & \textcolor{white}{\textbf{Element}} & \textcolor{white}{\textbf{What It Does}} \\
+\midrule
+\rowcolor{RowLight}
+\faDesktop & Desktop & Main working area where icons and windows appear \\
+\rowcolor{RowDark}
+\faMinus & Taskbar & Shows open programs and pinned apps at the bottom \\
+\rowcolor{RowLight}
+\faWindows & Start Menu & Opens apps, settings, power options, and search \\
+\rowcolor{RowDark}
+\faFolder & Icons & Shortcuts to files, folders, and programs \\
+\rowcolor{RowLight}
+\faBell & Notification Area & Alerts, date/time, Wi-Fi, volume, and battery \\
+\rowcolor{RowDark}
+\faTrash & Recycle Bin & Deleted files go here (can be recovered!) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{notebox}
+The \textbf{Recycle Bin} is like a rubbish bin for your computer. When you delete a file, it goes to the Recycle Bin first. You can restore it if you change your mind! Files are only permanently deleted when you \textbf{empty} the Recycle Bin.
+\end{notebox}
+
+\bytetip[tip]{You can customise your desktop! Right-click on an empty area of the desktop and try ``Personalise'' to change the wallpaper, colours, and theme. Make your computer feel like \emph{yours}!}
+
+\begin{funfact}
+The Recycle Bin icon on your desktop actually changes its appearance! When it's empty, it shows an empty bin. When it contains deleted files, it shows a bin with crumpled paper inside. Nice detail, right?
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name five elements of the Windows desktop.
+  \item What is the purpose of the Taskbar?
+  \item How do you access the Start Menu?
+  \item What is the Recycle Bin, and where do deleted files go?
+  \item What information can you find in the System Tray (notification area)?
+\end{reviewqs}
+
+\begin{challenge}
+Customise your desktop: change the wallpaper, rearrange the icons, and pin your favourite app to the taskbar. Then take a screenshot (\key{PrtSc} key) and paste it into MS Paint. Save it as ``MyDesktop.png.''\end{challenge}

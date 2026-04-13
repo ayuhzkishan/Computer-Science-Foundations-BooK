@@ -1,0 +1,117 @@
+% ============================================================================
+% Chapter 16: Advanced Computer Concepts
+% ============================================================================
+
+\chapter{Advanced Computer Concepts}
+\label{ch:advanced}
+
+\begin{objectives}
+  \item Explore how computers are used across industries
+  \item Understand the Input--Process--Output cycle in depth
+  \item Appreciate the impact of computers on modern society
+  \item Recognise emerging technologies and their possibilities
+\end{objectives}
+
+\bytetip[fun]{You already know the basics --- now let's crank it up a notch! In this chapter, we explore how computers are transforming \emph{every} part of the real world.}
+
+\section{Computers in the Real World}
+\label{sec:real-world}
+\index{computer!real-world applications}
+
+% --- Figure 16.1: Real-Life Applications Mindmap ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[mindmap, grow cyclic, 
+  every node/.style={concept, font=\small\sffamily\bfseries},
+  concept color=ModuleBlue,
+  level 1/.append style={level distance=4cm, sibling angle=72, concept color=ModuleBlue!60},
+  level 2/.append style={level distance=2.8cm, sibling angle=45, font=\tiny\sffamily, concept color=ModuleBlue!30},
+]
+  \node{Computers in\\the Real\\World}
+    child[concept color=FunSky!70] { node{Education}
+      child { node{Online\\classes} }
+      child { node{E-books} }
+    }
+    child[concept color=LabGreen!60] { node{Banking}
+      child { node{ATMs} }
+      child { node{Online\\transfers} }
+    }
+    child[concept color=FunCoral!60] { node{Healthcare}
+      child { node{Patient\\records} }
+      child { node{MRI/CT\\scans} }
+    }
+    child[concept color=FunPurple!60] { node{Entertainment}
+      child { node{Streaming} }
+      child { node{Gaming} }
+    }
+    child[concept color=NoteOrange!60] { node{Transport}
+      child { node{GPS} }
+      child { node{Ticket\\booking} }
+    }
+  ;
+\end{tikzpicture}
+\caption{Computers are used in virtually every industry}
+\label{fig:mindmap-apps}
+\end{figure}
+
+% --- Table 16.1: Real-Life Applications Table ---
+\begin{table}[H]
+\centering
+\caption{Computer applications across different domains}
+\label{tab:real-life-apps}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l X X}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{Domain}} & \textcolor{white}{\textbf{Application}} & \textcolor{white}{\textbf{Software/Device}} \\
+\midrule
+\rowcolor{RowLight} Education & Online classes, digital textbooks & Zoom, Google Classroom \\
+\rowcolor{RowDark} Banking & ATM transactions, online banking & Banking apps, UPI \\
+\rowcolor{RowLight} Healthcare & Patient records, diagnostic imaging & Hospital management systems \\
+\rowcolor{RowDark} Entertainment & Video streaming, gaming & Netflix, Steam \\
+\rowcolor{RowLight} Transport & GPS navigation, ticket booking & Google Maps, IRCTC \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{The IPO Cycle Revisited}
+\label{sec:ipo-advanced}
+\index{IPO cycle}
+
+Every computer task follows the \textbf{Input--Process--Output} (IPO) cycle:
+
+\begin{center}
+\begin{tikzpicture}[node distance=1cm]
+  \node[hwbox, fill=FunSky!15, minimum width=3cm] (input) {\faKeyboard\ \textbf{Input}\\Data goes in};
+  \node[hwbox, fill=FunPurple!10, draw=FunPurple, minimum width=3cm, right=1.5cm of input] (process) {\faMicrochip\ \textbf{Process}\\CPU works on it};
+  \node[hwbox, fill=LabGreen!10, draw=LabGreen, minimum width=3cm, right=1.5cm of process] (output) {\faDesktop\ \textbf{Output}\\Results shown};
+  \draw[thickarrow] (input) -- (process);
+  \draw[thickarrow] (process) -- (output);
+  
+  % Storage below
+  \node[hwbox, fill=NoteOrange!10, draw=NoteOrange, minimum width=3cm, below=1cm of process] (storage) {\faDatabase\ \textbf{Storage}\\Data saved};
+  \draw[NoteOrange, line width=1.5pt, <->] (process) -- (storage);
+\end{tikzpicture}
+\end{center}
+
+\bytetip[tip]{Everything you do on a computer follows the IPO cycle. Typing a letter? Input = keystrokes, Process = converting to text, Output = letters on screen, Storage = saving the document!}
+
+\begin{realworld}
+When you search on Google: \textbf{Input} = your search query, \textbf{Process} = Google's servers scanning billions of pages, \textbf{Output} = the search results you see. This entire process takes less than one second!
+\end{realworld}
+
+\begin{funfact}
+There are approximately \textbf{5.5 billion} internet users worldwide --- that's about 68\% of the entire human population! And the number is growing every day.
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name five industries where computers are widely used.
+  \item What is the IPO cycle? Give an example.
+  \item How are computers used in healthcare?
+  \item What role do computers play in education today?
+  \item Name two emerging technologies that use computers.
+\end{reviewqs}
+
+\begin{challenge}
+Choose any \textbf{one industry} (e.g., agriculture, space, sports). Research how computers are used in that field and write a 10-sentence paragraph explaining what you found. Include at least one specific software or device name.
+\end{challenge}

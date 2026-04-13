@@ -1,0 +1,88 @@
+% ============================================================================
+% Chapter 19: Operating Systems in Depth
+% ============================================================================
+
+\chapter{Operating Systems in Depth}
+\label{ch:os-depth}
+
+\begin{objectives}
+  \item Compare different operating systems (Windows, macOS, Linux, Android, iOS)
+  \item Understand multitasking and how the OS manages multiple programs
+  \item Learn about user accounts and permissions
+  \item Explore the concept of a graphical user interface (GUI)
+\end{objectives}
+
+\bytetip[tip]{You already know \emph{what} an OS does. Now let's understand \emph{how} it does it --- and explore the world beyond Windows!}
+
+\section{Comparing Operating Systems}
+\label{sec:compare-os}
+\index{operating system!comparison}
+
+\begin{table}[H]
+\centering
+\caption{Popular operating systems compared}
+\label{tab:os-compare}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{l l X l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{OS}} & \textcolor{white}{\textbf{Made By}} & \textcolor{white}{\textbf{Used On}} & \textcolor{white}{\textbf{Cost}} \\
+\midrule
+\rowcolor{RowLight} Windows & Microsoft & Desktops, laptops & Paid \\
+\rowcolor{RowDark} macOS & Apple & MacBooks, iMacs & Free (with Mac) \\
+\rowcolor{RowLight} Linux & Community & Servers, desktops & Free \\
+\rowcolor{RowDark} Android & Google & Smartphones, tablets & Free \\
+\rowcolor{RowLight} iOS & Apple & iPhones, iPads & Free (with device) \\
+\rowcolor{RowDark} ChromeOS & Google & Chromebooks & Free (with device) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Multitasking}
+\label{sec:multitasking}
+\index{multitasking}
+
+\hl{Multitasking} means running multiple programs at the same time. The OS manages this by rapidly switching between programs --- so fast that it feels like everything is running simultaneously.
+
+\begin{center}
+\begin{tikzpicture}[node distance=0.5cm]
+  \node[process, fill=FunSky!15, draw=FunSky, minimum width=2.2cm] (p1) {Chrome};
+  \node[process, fill=FunPurple!15, draw=FunPurple, minimum width=2.2cm, right=of p1] (p2) {Word};
+  \node[process, fill=LabGreen!15, draw=LabGreen, minimum width=2.2cm, right=of p2] (p3) {Music};
+  \node[process, fill=FunCoral!15, draw=FunCoral, minimum width=2.2cm, right=of p3] (p4) {Paint};
+  
+  % CPU below
+  \node[hwbox, fill=NavyBlue!10, draw=NavyBlue, minimum width=3cm, below=1.5cm of p2.south east] (cpu) 
+    {\faMicrochip\ CPU};
+  
+  \foreach \p in {p1, p2, p3, p4}{
+    \draw[NavyBlue, line width=1pt, ->] (\p.south) -- (cpu.north);
+  }
+  \node[below=0.3cm of cpu, font=\scriptsize\sffamily\itshape, text=NavyBlue] 
+    {CPU switches between all programs incredibly fast};
+\end{tikzpicture}
+\end{center}
+
+\section{GUI --- Graphical User Interface}
+\label{sec:gui}
+\index{GUI}
+
+A \hl{GUI} (Graphical User Interface)\index{GUI} lets you interact with the computer using visual elements --- icons, buttons, windows, and menus --- instead of typing text commands. All modern operating systems use a GUI.
+
+\bytetip[fun]{Before GUIs existed, people used a \textbf{CLI} (Command Line Interface) --- a black screen where you typed commands. It looked like something from a hacker movie! Some IT professionals still prefer CLI because it's faster for certain tasks.}
+
+\begin{funfact}
+The first GUI was developed at \textbf{Xerox PARC} in 1973 --- yes, the same Xerox that makes photocopiers! Steve Jobs visited their lab, was inspired, and created the \textbf{Apple Lisa} and later the \textbf{Macintosh} (1984), which brought GUIs to regular people.
+\end{funfact}
+
+\begin{reviewqs}
+  \item Name four popular operating systems and who makes each one.
+  \item What is multitasking? How does the CPU handle it?
+  \item What does GUI stand for and why is it important?
+  \item Which operating system is free and open-source?
+  \item What is the difference between GUI and CLI?
+\end{reviewqs}
+
+\begin{challenge}
+If you have access to a tablet or smartphone, compare its interface to a Windows desktop. List \textbf{five differences} and \textbf{five similarities} between the two operating systems' interfaces.
+\end{challenge}

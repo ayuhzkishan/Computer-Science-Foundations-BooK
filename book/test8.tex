@@ -1,0 +1,15 @@
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\usepackage{xcolor}
+\usepackage{tikz}
+\definecolor{PartColor1}{HTML}{1A73E8}
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={
+    draw=#1, fill=#1!8, align=center
+  }
+]
+  \node[card=PartColor1] (desktop) at (0,0) {
+    A
+  };
+\end{tikzpicture}
+\end{document}

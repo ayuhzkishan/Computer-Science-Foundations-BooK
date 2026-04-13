@@ -1,0 +1,198 @@
+% ============================================================================
+% Chapter 1: Introduction to Computers
+% ============================================================================
+
+\chapter{Introduction to Computers}
+\label{ch:intro-computers}
+
+\begin{objectives}
+  \item Define what a computer is and explain its purpose
+  \item List the main characteristics of a computer
+  \item Identify how computers are used in daily life
+  \item Understand the difference between data and information
+\end{objectives}
+
+\bytetip[fun]{Welcome to Chapter 1! Get ready to discover what makes computers so amazing. Spoiler alert --- they're basically super-fast, super-accurate thinking machines!}
+
+% ---------------------------------------------------------------
+\section{What Is a Computer?}
+\label{sec:what-is-computer}
+\index{computer!definition}
+
+A \hl{computer} is an electronic device that accepts \textbf{data} (raw facts and figures), processes it according to a set of instructions (called a \textbf{program}), and produces useful \textbf{information} as output.
+
+\begin{theorybox}[Definition: Computer]
+A \textbf{computer}\index{computer} is an electronic machine that:
+\begin{enumerate}[label=\textcolor{ModuleBlue}{\arabic*.}, itemsep=2pt]
+  \item \textbf{Accepts} data (input)
+  \item \textbf{Processes} data (using programs)
+  \item \textbf{Stores} data (in memory)
+  \item \textbf{Produces} results (output)
+\end{enumerate}
+\end{theorybox}
+
+Think of it like this: your brain takes in information through your eyes and ears, thinks about it, remembers important things, and then tells your body what to do. A computer works in a very similar way!
+
+% --- Figure 1.1: What Is a Computer? Analogy Diagram ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+  % Human brain column
+  \node[hwbox, fill=FunSky!15, minimum width=3.2cm] (brain) 
+    {\faUser\ \textbf{Human Brain}\\[2pt]\small Thinks};
+  
+  % Comparison column (middle)
+  \node[right=2cm of brain, font=\small\sffamily, align=center, text=NavyBlue] (compare) {
+    \faBolt\ Speed\\[4pt]
+    \faClock\ Timing\\[4pt]
+    \faLock\ Accuracy
+  };
+  \node[draw=FunYellow, fill=FunYellow!20, rounded corners=4pt, 
+        fit=(compare), inner sep=6pt] (comparebox) {};
+  
+  % Computer column
+  \node[hwbox, fill=ModuleBlue!10, minimum width=3.2cm, right=2cm of comparebox] (comp)
+    {\faDesktop\ \textbf{Computer}\\[2pt]\small Processes Data};
+  
+  % Arrows
+  \draw[thickarrow, <->] (brain) -- (comparebox);
+  \draw[thickarrow, <->] (comparebox) -- (comp);
+  
+  % Labels
+  \node[below=0.3cm of comparebox, font=\footnotesize\sffamily\itshape, text=NavyBlue]
+    {Both can do these --- but computers are MUCH faster!};
+\end{tikzpicture}
+\caption{A computer is like a super-fast brain that processes data}
+\label{fig:what-is-computer}
+\end{figure}
+
+\begin{realworld}
+When you type your name into a school computer, that's \textbf{data}. When the computer uses it to print your name on a report card, that's \textbf{information}. Data becomes information when it's processed and made useful!
+\end{realworld}
+
+% ---------------------------------------------------------------
+\section{Characteristics of a Computer}
+\label{sec:characteristics}
+\index{computer!characteristics}
+
+What makes computers special? Here are the six key characteristics that make them so powerful:
+
+% --- Figure 1.2: Characteristics Radial Burst ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  charnode/.style={
+    draw=#1, fill=#1!12, rounded corners=6pt,
+    minimum width=2.4cm, minimum height=1.4cm,
+    font=\scriptsize\bfseries\sffamily, align=center,
+    line width=1pt
+  }
+]
+  % Central node
+  \node[circle, draw=ModuleBlue, fill=ModuleBlue, text=white,
+        font=\small\bfseries\sffamily, minimum size=2.2cm, 
+        line width=2pt] (center) {COMPUTER};
+  
+  % Surrounding characteristic nodes
+  \node[charnode=PartColor1, above=1.2cm of center] (speed) 
+    {\faBolt\\[2pt] Speed};
+  \node[charnode=PartColor5, above right=0.8cm and 1.8cm of center] (accuracy) 
+    {\faBullseye\\[2pt] Accuracy};
+  \node[charnode=PartColor2, below right=0.8cm and 1.8cm of center] (storage) 
+    {\faDatabase\\[2pt] Storage};
+  \node[charnode=PartColor4, below=1.2cm of center] (diligence) 
+    {\faBatteryFull\\[2pt] Diligence};
+  \node[charnode=PartColor3, below left=0.8cm and 1.8cm of center] (versatility) 
+    {\faCogs\\[2pt] Versatility};
+  \node[charnode=PartColor7, above left=0.8cm and 1.8cm of center] (automation) 
+    {\faRobot\\[2pt] Automation};
+  
+  % Connecting lines
+  \foreach \n in {speed, accuracy, storage, diligence, versatility, automation}{
+    \draw[ModuleBlue, line width=1.5pt, ->] (center) -- (\n);
+  }
+\end{tikzpicture}
+\caption{The six key characteristics of a computer}
+\label{fig:characteristics}
+\end{figure}
+
+\begin{enumerate}[label=\textcolor{ModuleBlue}{\textbf{\arabic*.}}, itemsep=6pt]
+  \item \textbf{Speed}\index{speed} --- Computers can perform \emph{billions} of calculations per second. What takes you minutes takes a computer less than a blink!
+  \item \textbf{Accuracy}\index{accuracy} --- Computers almost never make mistakes. If the input data is correct, the output will always be correct.
+  \item \textbf{Storage}\index{storage} --- Computers can store enormous amounts of data --- from your holiday photos to entire libraries of books.
+  \item \textbf{Diligence}\index{diligence} --- Unlike humans, computers never get tired or bored. They can work for hours without slowing down.
+  \item \textbf{Versatility}\index{versatility} --- The same computer can play music, write essays, solve maths problems, and browse the internet.
+  \item \textbf{Automation}\index{automation} --- Once programmed, computers can perform tasks automatically without human help.
+\end{enumerate}
+
+\bytetip[tip]{A modern computer can perform over \textbf{1 billion calculations per second}. That means if you could do one calculation per second, it would take you about \textbf{31 years} to do what a computer does in \textbf{one second}!}
+
+% ---------------------------------------------------------------
+\section{Computers in Daily Life}
+\label{sec:daily-life}
+\index{computer!daily life}
+
+Computers are everywhere --- and we mean \emph{everywhere}! Let's look at where you might encounter them:
+
+% --- Table 1.1: Computers in Daily Life ---
+\begin{table}[H]
+\centering
+\caption{Computers in daily life}
+\label{tab:daily-life}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{>{\columncolor{white}}c >{\columncolor{white}}l X l}
+\toprule
+\rowcolor{HeaderRow}
+\textcolor{white}{\textbf{}} & \textcolor{white}{\textbf{Where}} & \textcolor{white}{\textbf{What We Use It For}} & \textcolor{white}{\textbf{Example}} \\
+\midrule
+\rowcolor{RowLight}
+\faSchool & School & Writing assignments, research & MS Word, Google \\
+\rowcolor{RowDark}
+\faHome & Home & Entertainment, communication & YouTube, Games \\
+\rowcolor{RowLight}
+\faUniversity & Bank & Transactions, account management & ATM, Online Banking \\
+\rowcolor{RowDark}
+\faHospital & Hospital & Patient records, diagnosis & Medical software \\
+\rowcolor{RowLight}
+\faStore & Shop & Billing \& inventory & POS system \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{tryit}
+Think about your typical day. Can you list \textbf{five} different times you (or your family) use a computer or a computerised device? Write them down! Remember, smartphones and smart TVs have computers inside them too.
+\end{tryit}
+
+% ---------------------------------------------------------------
+\section{Data and Information}
+\label{sec:data-info}
+\index{data}\index{information}
+
+\begin{theorybox}[Data vs Information]
+\begin{itemize}[leftmargin=*, label={\textcolor{ModuleBlue}{\faAngleRight}}, itemsep=4pt]
+  \item \textbf{Data}\index{data} = Raw, unprocessed facts. Example: \texttt{85, 92, 78, 90, 88}
+  \item \textbf{Information}\index{information} = Processed, meaningful data. Example: ``Average marks = 86.6''
+  \item \textbf{Processing} = The step where data is converted into information
+\end{itemize}
+\end{theorybox}
+
+\begin{funfact}
+The word ``computer'' originally referred to a \textbf{person} who did calculations by hand! It wasn't until the 1940s that the word started to mean an electronic machine. The first electronic computer, \textbf{ENIAC} (1945), weighed 27 tonnes and filled an entire room. Today, your smartphone is millions of times more powerful!
+\end{funfact}
+
+% ---------------------------------------------------------------
+% End-of-Chapter Elements
+% ---------------------------------------------------------------
+
+\begin{reviewqs}
+  \item What is a computer? Write a definition in your own words.
+  \item List any four characteristics of a computer.
+  \item Give two examples each of \textbf{data} and \textbf{information}.
+  \item Name three places where computers are used in daily life.
+  \item Why is a computer said to be ``diligent''?
+  \item What is the difference between data and information?
+\end{reviewqs}
+
+\begin{challenge}
+Interview a family member or neighbour about how they use computers at work. Write a short paragraph (5--6 sentences) about what you learned. Include the \textbf{type of computer} they use and at least \textbf{two tasks} they do on it.
+\end{challenge}
