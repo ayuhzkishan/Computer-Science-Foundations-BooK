@@ -1,0 +1,28 @@
+# LaTeX build files
+*.aux
+*.log
+*.toc
+*.idx
+*.ind
+*.ilg
+*.bbl
+*.blg
+*.out
+*.lof
+*.lot
+*.pdf
+*.synctex.gz
+*.glo
+*.ist
+*.maf
+*.mtc*
+*.bcf
+*.xml
+
+# Antigravity logs
+compile_log*.txt
+overview.txt
+
+# OS files
+Thumbs.db
+.DS_Store
